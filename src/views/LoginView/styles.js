@@ -346,6 +346,9 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
     },
+    error:{
+      color: 'white',
+    },
     text: {
         flex: 1,
         position: "relative",

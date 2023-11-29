@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Login} from "../views/Login";
 import {LoginView} from "../views/LoginView";
 import {RegisterView} from "../views/RegisterView";
+import TabNav from "./Tab";
 
 
 
@@ -18,6 +19,7 @@ export default function StackNav() {
             <Stack.Screen name="Login" component={Login} options={optionScreen} />
             <Stack.Screen name="LoginView" component={LoginView} options={optionScreen} />
             <Stack.Screen name="RegisterView" component={RegisterView} options={optionScreen} />
+            <Stack.Screen name="TabNav" component={TabNav} options={optionScreen} />
         </Stack.Navigator>
 
     );

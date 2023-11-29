@@ -7,20 +7,24 @@ import {useState} from "react";
 import axios from "axios";
 import image from "../Login/img/LoginBackground.png";
 import {RegisterView} from "../RegisterView";
-
-
+import TabNav from "../../navigation/Tab";
+import Singleton from "../../Classes/User"
 export function LoginView({ navigation }) {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
+    const [error,setError] = useState(false);
     const handleLogin = async () => {
         try {
             const response = await axios.get("http://192.168.56.1:3000/users");
             const users = response.data;
             const user = users.find((user) => user.login === login && user.password === password);
             if (user) {
-                console.log("ZAJEBISCIE")
+                Singleton.setNameAndId(user.personal,user.id);
+                console.log("ZAJEBISCIE");
+                setError(false);
+                navigation.navigate(TabNav);
             } else {
-                console.log("Chujowo")
+                setError(true);
             }
         }catch (error) {
             console.error("Error fetching data:", error);
@@ -49,6 +53,7 @@ export function LoginView({ navigation }) {
                     </View>
                 </View>
                 <View style={styles.frame3}>
+                    {error ? <Text style={styles.error}>Twój email lub hasło są nieprawodłowe</Text> : null}
                     <View style={styles.frameView}>
                         <View style={styles.fieldParent}>
                             <View style={styles.field}>
