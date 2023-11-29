@@ -3,17 +3,26 @@
     {
       "id": 1,
       "login": "test",
+      "personal": "test test",
       "password": "test"
     },
     {
       "login": "admin",
+      "personal": "admin admin",
       "password": "admin",
       "id": 2
     },
     {
       "login": "t",
+      "personal": "t t",
       "password": "t",
       "id": 3
+    },
+    {
+      "login": "mateuszziara@op.pl",
+      "password": "test",
+      "personal": "Mateusz Ziara",
+      "id": 4
     }
   ]
 }

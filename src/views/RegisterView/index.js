@@ -3,8 +3,30 @@ import {StyleSheet, View, Text, TextInput, Pressable, ImageBackground} from "rea
 import { Image } from "expo-image";
 import {styles} from "./styles";
 import image from "../Login/img/LoginBackground.png";
+import {LoginView} from "../LoginView";
+import {useState} from "react";
+import axios from "axios";
 
 export function RegisterView({ navigation }) {
+    const [login, setLogin] = useState("");
+    const [password, setPassword] = useState("");
+    const [personal, setPersonal] = useState("");
+    const handleRegistration = async () => {
+        try {
+            const response = await axios.post('http://192.168.56.1:3000/users', {
+                login,
+                password,
+                personal,
+            });
+
+            console.log('Registration successful:', response.data);
+
+            navigation.navigate(LoginView);
+        } catch (error) {
+
+            console.error('Registration failed:', error.message);
+        }
+    };
     return (
         <View style={styles.ekranRejestracji}>
             <ImageBackground source={image} resizeMode="cover" style={styles.backgroundImage}>
@@ -33,20 +55,21 @@ export function RegisterView({ navigation }) {
                 <View>
                     <TextInput
                         style={styles.TextInput}
+                        value={personal}  onChangeText={(text) => setPersonal(text)}
                         placeholder="Imie i Nazwisko"
                         keyboardType="default"
-                        secureTextEntry={true}
                         placeholderTextColor="#fff"
                     />
                     <TextInput
                         style={[styles.TextInput]}
                         placeholder="Adres email"
+                        value={login}  onChangeText={(text) => setLogin(text)}
                         keyboardType="email-address"
-                        secureTextEntry={true}
                         placeholderTextColor="#fff"
                     />
                     <TextInput
                         style={[styles.TextInput]}
+                        value={password}  onChangeText={(text) => setPassword(text)}
                         placeholder="Hasło"
                         keyboardType="default"
                         secureTextEntry={true}
@@ -54,8 +77,8 @@ export function RegisterView({ navigation }) {
                     />
                 </View>
             </View>
-            <Text style={styles.maszKontoZaloguj}>Masz konto? Zaloguj się</Text>
-            <Pressable style={[styles.button, styles.buttonPosition]}>
+            <Text style={styles.maszKontoZaloguj} onPress={() => navigation.navigate(LoginView)}>Masz konto? Zaloguj się</Text>
+            <Pressable style={[styles.button, styles.buttonPosition]} onPress={handleRegistration}>
                 <Text style={styles.startLearning}>Zarejestruj się</Text>
                 <Image
                     style={styles.vectorIcon}
