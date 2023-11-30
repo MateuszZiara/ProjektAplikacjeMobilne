@@ -15,7 +15,7 @@ export function LoginView({ navigation }) {
     const [error,setError] = useState(false);
     const handleLogin = async () => {
         try {
-            const response = await axios.get("http://192.168.56.1:3000/users");
+            const response = await axios.get("http://192.168.100.162:3000/users");
             const users = response.data;
             const user = users.find((user) => user.login === login && user.password === password);
             if (user) {

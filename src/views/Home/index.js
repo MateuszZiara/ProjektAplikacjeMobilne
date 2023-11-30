@@ -1,9 +1,11 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import {StyleSheet, View, Text, TextInput, ScrollView} from "react-native";
+import {StyleSheet, View, Text, TextInput, ScrollView, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import Singleton from "../../Classes/User"
+import {PrzekaskiView} from "../Przekaski";
+
 export function Home({ navigation }){
     console.log(Singleton.name);
     return (
@@ -73,7 +75,11 @@ export function Home({ navigation }){
                                 <Text style={[styles.wylosujSwjRabat1, styles.znajdFilmW1Typo]}>
                                     Wylosuj swój rabat
                                 </Text>
-                                <Text style={styles.grzechotnik}>Grzechotnik</Text>
+
+                                <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
+                                    <Text style={styles.grzechotnik}>Grzechotnik</Text>
+                                </TouchableOpacity>
+
                             </View>
                             <View style={[styles.rightArrowWrapper, styles.rightFlexBox]}>
                                 <Image
