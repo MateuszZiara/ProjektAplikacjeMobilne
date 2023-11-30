@@ -1,10 +1,5 @@
 /* fonts */
-export const FontFamily = {
-  poppinsMedium: "Poppins-Medium",
-  poppinsSemiBold: "Poppins-SemiBold",
-  poppinsBold: "Poppins-Bold",
-  berlinSansFB: "Berlin Sans FB",
-};
+
 /* font sizes */
 export const FontSize = {
   size_11xl: 30,

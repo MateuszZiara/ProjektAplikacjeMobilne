@@ -2,7 +2,7 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, View, Text, Pressable, Dimensions } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Color, FontFamily, Border, FontSize, Padding } from "./styles";
+import { Color, Border, FontSize, Padding } from "./styles";
 
 
 export function PrzekaskiView({ navigation }) {
@@ -251,7 +251,7 @@ const styles = StyleSheet.create({
     color: Color.colorWhitesmoke_100,
   },
   przekskiTypo: {
-    fontFamily: FontFamily.poppinsSemiBold,
+   // fontFamily: FontFamily.poppinsSemiBold,
     fontWeight: "600",
     textAlign: "left",
   },
@@ -282,7 +282,7 @@ const styles = StyleSheet.create({
   dlaCiebieITypo: {
     color: Color.colorLightgray,
     textAlign: "left",
-    fontFamily: FontFamily.poppinsMedium,
+   // fontFamily: FontFamily.poppinsMedium,
     fontWeight: "500",
   },
   viewLayout: {
@@ -294,7 +294,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   maaKawaTypo: {
-    fontFamily: FontFamily.poppinsBold,
+   // fontFamily: FontFamily.poppinsBold,
     fontWeight: "700",
     fontSize: FontSize.size_lg,
     color: Color.colorLightgray,
@@ -357,7 +357,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     height: 53,
     textAlign: "left",
-    fontFamily: FontFamily.poppinsMedium,
+  //  fontFamily: FontFamily.poppinsMedium,
     fontWeight: "500",
     width: 322,
   },
@@ -410,7 +410,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 19,
-    fontFamily: FontFamily.berlinSansFB,
+   // fontFamily: FontFamily.berlinSansFB,
     color: Color.colorWhite,
     width: 43,
     height: 20,
@@ -473,7 +473,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: Color.colorWhitesmoke_100,
     display: "flex",
-    fontFamily: FontFamily.poppinsMedium,
+  //  fontFamily: FontFamily.poppinsMedium,
     fontWeight: "500",
   },
   rightArrowIcon: {
@@ -569,7 +569,7 @@ const styles = StyleSheet.create({
   },
   maaKawa: {
     top: 120,
-    fontFamily: FontFamily.poppinsBold,
+  //  fontFamily: FontFamily.poppinsBold,
     fontWeight: "700",
     fontSize: FontSize.size_lg,
     color: Color.colorLightgray,
@@ -685,4 +685,3 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Index;
