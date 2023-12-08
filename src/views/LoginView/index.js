@@ -13,23 +13,33 @@ export function LoginView({ navigation }) {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [error,setError] = useState(false);
+    const firebaseURL = "https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app";
+
     const handleLogin = async () => {
         try {
-            const response = await axios.get("http://192.168.100.162:3000/users");
+            const response = await axios.get(`${firebaseURL}/users.json`);
             const users = response.data;
-            const user = users.find((user) => user.login === login && user.password === password);
-            if (user) {
-                Singleton.setNameAndId(user.personal,user.id);
-                console.log("ZAJEBISCIE");
-                setError(false);
-                navigation.navigate(TabNav);
-            } else {
-                setError(true);
+
+            for (const key in users) {
+                const user = users[key];
+
+                if (user.email === login && user.password === password) {
+                    // Successful login
+                    setError(false);
+                    Singleton.setNameAndId(user.personal, key);
+                    navigation.navigate(TabNav);
+                    return;
+                }
             }
-        }catch (error) {
-            console.error("Error fetching data:", error);
+
+            // If no matching user is found
+            setError(true);
+        } catch (error) {
+            console.error("Error checking login:", error);
+            // Handle error, e.g., show an error message
         }
     };
+
     return (
         <ScrollView>
         <View style={styles.ekranLogowania}>

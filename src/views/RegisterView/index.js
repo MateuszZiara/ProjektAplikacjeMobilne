@@ -11,20 +11,27 @@ export function RegisterView({ navigation }) {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [personal, setPersonal] = useState("");
+    const firebaseLinkDoBazy = 'https://aplikacjemobilne-a7987-default-rtdb.europe-west1.firebasedatabase.app/';
+    const sciezkaDoBazy = '/users.json';
+    const ApiKey = 'AIzaSyB5iaS38Fm9mYfMNaK_HnBqk4V6sp5paJg';
+    const LinkZadania = `${firebaseLinkDoBazy}${sciezkaDoBazy}?key=${ApiKey}`;
+
     const handleRegistration = async () => {
         try {
-            const response = await axios.post('http://192.168.100.162:3000/users', {
-                login,
-                password,
-                personal,
-            });
+            const response = await axios.post(
+                `https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app/users.json`,
+                {
+                    email: login,
+                    password: password,
+                    personal: personal,
+                }
+            );
 
-            console.log('Registration successful:', response.data);
-
-            navigation.navigate(LoginView);
+            console.log("Registration successful:", response.data);
+            // You can add navigation logic or other actions after successful registration
         } catch (error) {
-
-            console.error('Registration failed:', error.message);
+            console.error("Registration failed:", error);
+            // Handle the registration failure, e.g., display an error message
         }
     };
     return (
