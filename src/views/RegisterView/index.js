@@ -13,7 +13,7 @@ export function RegisterView({ navigation }) {
     const [personal, setPersonal] = useState("");
     const handleRegistration = async () => {
         try {
-            const response = await axios.post('http://192.168.56.1:3000/users', {
+            const response = await axios.post('http://192.168.100.162:3000/users', {
                 login,
                 password,
                 personal,

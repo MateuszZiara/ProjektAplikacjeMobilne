@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Home} from "../views/Home";
 import {BottomTabIcon} from "../components/BottomTabIcon";
 import {PrzekaskiView} from "../views/Przekaski";
+import {Bilety1} from "../views/Bilety1";
+import {Bilety2} from "../views/Bilet2";
 
 
 const optionScreen = {
@@ -23,6 +25,7 @@ export default function TabNav() {
         })}>
             <Tab.Screen name="Home" component={Home} options={optionScreen} />
             <Tab.Screen name="PrzekaskiView" component={PrzekaskiView} options={optionScreen} />
+            <Tab.Screen name="Bilety1" component={Bilety1} options={optionScreen} />
         </Tab.Navigator>
     );
 }

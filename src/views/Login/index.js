@@ -2,6 +2,8 @@
 import {View, Text, Image,  TouchableOpacity, ImageBackground,} from 'react-native';
 import {styles} from "./styles";
 import {LoginView} from "../LoginView";
+import TabNav from "../../navigation/Tab";
+import {Test, test} from "../test";
 const image = require('./img/LoginBackground.png');
 
 
@@ -19,7 +21,7 @@ export function Login({ navigation }) {
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(LoginView)}>
                     <Text style={styles.buttonText}>Zaloguj/Zarejestruj się</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(Test)}>
                     <Text style={styles.buttonText}>Kontynuuj bez rejestracji</Text>
                 </TouchableOpacity>
             </ImageBackground>
