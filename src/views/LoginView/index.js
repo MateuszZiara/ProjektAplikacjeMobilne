@@ -1,5 +1,5 @@
 import * as React from "react";
-import {StyleSheet, View, Text, TextInput, TouchableOpacity, ImageBackground} from "react-native";
+import {StyleSheet, View, Text, TextInput, TouchableOpacity, ImageBackground, ScrollView} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image } from "expo-image";
 import {styles} from "./styles"
@@ -31,6 +31,7 @@ export function LoginView({ navigation }) {
         }
     };
     return (
+        <ScrollView>
         <View style={styles.ekranLogowania}>
             <ImageBackground source={image} resizeMode="cover" style={styles.backgroundImage}>
             <View style={styles.frame}>
@@ -105,5 +106,6 @@ export function LoginView({ navigation }) {
             </View>
             </ImageBackground>
         </View>
+        </ScrollView>
     );
 };

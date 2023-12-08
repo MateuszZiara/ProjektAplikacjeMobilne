@@ -35,6 +35,21 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     source={require('../images/Popcorn(inactive).png')}
                 />
             }
+        case 'Bilety1':
+            if(focused)
+            {
+                return <Image
+                    style={styles.imgActive}
+                    source={require('../images/Ticket(Active).png')}
+                />
+            }
+            else
+            {
+                return <Image
+                    style={styles.img}
+                    source={require('../images/Ticket(inactive).png')}
+                />
+            }
     }
 }
 
