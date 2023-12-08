@@ -4,8 +4,6 @@ import {Home} from "../views/Home";
 import {BottomTabIcon} from "../components/BottomTabIcon";
 import {PrzekaskiView} from "../views/Przekaski";
 import {Bilety1} from "../views/Bilety1";
-import {Bilety2} from "../views/Bilet2";
-
 
 const optionScreen = {
     headerShown: false,
