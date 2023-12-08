@@ -2,7 +2,7 @@ import * as React from "react";
 import { Image } from "expo-image";
 import {StyleSheet, View, Text, StatusBar, ScrollView} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import {Bilety2} from "../Bilet2";
+import {Bilety2_vip} from "../Bilety2_vip";
 
 export function Bilety1({ navigation }) {
     return (
@@ -71,7 +71,7 @@ export function Bilety1({ navigation }) {
                 <View style={styles.sliderPrzekasekParent} >
                     <View style={[styles.sliderPrzekasek, styles.sliderPosition]}>
                         <View style={styles.parentLayout}>
-                            <Text style={[styles.vip, styles.vipClr]} onPress={() => navigation.navigate(Bilety2)}>VIP</Text>
+                            <Text style={[styles.vip, styles.vipClr]} onPress={() => navigation.navigate(Bilety2_vip)}>VIP</Text>
                             <Image
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"
@@ -79,7 +79,9 @@ export function Bilety1({ navigation }) {
                             />
                         </View>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
-                            <Text style={[styles.ulgowy, styles.vipClr]}>Ulgowy</Text>
+
+                            <Text style={[styles.ulgowyParent, styles.vipClr]}>Ulgowy</Text>
+
                             <Image
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"

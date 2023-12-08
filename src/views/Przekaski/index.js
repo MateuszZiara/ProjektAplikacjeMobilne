@@ -2,10 +2,8 @@ import * as React from "react";
 import { Image } from "expo-image";
 import {StyleSheet, View, Text, Pressable, Dimensions, ScrollView, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Color, Border, FontSize, Padding } from "./styles";
 import {styles} from "./styles"
 import {Przekaski2View} from "../Przekaski2";
-import {Bilety2} from "../Bilet2";
 
 export function PrzekaskiView({ navigation }) {
   return (
