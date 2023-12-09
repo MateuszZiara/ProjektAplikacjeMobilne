@@ -7,6 +7,7 @@ import {useState} from "react";
 import {Calendar} from "react-native-calendars";
 import {Przekaski2View} from "../Przekaski2";
 import {Bilety4_vip} from "../Bilety4_vip";
+import {Bilety2_vip} from "../Bilety2_vip";
 
 export function Bilety3_vip({ navigation }) {
   const [selected, setSelected] = useState('');
@@ -38,12 +39,16 @@ export function Bilety3_vip({ navigation }) {
           />
         </View>
       </View>
+
       <View style={[styles.backParent, styles.wrapperParentFlexBox]}>
+        <TouchableOpacity onPress={() =>navigation.navigate(Bilety2_vip)}>
         <Image
           style={styles.backIconLayout1}
           contentFit="cover"
           source={require("./assets/back.png")}
         />
+        </TouchableOpacity>
+
         <View style={[styles.frameWrapper, styles.frameFlexBox]}>
           <View style={styles.appNameWrapper}>
             <View style={[styles.appName, styles.appSpaceBlock]}>
