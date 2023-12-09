@@ -2,12 +2,16 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, View, Text, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import {styles} from "./styles"
+import {styles} from "./styles";
+import {useState} from "react";
+import {Calendar} from "react-native-calendars";
+
 export function Bilety3_vip({ navigation }) {
+  const [selected, setSelected] = useState('');
   return (
+
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.wybprDaty}>
-
       <View style={[styles.headerEkranuPrzeksek, styles.sliderLayout]}>
         <View style={[styles.slider, styles.sliderPosition]}>
           <Image
@@ -50,7 +54,9 @@ export function Bilety3_vip({ navigation }) {
             </View>
           </View>
         </View>
+
       </View>
+
       <View style={[styles.frameParent, styles.wrapperParentFlexBox]}>
         <View style={[styles.frameContainer, styles.frameFlexBox]}>
           <View style={styles.appNameContainer}>
@@ -70,277 +76,32 @@ export function Bilety3_vip({ navigation }) {
           />
         </View>
       </View>
-      <View style={[styles.listopadParent, styles.groupChildShadowBox]}>
-        <Text style={[styles.listopad, styles.textTypo1]}>Listopad</Text>
-        <Text style={[styles.text, styles.textTypo1]}>2023</Text>
-        <Image
-          style={[styles.backIcon1, styles.backIconLayout]}
-          contentFit="cover"
-          source={require("./assets/back1.png")}
-        />
-        <Image
-          style={[styles.backIcon2, styles.backIconLayout]}
-          contentFit="cover"
-          source={require("./assets/back2.png")}
-        />
-        <View style={[styles.instanceParent, styles.instanceParentPosition]}>
-          <View style={[styles.suWrapper, styles.wrapperParentFlexBox]}>
-            <Text style={[styles.su, styles.textTypo]}>Pn</Text>
-          </View>
-          <View style={[styles.suWrapper, styles.wrapperParentFlexBox]}>
-            <Text style={[styles.su, styles.textTypo]}>Wt</Text>
-          </View>
-          <View style={[styles.suWrapper, styles.wrapperParentFlexBox]}>
-            <Text style={[styles.su, styles.textTypo]}>Śr</Text>
-          </View>
-          <View style={[styles.suWrapper, styles.wrapperParentFlexBox]}>
-            <Text style={[styles.su, styles.textTypo]}>Czw</Text>
-          </View>
-          <View style={[styles.suWrapper, styles.wrapperParentFlexBox]}>
-            <Text style={[styles.su, styles.textTypo]}>Pt</Text>
-          </View>
-          <View style={[styles.suWrapper, styles.wrapperParentFlexBox]}>
-            <Text style={[styles.su, styles.textTypo]}>So</Text>
-          </View>
-          <View style={[styles.suWrapper, styles.wrapperParentFlexBox]}>
-            <Text style={[styles.su, styles.textTypo]}>N</Text>
-          </View>
-        </View>
-        <View style={[styles.instanceGroup, styles.instanceParentPosition]}>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>26</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>27</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>28</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>29</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>30</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>31</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>1</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.instanceContainer, styles.instanceParentPosition]}>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>2</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>3</Text>
-            </View>
-          </View>
-          <View style={styles.rectangleParent}>
-            <LinearGradient
-              style={[styles.groupChild, styles.groupChildShadowBox]}
-              locations={[0, 0.83, 1]}
-              colors={[
-                "rgba(131, 6, 255, 0.6)",
-                "rgba(102, 33, 250, 0.18)",
-                "rgba(109, 44, 249, 0)",
-              ]}
-            />
-            <View style={[styles.frameWrapper10, styles.frameWrapperFlexBox]}>
-              <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-                <Text style={[styles.text7, styles.textTypo]}>4</Text>
-              </View>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>5</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>6</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>7</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>8</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.instanceParent1, styles.instanceParentPosition]}>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>9</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>10</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>12</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>13</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>14</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>15</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>16</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.instanceParent2, styles.instanceParentPosition]}>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>17</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>18</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>19</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>20</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>21</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>22</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>23</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.instanceParent3, styles.instanceParentPosition]}>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>24</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>25</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>26</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>27</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>28</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>29</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>30</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.instanceParent4, styles.instanceParentPosition]}>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text7, styles.textTypo]}>31</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>1</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>2</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>3</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>4</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>5</Text>
-            </View>
-          </View>
-          <View style={styles.frameWrapperFlexBox}>
-            <View style={[styles.wrapper, styles.wrapperParentFlexBox]}>
-              <Text style={[styles.text1, styles.textTypo]}>6</Text>
-            </View>
-          </View>
-        </View>
-      </View>
+      <Calendar
+          onDayPress={day => {
+            console.log('selected day', day.dateString);
+            setSelected(day.dateString);
+          }}
+          markedDates={{
+            [selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'orange'}
+          }}
+          style={{
+            marginTop: 300,
+            elevation: 5,
+            borderWidth: 4,
+            borderColor: 'rgba(100, 100, 100, 0.2)'
+          }}
+          theme={{
+            calendarBackground: '#222',
+            dayTextColor: '#fff',
+            textDisabledColor: '#444',
+            monthTextColor: '#888'
+          }}
+      />
     </View>
+        <View>
+
+        </View>
+
       </ScrollView>
   );
 }

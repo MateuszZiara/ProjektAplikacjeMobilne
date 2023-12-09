@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import {StyleSheet, View, Text, StatusBar, ScrollView} from "react-native";
+import {StyleSheet, View, Text, StatusBar, ScrollView, Button} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {Bilety2_vip} from "../Bilety2_vip";
 
@@ -76,6 +76,7 @@ export function Bilety1({ navigation }) {
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"
                                 source={require("./assets/mask-group.png")}
+                                onPress={() => navigation.navigate(Bilety2_vip)}
                             />
                         </View>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>

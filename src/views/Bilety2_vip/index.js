@@ -5,11 +5,13 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import {styles} from "./styles"
 import {Bilety3_vip} from "../Bilety3_vip";
+import {Calendar} from "react-native-calendars";
+import {useState} from "react";
+
 export function Bilety2_vip({ navigation }) {
   return (
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.wzr}>
-
 
       <View style={[styles.headerEkranuPrzeksek, styles.sliderLayout]}>
         <View style={[styles.slider, styles.sliderLayout]}>
