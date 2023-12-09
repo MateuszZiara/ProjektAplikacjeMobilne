@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Text, StyleSheet, View, TouchableOpacity} from "react-native";
+import {Text, StyleSheet, View, TouchableOpacity, ScrollView} from "react-native";
 import { Image } from "expo-image";
 import { Border, FontSize, FontFamily, Color } from "./styles.js";
 import { styles } from "./styles.js";
@@ -10,7 +10,7 @@ export function UstawieniaView({ navigation }) {
     {
         return (
             <View style={styles.wzr}>
-                <View style={styles.wzrInner}>
+                <ScrollView style={styles.wzrInner}>
                     <View style={styles.frameParent}>
                         <View style={styles.titleParent}>
                             <Text style={{ fontFamily: 'Inter_900Black', fontSize: 40 }}>Edytuj Profil</Text>
@@ -127,7 +127,7 @@ export function UstawieniaView({ navigation }) {
                             </View>
                         </View>
                     </View>
-                </View>
+                </ScrollView>
                 <View style={[styles.navigationBar, styles.navigationBarLayout]}>
                     <View style={styles.homeinactiveParent}>
                         <Image
