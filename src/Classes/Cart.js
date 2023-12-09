@@ -4,7 +4,9 @@ class Cart {
     constructor() {
         if (!instance) {
             instance = this;
-            this.array = [];
+            this.array = [
+
+            ];
         }
 
         return instance;

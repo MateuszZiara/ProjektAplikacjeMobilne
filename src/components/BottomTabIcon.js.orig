@@ -55,10 +55,10 @@ export const BottomTabIcon = ({ routeName, focused }) => {
             if(focused)
             {
                 return <View style={styles.rectFocus}>
-                <Image
-                    style={styles.imgActive}
-                    source={require('../images/Calendar(active).png')}
-                />
+                    <Image
+                        style={styles.imgActive}
+                        source={require('../images/Calendar(active).png')}
+                    />
                 </View>
             }
             else
@@ -68,7 +68,7 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     source={require('../images/Calendar(inactive).png')}
                 />
             }
-        case 'Cart':
+        case 'Koszyk':
             if(focused)
             {
 
