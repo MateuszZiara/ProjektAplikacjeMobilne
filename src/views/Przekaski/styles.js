@@ -387,14 +387,15 @@ export const styles = StyleSheet.create({
     position: "absolute",
   },
   sliderPrzekasek: {
-    marginLeft: -205.5,
-    top: 73,
-    alignItems: "flex-end",
+    alignItems: 'center', // Align items to the center horizontally
+    justifyContent: 'center', // Align items to the center vertically
     height: 172,
-    width: 411,
-    left: "50%",
-    flexDirection: "row",
-    position: "absolute",
+    position: 'absolute',
+    left: '50%',
+    marginLeft: -150, // Adjusted to half of the width of your block
+    top: 73,
+    flexDirection: 'row',
+    bottom: 20,
   },
   naszeKlasyki: {
     fontSize: 23,
