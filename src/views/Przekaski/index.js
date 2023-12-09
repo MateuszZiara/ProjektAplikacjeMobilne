@@ -2,10 +2,60 @@ import * as React from "react";
 import { Image } from "expo-image";
 import {StyleSheet, View, Text, Pressable, Dimensions, ScrollView, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import {styles} from "./styles"
-import {Przekaski2View} from "../Przekaski2";
+import {Color, styles} from "./styles"
+import Carousel, { Pagination } from 'react-native-snap-carousel';
+import {useState} from "react";
 
 export function PrzekaskiView({ navigation }) {
+  const width = Dimensions.get('window').width;
+  const [activeIndex, setActiveIndex] = useState(0);
+  function ActiveSlider(index)
+  {
+    setActiveIndex(index);
+    console.log(index);
+  }
+  const carouselItems = [
+    { title: 'Mały', text: 'Popcorn', imageSource: require("./assets/pngitem-4868092-2.png") },
+    { title: 'Lody', text: 'Oreo', imageSource: require("./assets/image-10.png") },
+    { title: 'Item 3', text: 'Text 3' },
+    { title: 'Item 4', text: 'Text 4' },
+    { title: 'Item 5', text: 'Text 5' },
+  ];
+  const renderItem = ({ item, index }) => {
+    return (
+        <View
+            style={{
+              backgroundColor: Color.colorGray_100,
+              borderRadius: 30,
+              height: 150,
+              width:150,
+              marginLeft: 55,
+              marginRight: 25,
+              justifyContent: 'center', // Center vertically
+              alignItems: 'center',
+                marginTop: 20,
+
+
+
+              //!TODO paginationItemPadSize: 2,
+            }}
+        >
+
+          <Image
+            style={{
+              top: 7,
+              left: 33,
+              width: 88,
+              height: 112,
+              position: "absolute",
+          }}
+            source={item.imageSource}
+        />
+          <Text style={{ fontSize: 30, color:'white', marginTop:85}} >{item.title}</Text>
+          <Text style={{color:'white', }}>{item.text}</Text>
+        </View>
+    );
+  };
   return (
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.ekranPrzeksek}>
@@ -54,14 +104,6 @@ export function PrzekaskiView({ navigation }) {
           </View>
         </View>
       </View>
-      <View
-        style={[
-          styles.iphonestatusbarOgranicznik,
-          styles.iphonestatusbarPosition,
-        ]}
-      >
-
-      </View>
       <View style={styles.komponentPrzekskiParent}>
         <View style={[styles.komponentPrzekski, styles.komponentLayout]}>
           <View style={[styles.maskGroup, styles.maskGroupLayout]}>
@@ -97,50 +139,58 @@ export function PrzekaskiView({ navigation }) {
           </View>
         </View>
         <View style={styles.sliderNav}>
-          <View style={[styles.view, styles.viewLayout]} />
-          <View style={[styles.view1, styles.viewLayout]} />
-          <View style={styles.curr} />
+          <Pagination
+              dotsLength={carouselItems.length}
+              activeDotIndex={activeIndex}
+              containerStyle={{ marginTop: -25 }}
+              dotStyle={{
+                width: 20,
+                height: 10,
+                borderRadius: 5,
+                marginHorizontal: 8,
+                backgroundColor: 'rgba(49, 7, 139, 1)',
+              }}
+              inactiveDotStyle={{
+                backgroundColor: 'rgba(125, 125, 125, 0.33)',
+                width: 10,
+                height: 10,
+              }}
+              inactiveDotOpacity={0.6}
+              inactiveDotScale={0.8}
+          />
         </View>
         <View style={styles.sliderPrzekasek}>
-          <TouchableOpacity onPress={() => navigation.navigate(Przekaski2View)}>
-          <View style={styles.parentLayout}>
-              <Text style={[styles.mayPopcorn, styles.maaKawaTypo]}>Mały popcorn</Text>
-            <Image
-              style={styles.pngitem48680922Icon}
-              contentFit="cover"
-              source={require("./assets/pngitem-4868092-2.png")}
-            />
-          </View>
-          </TouchableOpacity>
-          <View style={[styles.lodyOreoParent, styles.parentLayout]}>
-            <Text style={[styles.lodyOreo, styles.maaKawaTypo]}>Lody Oreo</Text>
-            <Image
-              style={[styles.image10Icon, styles.image10IconPosition]}
-              contentFit="cover"
-              source={require("./assets/image-10.png")}
-            />
-          </View>
-          <View style={[styles.lodyOreoParent, styles.parentLayout]}>
-            <Text style={[styles.mayPopcorn, styles.maaKawaTypo]}>
-              Duży popcorn
-            </Text>
-            <Image
-              style={styles.pngitem48680921Icon}
-              contentFit="cover"
-              source={require("./assets/pngitem-4868092-1.png")}
-            />
-          </View>
-          <View style={[styles.lodyOreoParent, styles.parentLayout]}>
-            <Text style={[styles.maaKawa, styles.maaKawaPosition]}>
-              Mała kawa
-            </Text>
-            <Image
-              style={styles.image30Icon}
-              contentFit="cover"
-              source={require("./assets/image-30.png")}
-            />
-          </View>
+        {/*elo*/}
+        <Carousel
+            layout={'default'}
+            ref={(ref) => (this.carousel = ref)}
+            data={carouselItems}
+            sliderWidth={300}
+            itemWidth={300}
+            renderItem={renderItem}
+            onSnapToItem={(index) => ActiveSlider(index)}
+        />
+          <Pagination
+              dotsLength={carouselItems.length}
+              activeDotIndex={activeIndex}
+              containerStyle={{ marginTop: -25 }}
+              dotStyle={{
+                width: 10,
+                height: 10,
+                borderRadius: 5,
+                marginHorizontal: 8,
+                backgroundColor: 'rgba(255, 255, 255, 0.8)', // Light color for active dot
+              }}
+              inactiveDotStyle={{
+                backgroundColor: 'rgba(255, 255, 255, 0.3)', // Light color for inactive dot
+              }}
+              inactiveDotOpacity={0.6} // Increase opacity for inactive dots
+              inactiveDotScale={0.8} // Decrease size for inactive dots
+          />
         </View>
+
+
+
         <View style={styles.naszeKlasykiParent}>
           <Text style={[styles.naszeKlasyki, styles.przekskiTypo]}>
             Nasze klasyki
