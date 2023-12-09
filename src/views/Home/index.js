@@ -6,9 +6,54 @@ import {styles} from "./styles";
 import Singleton from "../../Classes/User"
 import {PrzekaskiView} from "../Przekaski";
 import {UstawieniaView} from "../Ustawienia";
+import {useState} from "react";
+import Carousel from "react-native-snap-carousel";
 
 export function Home({ navigation }){
     console.log(Singleton.name);
+    const [activeIndex, setActiveIndex] = useState(0);
+    function ActiveSlider(index)
+    {
+        setActiveIndex(index);
+        console.log(index);
+    }
+    const carouselItems = [
+        { title: 'Item 1', text: 'Text 1' },
+        { title: 'Item 2', text: 'Text 2' },
+        { title: 'Item 3', text: 'Text 3' },
+        { title: 'Item 4', text: 'Text 4' },
+        { title: 'Item 5', text: 'Text 5' },
+    ];
+    const renderItem = ({ item, index }) => {
+        return (
+            <View
+                style={{
+                    backgroundColor: 'floralwhite',
+                    borderRadius: 5,
+                    height: 250,
+                    marginLeft: 25,
+                    marginRight: 25,
+                    justifyContent: 'center', // Center vertically
+                    alignItems: 'center',
+                    //!TODO paginationItemPadSize: 2,
+                }}
+            >
+
+                <Image
+                    style={{
+                        top: 7,
+                        left: 37,
+                        width: 88,
+                        height: 112,
+                        position: "absolute",
+                    }}
+                    source={item.imageSource}
+                />
+                <Text style={{ fontSize: 30 }}>{item.title}</Text>
+                <Text>{item.text}</Text>
+            </View>
+        );
+    };
     return (
         <ScrollView style={{ flex: 1 }}>
         <View style={styles.ekranGowny111}>
@@ -35,7 +80,23 @@ export function Home({ navigation }){
                             />
                         </TouchableOpacity>
                     </View>
+                    <View style={
+                        {
+                            marginTop: 150,
+                        }
+                    }>
+                        <Carousel
+                            layout={'default'}
+                            ref={(ref) => (this.carousel = ref)}
+                            data={carouselItems}
+                            sliderWidth={300}
+                            itemWidth={300}
+                            renderItem={renderItem}
+                            onSnapToItem={(index) => ActiveSlider(index)}
+                        />
+                    </View>
                 </View>
+
                 <View style={[styles.searchBarWrapper, styles.wrapperLayout]}>
                     <View style={styles.searchBar}>
                         <View style={styles.znajdFilmWRepertuarzeParent}>
