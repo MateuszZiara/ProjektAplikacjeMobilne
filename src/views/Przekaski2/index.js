@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Text, Pressable } from "react-native";
+import {StyleSheet, View, Text, Pressable, ScrollView} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles"
 
 export function Przekaski2View({ navigation }) {
   return (
+      <ScrollView>
     <View style={styles.wzr}>
       <View style={styles.headerEkranuPrzeksekParent}>
         <View style={styles.headerEkranuPrzeksek}>
@@ -64,8 +65,7 @@ export function Przekaski2View({ navigation }) {
               <View style={[styles.appName1, styles.appSpaceBlock]}>
                 <Text
                   style={[styles.ustawienia, styles.ustawieniaTypo]}
-                >{`Przekąski
-`}</Text>
+                >{`Przekąski`}</Text>
                 <Text style={[styles.ustawieniaKonta, styles.przekskiTypo]}>
                   Bestsellery
                 </Text>
@@ -149,60 +149,8 @@ export function Przekaski2View({ navigation }) {
             </View>
           </View>
         </View>
-        <View style={[styles.navigationBar, styles.navigationBarLayout]}>
-          <View style={[styles.homeinactiveParent, styles.image10IconPosition]}>
-            <View style={styles.homeinactiveLayout}>
-              <Pressable style={styles.ikonaDolnegoNavbaruNieakty} />
-            </View>
-            <Image
-              style={[styles.popcornactiveIcon, styles.homeinactiveLayout]}
-              contentFit="cover"
-              source={require("./assets/popcornactive.png")}
-            />
-            <Image
-              style={[styles.popcornactiveIcon, styles.homeinactiveLayout]}
-              contentFit="cover"
-              source={require("./assets/mask-group.png")}
-            />
-            <Image
-              style={[styles.popcornactiveIcon, styles.homeinactiveLayout]}
-              contentFit="cover"
-              source={require("./assets/mask-group1.png")}
-            />
-          </View>
-          <View style={[styles.iphoneIndicator, styles.navigationBarLayout]}>
-            <View style={styles.line} />
-          </View>
-          <Pressable style={styles.navigationBarChild} />
-        </View>
-      </View>
-      <View
-        style={[
-          styles.iphonestatusbarOgranicznik,
-          styles.iphonestatusbarPosition,
-        ]}
-      >
-        <View style={[styles.iphonestatusbar, styles.iphonestatusbarPosition]}>
-          <Text style={[styles.text, styles.textFlexBox]}>9.41</Text>
-          <View style={[styles.signalParent, styles.parentFlexBox]}>
-            <Image
-              style={styles.signalIcon}
-              contentFit="cover"
-              source={require("./assets/signal.png")}
-            />
-            <Image
-              style={styles.wiFiIcon}
-              contentFit="cover"
-              source={require("./assets/wifi.png")}
-            />
-            <Image
-              style={styles.fullBatteryIcon}
-              contentFit="cover"
-              source={require("./assets/full-battery.png")}
-            />
-          </View>
-        </View>
       </View>
     </View>
+      </ScrollView>
   );
 }

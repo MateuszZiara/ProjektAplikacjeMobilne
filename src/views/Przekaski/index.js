@@ -102,14 +102,16 @@ export function PrzekaskiView({ navigation }) {
           <View style={styles.curr} />
         </View>
         <View style={styles.sliderPrzekasek}>
+          <TouchableOpacity onPress={() => navigation.navigate(Przekaski2View)}>
           <View style={styles.parentLayout}>
-              <Text style={[styles.mayPopcorn, styles.maaKawaTypo]} onPress={() => navigation.navigate(Przekaski2View)}>Mały popcorn</Text>
+              <Text style={[styles.mayPopcorn, styles.maaKawaTypo]}>Mały popcorn</Text>
             <Image
               style={styles.pngitem48680922Icon}
               contentFit="cover"
               source={require("./assets/pngitem-4868092-2.png")}
             />
           </View>
+          </TouchableOpacity>
           <View style={[styles.lodyOreoParent, styles.parentLayout]}>
             <Text style={[styles.lodyOreo, styles.maaKawaTypo]}>Lody Oreo</Text>
             <Image

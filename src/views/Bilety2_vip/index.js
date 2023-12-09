@@ -35,7 +35,17 @@ export function Bilety2_vip({ navigation }) {
       return 'Rodzinny';
     }
   };
-
+  const getDynamicValue = () => {
+    if (Ticket.id === 1) {
+      return 50;
+    } else if (Ticket.id === 2) {
+      return 15;
+    } else if (Ticket.id === 3) {
+      return 30;
+    } else {
+      return 65;
+    }
+  }
   const getDynamicImage = () => {
     if (Ticket.id === 1) {
       return require('./assets/mask-group2.png');
@@ -121,7 +131,7 @@ export function Bilety2_vip({ navigation }) {
           }
 
         </Text>
-        <Text style={[styles.z, styles.zTypo]}>{35 * number} zł</Text>
+        <Text style={[styles.z, styles.zTypo]}>{number * getDynamicValue()} zł</Text>
         <Image
             style={styles.maskGroupIcon2}
             contentFit="cover"
