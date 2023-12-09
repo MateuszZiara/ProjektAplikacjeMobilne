@@ -2,14 +2,12 @@ import * as React from "react";
 import { Image } from "expo-image";
 import {StyleSheet, View, ScrollView, Text, TouchableOpacity, TextInput} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-
 import {styles} from "./styles"
 import {Bilety3_vip} from "../Bilety3_vip";
-import {Calendar} from "react-native-calendars";
 import {useState} from "react";
 import Ticket from "../../Classes/Ticket";
 import {Bilety1} from "../Bilety1";
-import {Input} from "@mui/material";
+
 export function Bilety2_vip({ navigation }) {
   const [number, setNumber] = useState(0);
 
@@ -207,20 +205,20 @@ export function Bilety2_vip({ navigation }) {
           />
         </View>
       </View>
+      <TouchableOpacity onPress={() =>navigation.navigate(Bilety3_vip)}>
       <View style={styles.rectangleParent}>
         <View style={styles.frameItem} />
         <View style={styles.garyLeeParent}>
-          <Text style={[styles.garyLee, styles.garyLeeTypo]} onPress={() => navigation.navigate(Bilety3_vip)}>Wybierz seans</Text>
-
-
-
+          <Text style={[styles.garyLee, styles.garyLeeTypo]}>Wybierz seans</Text>
           <Image
             style={[styles.maskGroupIcon3, styles.iconLayout]}
             contentFit="cover"
             source={require("./assets/mask-group3.png")}
           />
+
         </View>
       </View>
+      </TouchableOpacity>
     </View>
       </ScrollView>
   );

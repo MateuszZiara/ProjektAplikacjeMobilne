@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Text, ScrollView } from "react-native";
+import {StyleSheet, View, Text, ScrollView, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import {useState} from "react";
 import {Calendar} from "react-native-calendars";
+import {Przekaski2View} from "../Przekaski2";
+import {Bilety4_vip} from "../Bilety4_vip";
 
 export function Bilety3_vip({ navigation }) {
   const [selected, setSelected] = useState('');
@@ -97,10 +99,26 @@ export function Bilety3_vip({ navigation }) {
             monthTextColor: '#888'
           }}
       />
-    </View>
-        <View>
-
+      <TouchableOpacity onPress={() =>navigation.navigate(Bilety4_vip)}>
+      <View style={styles.rectangleParent}>
+        <View style={styles.frameItem} />
+        <View style={styles.garyLeeParent}>
+          <Text style={[styles.garyLee, styles.garyLeeTypo]}>Dalej</Text>
+          <Image
+              style={[styles.maskGroupIcon3, styles.iconLayout]}
+              contentFit="cover"
+              source={require("./assets/mask-group.png")}
+          />
         </View>
+        </View>
+      </TouchableOpacity>
+
+
+
+
+    </View>
+
+
 
       </ScrollView>
   );

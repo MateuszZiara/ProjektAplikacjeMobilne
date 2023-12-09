@@ -64,6 +64,38 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     overflow: "hidden",
   },
+  frameItem: {
+    borderRadius: 20,
+    backgroundColor: "#d9d9d9",
+    width: 185,
+    height: 89,
+    zIndex: 0,
+  },
+  maskGroupIcon3: {
+    marginLeft: 21,
+  },
+  garyLee: {
+    lineHeight: 26,
+    color: "#0c0c0c",
+    width: 105,
+  },
+  garyLeeTypo: {
+    height: 53,
+
+    fontWeight: "500",
+    fontSize: FontSize.size_mid,
+    textAlign: "left",
+  },
+  garyLeeParent: {
+    top: 16,
+    left: 14,
+    width: 154,
+    height: 56,
+    zIndex: 1,
+    alignItems: "center",
+    flexDirection: "row",
+    position: "absolute",
+  },
   ustawieniaTypo: {
     textAlign: "left",
     color: Color.colorWhitesmoke,
@@ -321,6 +353,8 @@ export const styles = StyleSheet.create({
   rectangleParent: {
     height: 34,
     width: 34,
+    marginTop:50,
+    marginLeft:100,
   },
   instanceContainer: {
     top: 154,
