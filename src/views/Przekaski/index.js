@@ -15,8 +15,8 @@ export function PrzekaskiView({ navigation }) {
     console.log(index);
   }
   const carouselItems  = [
-    { title: 'Mały', text: 'Popcorn', imageSource: require("./assets/pngitem-4868092-2.png") },
-    { title: 'Lody', text: 'Oreo', imageSource: require("./assets/image-10.png") },
+    { text: 'Mały Popcorn', imageSource: require("./assets/pngitem-4868092-2.png") },
+    { text: 'Lody Oreo', imageSource: require("./assets/image-10.png") },
     { title: 'Item 3', text: 'Text 3' },
     { title: 'Item 4', text: 'Text 4' },
     { title: 'Item 5', text: 'Text 5' },
