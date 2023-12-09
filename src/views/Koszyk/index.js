@@ -5,6 +5,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import {Bilety2_vip} from "../Bilety2_vip";
 import {Home} from "../Home";
+import {Bilety3_vip} from "../Bilety3_vip";
+import {Koszyk_platnosc} from "../Koszyk_platnosc";
 
 export function Koszyk({ navigation }){
   return (
@@ -147,6 +149,7 @@ export function Koszyk({ navigation }){
       <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
         <View style={styles.frameItem} />
         <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
+          <TouchableOpacity onPress={() =>navigation.navigate(Koszyk_platnosc)}>
           <Image
             style={styles.maskGroupIcon3}
             contentFit="cover"
@@ -155,6 +158,9 @@ export function Koszyk({ navigation }){
           <Text style={[styles.garyLee, styles.garyLeeTypo]}>
             Przejdź do Płatności
           </Text>
+
+          </TouchableOpacity>
+
         </View>
       </View>
     </View>
