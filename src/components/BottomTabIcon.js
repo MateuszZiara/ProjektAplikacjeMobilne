@@ -1,5 +1,6 @@
 import {StyleSheet, Image, View} from "react-native";
 import {PrzekaskiView} from "../views/Przekaski";
+import Cart from "../Classes/Cart";
 
 export const BottomTabIcon = ({ routeName, focused }) => {
     switch (routeName)
@@ -67,22 +68,47 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     source={require('../images/Calendar(inactive).png')}
                 />
             }
-        case 'Home2':
+        case 'Cart':
             if(focused)
             {
-                return <View style={styles.rectFocus}>
-                    <Image
-                        style={styles.imgActive}
-                        source={require('../images/CartConatins(active).png')}
-                    />
-                </View>
+
+                if(Cart.array.length !== 0) {
+                    console.log('Cart.array.length');
+                    return <View style={styles.rectFocus}>
+                        <Image
+                            style={styles.imgActive}
+                            source={require('../images/CartConatins(active).png')}
+                        />
+                    </View>
+                }
+                else {
+                    return <View style={styles.rectFocus}>
+                        <Image
+                            style={styles.imgActive}
+                            source={require('../CartEmpty(active)/Koszyk.png')}
+                        />
+                    </View>
+                }
             }
             else
             {
-                return <Image
-                    style={styles.img}
-                    source={require('../images/CartContains(inactive).png')} //albo ../images/CartEmpty(inactive).png
-                />
+                if(Cart.array.length !== 0) {
+                    console.log('Cart.array.length');
+                    return <View style={styles.rectFocus}>
+                        <Image
+                            style={styles.imgActive}
+                            source={require('../images/CartContains(inactive).png')}
+                        />
+                    </View>
+                }
+                else {
+                    return <View style={styles.rectFocus}>
+                        <Image
+                            style={styles.imgActive}
+                            source={require('../CartEmpty(inactive)/Koszyk.png')}
+                        />
+                    </View>
+                }
             }
     }
 }
