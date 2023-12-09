@@ -36,6 +36,7 @@ export const styles = StyleSheet.create({
     bottom: 0,
   },
   frameParentFlexBox: {
+
     flexDirection: "row",
     alignItems: "center",
   },
@@ -65,6 +66,7 @@ export const styles = StyleSheet.create({
     position: "absolute",
   },
   sliderItemPosition: {
+    marginTop:75,
     left: 21,
     position: "absolute",
   },

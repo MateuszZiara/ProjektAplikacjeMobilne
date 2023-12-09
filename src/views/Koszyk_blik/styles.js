@@ -9,14 +9,17 @@ export const FontSize = {
 };
 /* Colors */
 export const Color = {
-  colorGray_100: "#7f7f7f",
-  colorGray_200: "rgba(255, 255, 255, 0.5)",
   colorWhite: "#fff",
+  colorGray_100: "rgba(255, 255, 255, 0.5)",
   colorWhitesmoke: "#ececec",
 };
 /* Paddings */
 export const Padding = {
   p_8xs: 5,
+};
+/* border radiuses */
+export const Border = {
+  br_xl: 20,
 };
 
 
@@ -47,6 +50,7 @@ export const styles = StyleSheet.create({
   appSpaceBlock: {
     paddingVertical: Padding.p_8xs,
     paddingHorizontal: 0,
+    height: 106,
     justifyContent: "center",
     overflow: "hidden",
   },
@@ -68,23 +72,30 @@ export const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
   },
-  garyLeeTypo: {
-    height: 26,
+  oOOOTypo: {
+    fontWeight: "700",
+    fontSize: FontSize.size_lg,
+    top: 303,
     textAlign: "left",
-    fontWeight: "500",
-    fontSize: FontSize.size_mid,
+    position: "absolute",
   },
   textPosition: {
     left: "50%",
     position: "absolute",
   },
-  oOOOTypo: {
-    fontWeight: "700",
-    fontSize: FontSize.size_lg,
-    top: 310,
-    position: "absolute",
-    textAlign: 'left',
-    flexWrap: 'wrap',
+  garyLeeTypo: {
+    lineHeight: 26,
+    textAlign: "left",
+    fontWeight: "500",
+    fontSize: FontSize.size_mid,
+  },
+  inputLayout: {
+    height: 62,
+    width: 50,
+    borderWidth: 2,
+    borderColor: Color.colorWhite,
+    borderRadius: Border.br_xl,
+    borderStyle: "solid",
   },
   image2Icon: {
     width: 434,
@@ -120,9 +131,9 @@ export const styles = StyleSheet.create({
   twojeKonto: {
     height: 53,
     textAlign: "left",
+    fontWeight: "500",
     fontSize: FontSize.size_mid,
     width: 322,
-    fontWeight: "500",
   },
   zamwienie: {
     fontSize: 33,
@@ -132,9 +143,6 @@ export const styles = StyleSheet.create({
   },
   appName: {
     width: 267,
-    height: 106,
-    paddingVertical: Padding.p_8xs,
-    paddingHorizontal: 0,
   },
   appNameWrapper: {
     width: 258,
@@ -195,10 +203,13 @@ export const styles = StyleSheet.create({
     top: -4,
     left: 51,
     borderRadius: 50,
-    borderStyle: "solid",
     borderColor: "rgba(255, 255, 255, 0.14)",
     borderWidth: 4,
+    borderStyle: "solid",
     justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
+    position: "absolute",
   },
   koszykParent: {
     width: 110,
@@ -222,8 +233,11 @@ export const styles = StyleSheet.create({
     height: 30,
   },
   zamwienie1: {
+    height: 26,
+    textAlign: "left",
+    fontWeight: "500",
+    fontSize: FontSize.size_mid,
     width: 322,
-    color: Color.colorWhitesmoke,
   },
   ustawieniaKonta: {
     fontSize: 30,
@@ -232,12 +246,10 @@ export const styles = StyleSheet.create({
     marginTop: -22,
     height: 55,
     color: Color.colorWhitesmoke,
+    fontWeight: "600",
   },
   appName1: {
     width: 278,
-    height: 106,
-    paddingVertical: Padding.p_8xs,
-    paddingHorizontal: 0,
   },
   appNameContainer: {
     width: 235,
@@ -254,62 +266,38 @@ export const styles = StyleSheet.create({
     width: 294,
     justifyContent: "center",
   },
-  zamwienie2: {
-    fontSize: 20,
-    textAlign: "center",
-    width: 363,
-    height: 77,
-    color: Color.colorWhitesmoke,
-    fontWeight: "500",
-  },
-  appName2: {
-    marginLeft: -189,
-    top: 450,
-    width: 347,
-    height: 115,
-    paddingVertical: Padding.p_8xs,
-    paddingHorizontal: 0,
-    justifyContent: "center",
-    overflow: "hidden",
-  },
   patnoKart: {
-    color: Color.colorWhite,
-  },
-  gotwkaPrzyKasie: {
-    color: Color.colorGray_200,
+    color: Color.colorGray_100,
   },
   blik: {
-    color: Color.colorGray_100,
+    color: Color.colorWhite,
   },
   patnoKartGotwkaPrzyContainer1: {
     lineBreak: "anywhere",
     width: "100%",
   },
   patnoKartGotwkaPrzyContainer: {
-    left: 58,
+    left: 62,
     width: 181,
     display: "flex",
     alignItems: "center",
   },
-  oOOO: {
-    left: 32,
-  },
   frameItem: {
-    borderRadius: 20,
     backgroundColor: Color.colorWhite,
     width: 370,
     height: 89,
     zIndex: 0,
+    borderRadius: Border.br_xl,
   },
   maskGroupIcon: {
     width: 40,
     height: 40,
   },
   garyLee: {
-    lineHeight: 26,
     color: "#0c0c0c",
-    width: 223,
+    width: 226,
     marginLeft: 21,
+    height: 26,
   },
   maskGroupParent: {
     top: 22,
@@ -317,8 +305,26 @@ export const styles = StyleSheet.create({
     zIndex: 1,
   },
   rectangleParent: {
-    marginLeft: -186,
-    top: 648,
+    marginLeft: -185,
+    top: 658,
+  },
+  oOOO: {
+    left: 36,
+  },
+  inputItem: {
+    marginLeft: 10,
+  },
+  input: {
+    marginLeft: -176,
+    top: 478,
+    flexDirection: "row",
+    left: "50%",
+  },
+  wprowadPowyejKod: {
+    top: 565,
+    left: 87,
+    color: Color.colorWhite,
+    position: "absolute",
   },
   wzr: {
     backgroundColor: "#000",

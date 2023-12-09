@@ -3,10 +3,9 @@ import { Image } from "expo-image";
 import {StyleSheet, View, Text, ScrollView, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
-import {Koszyk_blik} from "../Koszyk_blik";
-import {Koszyk} from "../Koszyk";
-import {Koszyk_karta} from "../Koszyk_karta";
-export function Koszyk_platnosc({ navigation }){
+import {Koszyk_platnosc} from "../Koszyk_platnosc";
+
+export function Koszyk_blik({ navigation }){
   return (
       <ScrollView>
     <View style={[styles.wzr, styles.wzrLayout]}>
@@ -67,7 +66,7 @@ export function Koszyk_platnosc({ navigation }){
                 <Text style={[styles.text, styles.textFlexBox]}>2</Text>
               </View>
             </View>
-            <View style={[styles.vectorWrapper, styles.parentFlexBox]}>
+            <View style={styles.vectorWrapper}>
               <Image
                 style={styles.frameChild}
                 contentFit="cover"
@@ -78,7 +77,7 @@ export function Koszyk_platnosc({ navigation }){
         </View>
       </View>
       <View style={[styles.backParent, styles.parentFlexBox]}>
-        <TouchableOpacity onPress={() =>navigation.navigate(Koszyk)}>
+        <TouchableOpacity onPress={() =>navigation.navigate(Koszyk_platnosc)}>
         <Image
           style={styles.backIcon}
           contentFit="cover"
@@ -88,7 +87,9 @@ export function Koszyk_platnosc({ navigation }){
         <View style={[styles.frameContainer, styles.frameFlexBox]}>
           <View style={styles.appNameContainer}>
             <View style={[styles.appName1, styles.appSpaceBlock]}>
-              <Text style={[styles.zamwienie1, styles.garyLeeTypo]}>{`Zamówienie
+              <Text
+                style={[styles.zamwienie1, styles.zamwienieLayout]}
+              >{`Zamówienie
 `}</Text>
               <Text style={[styles.ustawieniaKonta, styles.textTypo]}>
                 Płatności
@@ -97,26 +98,15 @@ export function Koszyk_platnosc({ navigation }){
           </View>
         </View>
       </View>
-      <View style={[styles.appName2, styles.textPosition]}>
-        <Text style={styles.zamwienie2}>
-          {`Nie została podpięta `}
-          {`żadna karta płatnicza. `}Dodaj ją poniżej.
-        </Text>
-      </View>
       <Text style={[styles.patnoKartGotwkaPrzyContainer, styles.oOOOTypo]}>
-
-          <Text style={styles.patnoKart} onPress={() =>navigation.navigate(Koszyk_karta)}>Płatność kartą </Text>
-
-          <Text style={styles.gotwkaPrzyKasie}>Gotówka przy kasie </Text>
-
-          <Text style={styles.blik} onPress={() =>navigation.navigate(Koszyk_blik)}>BLIK                          </Text>
-
-          <Text style={styles.gotwkaPrzyKasie}>Paypal</Text>
-
+        <Text style={styles.patnoKartGotwkaPrzyContainer1}>
+          <Text style={styles.patnoKart}>Płatność kartą </Text>
+          <Text style={styles.patnoKart}>Gotówka przy kasie </Text>
+          <Text style={styles.blik}>BLIK                            </Text>
+          <Text style={styles.patnoKart}>Paypal</Text>
+        </Text>
       </Text>
-      <Text style={[styles.oOOO, styles.oOOOTypo]}>
 
-      </Text>
       <View style={[styles.rectangleParent, styles.textPosition]}>
         <View style={styles.frameItem} />
         <View style={[styles.maskGroupParent, styles.parentFlexBox]}>
@@ -126,11 +116,27 @@ export function Koszyk_platnosc({ navigation }){
             source={require("./assets/mask-group.png")}
           />
           <Text style={[styles.garyLee, styles.garyLeeTypo]}>
-            Dodaj kartę płatniczą
+            Zatwierdź płatność
           </Text>
         </View>
       </View>
+
+      <View style={[styles.input, styles.textPosition]}>
+        <View style={styles.inputLayout} />
+        <View style={[styles.inputItem, styles.inputLayout]} />
+        <View style={[styles.inputItem, styles.inputLayout]} />
+        <View style={[styles.inputItem, styles.inputLayout]} />
+        <View style={[styles.inputItem, styles.inputLayout]} />
+        <View style={[styles.inputItem, styles.inputLayout]} />
+      </View>
+      <Text style={[styles.wprowadPowyejKod, styles.garyLeeTypo]}>
+        Wprowadź powyżej kod BLIK
+      </Text>
     </View>
       </ScrollView>
   );
 }
+
+
+
+
