@@ -67,7 +67,7 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     source={require('../images/Calendar(inactive).png')}
                 />
             }
-        case 'Home2':
+        case 'Koszyk':
             if(focused)
             {
                 return <View style={styles.rectFocus}>

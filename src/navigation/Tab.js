@@ -5,6 +5,7 @@ import {BottomTabIcon} from "../components/BottomTabIcon";
 import {PrzekaskiView} from "../views/Przekaski";
 import {Bilety1} from "../views/Bilety1";
 import {RepertuarView} from "../views/Repertuar";
+import {Koszyk} from "../views/Koszyk";
 
 const optionScreen = {
     headerShown: false,
@@ -26,7 +27,7 @@ export default function TabNav() {
             <Tab.Screen name="PrzekaskiView" component={PrzekaskiView} options={optionScreen} />
             <Tab.Screen name="Bilety1" component={Bilety1} options={optionScreen} />
             <Tab.Screen name="RepertuarView" component={RepertuarView} options={optionScreen} />
-            <Tab.Screen name="Home2" component={Home} options={optionScreen} />
+            <Tab.Screen name="Koszyk" component={Koszyk} options={optionScreen} />
         </Tab.Navigator>
     );
 }
