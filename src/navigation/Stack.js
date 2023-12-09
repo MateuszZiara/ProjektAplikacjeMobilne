@@ -10,6 +10,7 @@ import {Bilety2_vip} from "../views/Bilety2_vip";
 import {Bilety3_vip} from "../views/Bilety3_vip";
 import {UstawieniaView} from "../views/Ustawienia";
 import {Bilety4_vip} from "../views/Bilety4_vip";
+import {SzczegolyKonta} from "../views/SzczegolyKonta";
 
 
 
@@ -31,6 +32,7 @@ export default function StackNav() {
             <Stack.Screen name="TabNav" component={TabNav} options={optionScreen} />
             <Stack.Screen name="Test" component={Test} options={optionScreen} />
             <Stack.Screen name="UstawieniaView" component={UstawieniaView} options={optionScreen} />
+            <Stack.Screen name="SzczegolyKonta" component={SzczegolyKonta} options={optionScreen} />
 
 
         </Stack.Navigator>
