@@ -5,6 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import {Color, styles} from "./styles"
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {useState} from "react";
+import Cart from "../../Classes/Cart";
 
 export function PrzekaskiView({ navigation }) {
   const width = Dimensions.get('window').width;
@@ -21,8 +22,30 @@ export function PrzekaskiView({ navigation }) {
     { title: 'Item 4', text: 'Text 4' },
     { title: 'Item 5', text: 'Text 5' },
   ];
+  function addToCart(index)
+  {
+      console.log("start");
+      console.log(Cart.array.length);
+      let contains = false;
+      if(index === 0)
+      {
+          for(let i = 0; i < Cart.array.length; ++i)
+          {
+              if(Cart.array[i].id === 0)
+              {
+                  contains = true;
+              }
+          }
+          if(contains === false)
+          {
+              Cart.array.push({id: 0, img: './assets/pngitem-4868092-2.png', amount: 1})
+          }
+          console.log("chuj");
+      }
+  }
   const renderItem = ({ item, index }) => {
     return (
+        <TouchableOpacity onPress={() => addToCart(index)}>
         <View
             style={{
               backgroundColor: Color.colorGray_100,
@@ -54,6 +77,7 @@ export function PrzekaskiView({ navigation }) {
           <Text style={{ fontSize: 30, color:'white', marginTop:85}} >{item.title}</Text>
           <Text style={{color:'white', }}>{item.text}</Text>
         </View>
+        </TouchableOpacity>
     );
   };
   return (
