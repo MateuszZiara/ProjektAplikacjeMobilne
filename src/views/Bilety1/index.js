@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import {StyleSheet, View, Text, StatusBar, ScrollView, Button} from "react-native";
+import {StyleSheet, View, Text, StatusBar, ScrollView, Button, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {Bilety2_vip} from "../Bilety2_vip";
-
+import Ticket from "../../Classes/Ticket";
 export function Bilety1({ navigation }) {
     return (
         <ScrollView>
@@ -70,27 +70,30 @@ export function Bilety1({ navigation }) {
                 </View>
                 <View style={styles.sliderPrzekasekParent} >
                     <View style={[styles.sliderPrzekasek, styles.sliderPosition]}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 1} navigation.navigate(Bilety2_vip)}}>
                         <View style={styles.parentLayout}>
-                            <Text style={[styles.vip, styles.vipClr]} onPress={() => navigation.navigate(Bilety2_vip)}>VIP</Text>
+                            <Text style={[styles.vip, styles.vipClr]}>VIP</Text>
                             <Image
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"
                                 source={require("./assets/mask-group.png")}
-                                onPress={() => navigation.navigate(Bilety2_vip)}
                             />
                         </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 2} navigation.navigate(Bilety2_vip)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
 
-                            <Text style={[styles.ulgowyParent, styles.vipClr]}>Ulgowy</Text>
-
+                            <Text style={[styles.normalny, styles.vipClr]}>Ulgowy</Text>
                             <Image
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"
                                 source={require("./assets/mask-group1.png")}
                             />
                         </View>
+                        </TouchableOpacity>
                     </View>
                     <View style={[styles.sliderPrzekasek1, styles.sliderPosition]}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 3} navigation.navigate(Bilety2_vip)}}>
                         <View style={styles.parentLayout}>
                             <Image
                                 style={styles.maskGroupIcon}
@@ -99,14 +102,17 @@ export function Bilety1({ navigation }) {
                             />
                             <Text style={[styles.normalny, styles.vipClr]}>Normalny</Text>
                         </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 4} navigation.navigate(Bilety2_vip)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
-                            <Text style={[styles.lodyOreo, styles.vipClr]}>Rodzinny</Text>
+                            <Text style={[styles.lodyOreo, styles.vipClr] }>Rodzinny</Text>
                             <Image
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"
                                 source={require("./assets/mask-group3.png")}
                             />
                         </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
