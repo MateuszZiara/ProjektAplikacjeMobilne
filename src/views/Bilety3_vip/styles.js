@@ -348,7 +348,7 @@ export const styles = StyleSheet.create({
     overflow: "hidden",
   },
   wybprDaty: {
-    backgroundColor: "#000",
+    backgroundColor: "#0c0c0c",
     flex: 1,
     width: "100%",
     height: 896,

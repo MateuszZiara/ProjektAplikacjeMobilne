@@ -5,6 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import Singleton from "../../Classes/User"
 import {PrzekaskiView} from "../Przekaski";
+import {UstawieniaView} from "../Ustawienia";
 
 export function Home({ navigation }){
     console.log(Singleton.name);
@@ -26,13 +27,13 @@ export function Home({ navigation }){
                                 </View>
                             </View>
                         </View>
-                        <View style={styles.vectorWrapper}>
+                        <TouchableOpacity style={styles.vectorWrapper} onPress={() => navigation.navigate(UstawieniaView)}>
                             <Image
                                 style={styles.frameChild}
                                 contentFit="cover"
                                 source={require("./assets/ellipse-19.png")}
                             />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <View style={[styles.searchBarWrapper, styles.wrapperLayout]}>
