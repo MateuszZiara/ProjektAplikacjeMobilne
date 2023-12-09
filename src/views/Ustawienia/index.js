@@ -52,7 +52,7 @@ export function UstawieniaView({ navigation }) {
 
                             </TouchableWithoutFeedback>
 
-                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Home')}>
+                            <TouchableWithoutFeedback onPress={() => navigation.navigate('SzczegolyKonta')}>
 
                                     <Image
                                         style={[styles.pencilIcon, styles.frameItemLayout]}
