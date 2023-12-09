@@ -1,12 +1,25 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import {StyleSheet, Text, View, ScrollView, TouchableOpacity} from "react-native";
+import {StyleSheet, Text, View, ScrollView, TouchableOpacity, FlatList} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import {Bilety2_vip} from "../Bilety2_vip";
 import {Home} from "../Home";
+import Cart from "../../Classes/Cart";
 
 export function Koszyk({ navigation }){
+  const renderItem = ({ item }) => (
+      <View >
+        <Image source={
+
+        } />
+        <Text style={
+          {
+            color: 'white',
+          }
+        }>{`ID: ${item.id}, Count: ${item.amount}`}</Text>
+      </View>
+  );
   return (
       <ScrollView>
     <View style={[styles.wzr, styles.wzrLayout]}>
@@ -61,6 +74,7 @@ export function Koszyk({ navigation }){
                 </View>
               </View>
             </View>
+
           </View>
 
 
@@ -85,7 +99,15 @@ export function Koszyk({ navigation }){
             </View>
           </View>
         </View>
-        
+      </View>
+      <View style={{
+        marginTop: 300,
+      }}>
+        <FlatList
+            data={Cart.array}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id.toString()}
+        />
       </View>
     </View>
       </ScrollView>

@@ -40,7 +40,7 @@ export function PrzekaskiView({ navigation }) {
           {
               Cart.array.push({id: 0, img: './assets/pngitem-4868092-2.png', amount: 1})
           }
-          console.log("chuj");
+
       }
   }
   const renderItem = ({ item, index }) => {
