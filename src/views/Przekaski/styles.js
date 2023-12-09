@@ -14,9 +14,12 @@ export const Color = {
   colorGray_200: "rgba(255, 255, 255, 0.1)",
   colorGray_300: "rgba(255, 255, 255, 0.15)",
   colorWhite: "#fff",
+  cwhite: "rbga(255,255,255,0)",
   colorWhitesmoke_100: "#ececec",
   colorLightgray: "#cbcbcb",
 };
+
+
 /* Paddings */
 export const Padding = {
   p_7xs: 6,
@@ -104,6 +107,7 @@ export const styles = StyleSheet.create({
     textAlign: "left",
     position: "absolute",
   },
+
   parentLayout: {
     width: 161,
     backgroundColor: Color.colorGray_200,

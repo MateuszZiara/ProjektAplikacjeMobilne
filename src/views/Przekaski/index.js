@@ -2,8 +2,7 @@ import * as React from "react";
 import { Image } from "expo-image";
 import {StyleSheet, View, Text, Pressable, Dimensions, ScrollView, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import {styles} from "./styles"
-import {Przekaski2View} from "../Przekaski2";
+import {Color, styles} from "./styles"
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {useState} from "react";
 
@@ -16,8 +15,8 @@ export function PrzekaskiView({ navigation }) {
     console.log(index);
   }
   const carouselItems = [
-    { title: 'Item 1', text: 'Text 1', imageSource: require("./assets/pngitem-4868092-2.png") },
-    { title: 'Item 2', text: 'Text 2' },
+    { title: 'Mały', text: 'Popcorn', imageSource: require("./assets/pngitem-4868092-2.png") },
+    { title: 'Lody', text: 'Oreo', imageSource: require("./assets/image-10.png") },
     { title: 'Item 3', text: 'Text 3' },
     { title: 'Item 4', text: 'Text 4' },
     { title: 'Item 5', text: 'Text 5' },
@@ -26,13 +25,18 @@ export function PrzekaskiView({ navigation }) {
     return (
         <View
             style={{
-              backgroundColor: 'floralwhite',
-              borderRadius: 5,
-              height: 250,
-              marginLeft: 25,
+              backgroundColor: Color.colorGray_100,
+              borderRadius: 30,
+              height: 150,
+              width:150,
+              marginLeft: 55,
               marginRight: 25,
               justifyContent: 'center', // Center vertically
               alignItems: 'center',
+                marginTop: 20,
+
+
+
               //!TODO paginationItemPadSize: 2,
             }}
         >
@@ -40,15 +44,15 @@ export function PrzekaskiView({ navigation }) {
           <Image
             style={{
               top: 7,
-              left: 37,
+              left: 33,
               width: 88,
               height: 112,
               position: "absolute",
           }}
             source={item.imageSource}
         />
-          <Text style={{ fontSize: 30 }}>{item.title}</Text>
-          <Text>{item.text}</Text>
+          <Text style={{ fontSize: 30, color:'white', marginTop:85}} >{item.title}</Text>
+          <Text style={{color:'white', }}>{item.text}</Text>
         </View>
     );
   };
