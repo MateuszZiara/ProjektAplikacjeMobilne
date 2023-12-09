@@ -68,7 +68,7 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     source={require('../images/Calendar(inactive).png')}
                 />
             }
-        case 'Cart':
+        case 'Koszyk':
             if(focused)
             {
 

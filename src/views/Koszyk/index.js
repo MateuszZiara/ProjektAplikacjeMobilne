@@ -78,84 +78,14 @@ export function Koszyk({ navigation }){
                 <View style={[styles.appName1, styles.appSpaceBlock]}>
                   <Text
                     style={[styles.zamwienie1, styles.garyLeeTypo]}
-                  >{`Zamówienie
-`}</Text>
+                  >{`Zamówienie`}</Text>
                   <Text style={styles.ustawieniaKonta}>Koszyk</Text>
                 </View>
               </View>
             </View>
           </View>
         </View>
-        <View style={styles.zestaw}>
-          <View style={[styles.duyPopcornParent, styles.parentLayout]}>
-            <Text style={[styles.duyPopcorn, styles.xFlexBox]}>
-              Duży popcorn
-            </Text>
-            <Text style={[styles.z, styles.zTypo]}>18 zł</Text>
-            <Image
-              style={[
-                styles.closeUpDeliciousSaltedPopcIcon,
-                styles.parentPosition,
-              ]}
-              contentFit="cover"
-              source={require("./assets/closeupdelicioussaltedpopcornreadybeservedtransformed-1.png")}
-            />
-            <View style={styles.ellipseParent}>
-              <Image
-                style={[styles.groupChild, styles.childLayout]}
-                contentFit="cover"
-                source={require("./assets/ellipse-79.png")}
-              />
-              <Text style={[styles.x, styles.zTypo]}>2x</Text>
-            </View>
-          </View>
-          <View style={[styles.biletUlgowyParent, styles.parentLayout]}>
-            <Text style={[styles.biletUlgowy, styles.xFlexBox]}>
-              Bilet Ulgowy
-            </Text>
-            <Text style={[styles.z1, styles.zTypo]}>18 zł</Text>
-            <Image
-              style={styles.maskGroupIcon2}
-              contentFit="cover"
-              source={require("./assets/mask-group2.png")}
-            />
-            <Text style={[styles.z, styles.zTypo]}>16 zł</Text>
-          </View>
-          <View style={[styles.biletUlgowyParent, styles.parentLayout]}>
-            <Text style={[styles.biletUlgowy, styles.xFlexBox]}>
-              Duży napój
-            </Text>
-            <Text style={[styles.z1, styles.zTypo]}>18 zł</Text>
-            <Image
-              style={styles.image28Icon}
-              contentFit="cover"
-              source={require("./assets/image-28.png")}
-            />
-            <Text style={[styles.z, styles.zTypo]}>18 zł</Text>
-          </View>
-          <View style={styles.vectorParent}>
-            <Image
-              style={styles.groupItem}
-              contentFit="cover"
-              source={require("./assets/line-1.png")}
-            />
-            <Text style={[styles.z5, styles.z5Typo]}>52 zł</Text>
-            <Text style={[styles.doZapaty, styles.z5Typo]}>Do zapłaty:</Text>
-          </View>
-        </View>
-      </View>
-      <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
-        <View style={styles.frameItem} />
-        <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
-          <Image
-            style={styles.maskGroupIcon3}
-            contentFit="cover"
-            source={require("./assets/mask-group3.png")}
-          />
-          <Text style={[styles.garyLee, styles.garyLeeTypo]}>
-            Przejdź do Płatności
-          </Text>
-        </View>
+        
       </View>
     </View>
       </ScrollView>
