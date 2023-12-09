@@ -8,6 +8,7 @@ import {Test} from "../views/test";
 import {Przekaski2View} from "../views/Przekaski2";
 import {Bilety2_vip} from "../views/Bilety2_vip";
 import {Bilety3_vip} from "../views/Bilety3_vip";
+import {UstawieniaView} from "../views/Ustawienia";
 
 
 
@@ -27,6 +28,7 @@ export default function StackNav() {
             <Stack.Screen name="Przekaski2View" component={Przekaski2View} options={optionScreen} />
             <Stack.Screen name="TabNav" component={TabNav} options={optionScreen} />
             <Stack.Screen name="Test" component={Test} options={optionScreen} />
+            <Stack.Screen name="UstawieniaView" component={UstawieniaView} options={optionScreen} />
 
 
         </Stack.Navigator>
