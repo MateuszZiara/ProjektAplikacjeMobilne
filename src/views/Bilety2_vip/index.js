@@ -1,14 +1,82 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, ScrollView, Text } from "react-native";
+import {StyleSheet, View, ScrollView, Text, TouchableOpacity, TextInput} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import {styles} from "./styles"
 import {Bilety3_vip} from "../Bilety3_vip";
 import {Calendar} from "react-native-calendars";
 import {useState} from "react";
-
+import Ticket from "../../Classes/Ticket";
+import {Bilety1} from "../Bilety1";
+import {Input} from "@mui/material";
 export function Bilety2_vip({ navigation }) {
+  const [number, setNumber] = useState(0);
+
+  function sub()
+  {
+    if(number === 0)
+    {
+
+    }
+    else
+    {
+      setNumber(number-1);
+    }
+  }
+  const getDynamicText = () => {
+    if (Ticket.id === 1) {
+      return 'VIP';
+    } else if (Ticket.id === 2) {
+      return 'Ulgowy';
+    } else if (Ticket.id === 3) {
+      return 'Normalny';
+    } else {
+      return 'Rodzinny';
+    }
+  };
+
+  const getDynamicImage = () => {
+    if (Ticket.id === 1) {
+      return require('./assets/mask-group2.png');
+    } else if (Ticket.id === 2) {
+      return require('../Bilety1/assets/mask-group1.png');
+    } else if (Ticket.id === 3) {
+      return require('../Bilety1/assets/mask-group2.png');
+    } else {
+      return require('../Bilety1/assets/mask-group3.png');
+    }
+  };
+  const onChangeText = (newText)=>{
+    /*
+      If text is above or below length of limits then exit function
+    */
+    if(newText < 0)
+    {
+      setNumber(0);
+      newText = 0;
+      return;
+    }
+    if (newText > 20){
+      setNumber(19);
+      newText = 19;
+      return;
+    }
+
+    // Else update text
+    setNumber(newText);
+  }
+  function add()
+  {
+    if(number === 19)
+    {
+      return;
+    }
+    else
+    {
+      setNumber(number + 1);
+    }
+  }
   return (
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.wzr}>
@@ -43,36 +111,25 @@ export function Bilety2_vip({ navigation }) {
           styles.iphonestatusbarPosition,
         ]}
       >
-        <View style={[styles.iphonestatusbar, styles.iphonestatusbarPosition]}>
-          <Text style={[styles.text, styles.textFlexBox]}>9.41</Text>
-          <View style={styles.signalParent}>
-            <Image
-              style={styles.signalIcon}
-              contentFit="cover"
-              source={require("./assets/signal.png")}
-            />
-            <Image
-              style={styles.wiFiIcon}
-              contentFit="cover"
-              source={require("./assets/wifi.png")}
-            />
-            <Image
-              style={styles.fullBatteryIcon}
-              contentFit="cover"
-              source={require("./assets/full-battery.png")}
-            />
-          </View>
-        </View>
+
+
       </View>
       <View style={[styles.biletVipParent, styles.parentBg]}>
-        <Text style={[styles.biletVip, styles.zTypo]}>Bilet VIP</Text>
-        <Text style={[styles.z, styles.zTypo]}>35 zł</Text>
+        <Text style={[styles.biletVip, styles.zTypo]}>
+          {
+            getDynamicText()
+          }
+
+        </Text>
+        <Text style={[styles.z, styles.zTypo]}>{35 * number} zł</Text>
         <Image
-          style={styles.maskGroupIcon2}
-          contentFit="cover"
-          source={require("./assets/mask-group2.png")}
+            style={styles.maskGroupIcon2}
+            contentFit="cover"
+            source={getDynamicImage()}
         />
+
         <View style={[styles.parent, styles.parentBg]}>
+          <TouchableOpacity onPress={() => sub()}>
           <View style={styles.view}>
             <LinearGradient
               style={[styles.child, styles.childPosition]}
@@ -81,26 +138,33 @@ export function Bilety2_vip({ navigation }) {
             />
             <Text style={[styles.text1, styles.textTypo]}>-</Text>
           </View>
+          </TouchableOpacity>
           <View style={[styles.counter, styles.view1ShadowBox]}>
             <View style={[styles.counterChild, styles.childPosition]} />
-            <Text style={[styles.text2, styles.textTypo]}>1</Text>
+            <Text style={[styles.text2, styles.textTypo]} onChangeText={value => onChangeText(value)}>{number}</Text>
           </View>
+          <TouchableOpacity onPress={() => add()}>
           <View style={[styles.view1, styles.view1ShadowBox]}>
             <LinearGradient
               style={[styles.child, styles.childPosition]}
               locations={[0, 1]}
               colors={["rgba(136, 243, 28, 0.2)", "rgba(82, 158, 5, 0.2)"]}
             />
+
             <Text style={[styles.text3, styles.textTypo]}>+</Text>
           </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={styles.backParent}>
+        <TouchableOpacity onPress={() => navigation.navigate(Bilety1)}>
         <Image
           style={styles.backIcon}
           contentFit="cover"
+          pres
           source={require("./assets/back.png")}
         />
+        </TouchableOpacity>
         <View style={[styles.frameWrapper, styles.frameFlexBox]}>
           <View style={styles.appNameWrapper}>
             <View style={[styles.appName, styles.appSpaceBlock]}>
@@ -108,7 +172,7 @@ export function Bilety2_vip({ navigation }) {
                 Bilety
               </Text>
               <Text style={[styles.ustawieniaKonta, styles.biletyTypo]}>
-                VIP
+                {getDynamicText()}
               </Text>
             </View>
           </View>

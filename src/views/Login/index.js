@@ -21,7 +21,7 @@ export function Login({ navigation }) {
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(LoginView)}>
                     <Text style={styles.buttonText}>Zaloguj/Zarejestruj się</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(Test)}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate(TabNav)}>
                     <Text style={styles.buttonText}>Kontynuuj bez rejestracji</Text>
                 </TouchableOpacity>
             </ImageBackground>
