@@ -1,19 +1,20 @@
 import * as React from "react";
-import {Text, StyleSheet, View, TouchableOpacity} from "react-native";
+import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback} from "react-native";
 import { Image } from "expo-image";
 import { Border, FontSize, FontFamily, Color } from "./styles.js";
 import { styles } from "./styles.js";
 import Singleton from "../../Classes/User";
 import {PrzekaskiView} from "../Przekaski";
+import {Home} from "../Home";
 
 export function UstawieniaView({ navigation }) {
     {
         return (
             <View style={styles.wzr}>
-                <View style={styles.wzrInner}>
+                <ScrollView style={styles.wzrInner}>
                     <View style={styles.frameParent}>
                         <View style={styles.titleParent}>
-                            <Text style={{ fontFamily: 'Inter_900Black', fontSize: 40 }}>Edytuj Profil</Text>
+                            <Text style={{fontFamily: 'Inter_900Black', fontSize: 40}}>Edytuj Profil</Text>
                             <View style={styles.frameGroup}>
                                 <View style={[styles.vectorWrapper, styles.wrapperFlexBox]}>
                                     <Image
@@ -41,20 +42,29 @@ export function UstawieniaView({ navigation }) {
                                     </View>
                                 </View>
                             </View>
-                            <Image
-                                style={[styles.frameItem, styles.frameItemLayout]}
-                                contentFit="cover"
-                                source={require("./assets/ellipse-78.png")}
-                            />
-                            <Image
-                                style={[styles.pencilIcon, styles.frameItemLayout]}
-                                contentFit="cover"
-                                source={require("./assets/pencil.png")}
-                            />
+
+                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Home')}>
+                                    <Image
+                                        style={[styles.frameItem, styles.frameItemLayout]}
+                                        contentFit="cover"
+                                        source={require('./assets/ellipse-78.png')}
+                                    />
+
+                            </TouchableWithoutFeedback>
+
+                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Home')}>
+
+                                    <Image
+                                        style={[styles.pencilIcon, styles.frameItemLayout]}
+                                        contentFit="cover"
+                                        source={require('./assets/pencil.png')}
+                                    />
+                            </TouchableWithoutFeedback>
+
+
                         </View>
-
-
-                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate(PrzekaskiView)}>
+                        <TouchableOpacity style={styles.rectangleParent}
+                                          onPress={() => navigation.navigate(PrzekaskiView)}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.adjustParent, styles.parentGroupPosition]}>
                                 <Image
@@ -127,7 +137,7 @@ export function UstawieniaView({ navigation }) {
                             </View>
                         </View>
                     </View>
-                </View>
+                </ScrollView>
                 <View style={[styles.navigationBar, styles.navigationBarLayout]}>
                     <View style={styles.homeinactiveParent}>
                         <Image

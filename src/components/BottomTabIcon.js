@@ -1,4 +1,4 @@
-import {StyleSheet, Image} from "react-native";
+import {StyleSheet, Image, View} from "react-native";
 import {PrzekaskiView} from "../views/Przekaski";
 
 export const BottomTabIcon = ({ routeName, focused }) => {
@@ -50,6 +50,40 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     source={require('../images/Ticket(inactive).png')}
                 />
             }
+        case 'RepertuarView':
+            if(focused)
+            {
+                return <View style={styles.rectFocus}>
+                <Image
+                    style={styles.imgActive}
+                    source={require('../images/Calendar(active).png')}
+                />
+                </View>
+            }
+            else
+            {
+                return <Image
+                    style={styles.img}
+                    source={require('../images/Calendar(inactive).png')}
+                />
+            }
+        case 'Home2':
+            if(focused)
+            {
+                return <View style={styles.rectFocus}>
+                    <Image
+                        style={styles.imgActive}
+                        source={require('../images/CartConatins(active).png')}
+                    />
+                </View>
+            }
+            else
+            {
+                return <Image
+                    style={styles.img}
+                    source={require('../images/CartContains(inactive).png')} //albo ../images/CartEmpty(inactive).png
+                />
+            }
     }
 }
 
@@ -63,5 +97,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         width: 40,
         height: 40
+    },
+    rectFocus: {
+        borderRadius: '13px',
+        background: 'rgba(255, 255, 255, 0.20)', //TODO nie wyswietla się!!!
+
     }
 })
