@@ -47,6 +47,7 @@ export const styles = StyleSheet.create({
     fontWeight: "600",
     alignItems: "center",
   },
+
   sliderPosition: {
     left: 0,
     top: 0,
@@ -58,6 +59,13 @@ export const styles = StyleSheet.create({
     top: "50%",
     left: "50%",
     position: "absolute",
+  },
+  dynamiczneitemki: {
+   marginLeft:10,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+
   },
   tytulTypo: {
     textAlign: "center",
@@ -113,6 +121,11 @@ export const styles = StyleSheet.create({
   rightArrowIcon: {
     width: 13,
     height: 16,
+    marginLeft: 5,
+  },
+  itemContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   rightFlexBox: {
     paddingVertical: 0,
