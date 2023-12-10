@@ -8,6 +8,7 @@ import {PrzekaskiView} from "../Przekaski";
 import {UstawieniaView} from "../Ustawienia";
 import {useState} from "react";
 import Carousel from "react-native-snap-carousel";
+import {Grzechotnik} from "../Grzechotnik";
 
 export function Home({ navigation }){
     console.log(Singleton.name);
@@ -138,7 +139,7 @@ export function Home({ navigation }){
                                     Wylosuj swój rabat
                                 </Text>
 
-                                <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
+                                <TouchableOpacity onPress={() => navigation.navigate(Grzechotnik)}>
                                     <Text style={styles.grzechotnik}>Grzechotnik</Text>
                                 </TouchableOpacity>
 

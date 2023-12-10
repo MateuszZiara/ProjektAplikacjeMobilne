@@ -1,7 +1,8 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Text,ScrollView } from "react-native";
+import { StyleSheet, View, Text,ScrollView,TouchableWithoutFeedback, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import {Koszyk_platnosc} from "../Koszyk_platnosc";
 
 import {styles} from "./styles";
 
@@ -149,11 +150,13 @@ export function Koszyk_karta({ navigation }){
         </LinearGradient>
       </View>
       <View style={[styles.backParent, styles.parentFlexBox]}>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('Koszyk_platnosc')}>
         <Image
           style={styles.backIcon1}
           contentFit="cover"
           source={require("./assets/back.png")}
         />
+      </TouchableWithoutFeedback>
         <View style={[styles.frameView, styles.frameFlexBox]}>
           <View style={styles.appNameFrame}>
             <View style={[styles.appName1, styles.appSpaceBlock]}>
