@@ -11,9 +11,9 @@ import Cart from "../../Classes/Cart";
 export function Koszyk({ navigation }){
   const renderItem = ({ item }) => (
       <View >
-        <Image source={
+        {/* <Image source={
 
-        } />
+        } />*/}
         <Text style={
           {
             color: 'white',

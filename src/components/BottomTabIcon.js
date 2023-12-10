@@ -54,12 +54,11 @@ export const BottomTabIcon = ({ routeName, focused }) => {
         case 'RepertuarView':
             if(focused)
             {
-                return <View style={styles.rectFocus}>
-                <Image
-                    style={styles.imgActive}
+                return<Image
+                    style={[styles.rectFocus, styles.imgActive]}
                     source={require('../images/Calendar(active).png')}
                 />
-                </View>
+
             }
             else
             {
@@ -85,7 +84,7 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     return <View style={styles.rectFocus}>
                         <Image
                             style={styles.imgActive}
-                            source={require('../CartEmpty(active)/Koszyk.png')}
+                            source={require('../images/CartEmpty(active).png')}
                         />
                     </View>
                 }
@@ -94,20 +93,18 @@ export const BottomTabIcon = ({ routeName, focused }) => {
             {
                 if(Cart.array.length !== 0) {
                     console.log('Cart.array.length');
-                    return <View style={styles.rectFocus}>
-                        <Image
-                            style={styles.imgActive}
+                    return <Image
+                            style={styles.img}
                             source={require('../images/CartContains(inactive).png')}
                         />
-                    </View>
+
                 }
                 else {
-                    return <View style={styles.rectFocus}>
-                        <Image
+                    return<Image
                             style={styles.imgActive}
-                            source={require('../CartEmpty(inactive)/Koszyk.png')}
+                            source={require('../images/CartEmpty(inactive).png')}
                         />
-                    </View>
+
                 }
             }
     }
@@ -120,13 +117,9 @@ const styles = StyleSheet.create({
         height: 28
     },
     imgActive: {
-        backgroundColor: 'black',
+        backgroundColor: '#0f0f0f',
         width: 40,
-        height: 40
+        height: 40,
+        //borderRadius: 2 //już bez tej obwódki bo szkoda czasu na to gówno
     },
-    rectFocus: {
-        borderRadius: '13px',
-        background: 'rgba(255, 255, 255, 0.20)', //TODO nie wyswietla się!!!
-
-    }
 })

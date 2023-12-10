@@ -1,28 +1,294 @@
 {
-  "users": [
+    "foodProducts":[
     {
-      "id": 1,
-      "login": "test",
-      "personal": "test test",
-      "password": "test"
+        "id": 1,
+        "name": "Mały popcorn",
+        "price": 12,
+        "img": "../images/products/malypopcorn.jpg"
     },
     {
-      "login": "admin",
-      "personal": "admin admin",
-      "password": "admin",
-      "id": 2
+        "id": 2,
+        "name": "Duży popcorn",
+        "price": 20,
+        "img": "../images/products/duzypopcorn.jpg"
     },
     {
-      "login": "t",
-      "personal": "t t",
-      "password": "t",
-      "id": 3
+        "id": 3,
+        "name": "Nachosy",
+        "price": 15,
+        "img": "../images/products/nachosy.jpg"
     },
     {
-      "login": "mateuszziara@op.pl",
-      "password": "test",
-      "personal": "Mateusz Ziara",
-      "id": 4
+        "id": 4,
+        "name": "Nachosy ostre",
+        "price": 17,
+        "img": "../images/products/nachosy.jpg"
+    },
+    {
+        "id": 5,
+        "name": "M&Ms",
+        "price": 8,
+        "img": "../images/products/mms.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Snickers",
+        "price": 7,
+        "img": "../images/products/snickers.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Mars",
+        "price": 7,
+        "img": "../images/products/mars.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Milky Way",
+        "price": 7,
+        "img": "../images/products/milkyway.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Lay's zielona cebulka",
+        "price": 6,
+        "img": "../images/products/laysziel.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Lay's paprykowe",
+        "price": 6,
+        "img": "../images/products/layspapr.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Mały popcorn karmelowy",
+        "price": 13,
+        "img": "../images/products/malypopcorn.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Duży popcorn karmelowy",
+        "price": 21,
+        "img": "../images/products/duzypopcorn.jpg"
     }
-  ]
-}
+],
+    "drinkProducts":[
+    {
+        "id": 1,
+        "name": "Sok jabłkowy",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 11
+            }
+        ],
+        "img": "../images/products/sokjabl.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Sok pomarańczowy",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 11
+            }
+        ],
+        "img": "../images/products/sokpoma.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Sok wieloowocowy",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 11
+            }
+        ],
+        "img": "../images/products/popcornsokwiel.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Woda",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 4
+            },
+            {
+                "size": "500 ml",
+                "price": 7
+            },
+            {
+                "size": "1000 ml",
+                "price": 11
+            }
+        ],
+        "img": "../images/products/woda.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Coca-Cola",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 9
+            },
+            {
+                "size": "1000 ml",
+                "price": 14
+            }
+        ],
+        "img": "../images/products/coca.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Coca-Cola Zero",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 9
+            },
+            {
+                "size": "1000 ml",
+                "price": 14
+            }
+        ],
+        "img": "../images/products/cocazero.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Fanta",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 9
+            },
+            {
+                "size": "1000 ml",
+                "price": 14
+            }
+        ],
+        "img": "../images/products/fanta.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Sprite",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 9
+            },
+            {
+                "size": "1000 ml",
+                "price": 14
+            }
+        ],
+        "img": "../images/products/sprite.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Lipton Ice Tea",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 6
+            },
+            {
+                "size": "500 ml",
+                "price": 9
+            },
+            {
+                "size": "1000 ml",
+                "price": 14
+            }
+        ],
+        "img": "../images/products/lipton.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Red Bull",
+        "sizes":[
+            {
+                "size": "250 ml",
+                "price": 9
+            },
+            {
+                "size": "500 ml",
+                "price": 16
+            }
+        ],
+        "img": "../images/products/redbull.jpg"
+    }
+],
+
+
+"tickets":
+[
+{
+    "id": "1",
+    "name": "Bilet normalny",
+    "price": 30
+}, 
+{
+    "id": "2",
+    "name": "Bilet VIP",
+    "price": 35
+},   
+{
+    "id": "3",
+    "name": "Bilet ulgowy",
+    "price": 20
+},   
+{
+    "id": "4",
+    "name": "Bilet rodzinny",
+    "price": 65
+}   
+],
+
+
+
+"movies":
+[
+    {
+        "id": 1,
+        "IMDB API": "xxxxx"
+    },
+    {
+        "id": 2,
+        "IMDB API": "xxxxx"
+    },
+    {
+        "id": 3,
+        "IMDB API": "xxxxx"
+    }
+]

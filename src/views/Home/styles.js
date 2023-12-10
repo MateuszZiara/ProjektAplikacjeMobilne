@@ -149,8 +149,8 @@ export const styles = StyleSheet.create({
     },
     tytulTypo: {
         textAlign: "center",
-        lineHeight: 21,
-        fontSize: FontSize.size_sm,
+        //lineHeight: 21,
+        fontSize: FontSize.size_11xl,
         color: Color.colorWhite,
        // fontFamily: FontFamily.poppinsSemiBold,
         fontWeight: "600",
@@ -211,6 +211,7 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         left: 22,
         position: "absolute",
+        zIndex: 1,
     },
     groupView: {
         height: 543,
@@ -498,36 +499,10 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         textAlign: "left",
     },
-    signalIcon1: {
-        width: 18,
-        height: 18,
-    },
-    wiFiIcon1: {
-        height: 22,
-        marginLeft: 6,
-        width: 24,
-    },
-    fullBatteryIcon1: {
-        width: 29,
-        marginLeft: 6,
-        height: 32,
-    },
-    signalParent: {
-        marginLeft: 226,
-        flexDirection: "row",
-        alignItems: "center",
-    },
-    iphonestatusbar: {
-        marginLeft: -176,
-        top: 5,
-        flexDirection: "row",
-        alignItems: "center",
-    },
     ekranGowny111: {
-        borderRadius: 40,
         backgroundColor: "#000",
         flex: 1,
-        height: 896,
+        height: 1496,
         overflow: "hidden",
         width: "100%",
     },

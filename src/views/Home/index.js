@@ -1,73 +1,89 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import {StyleSheet, View, Text, TextInput, ScrollView, TouchableOpacity} from "react-native";
+import {
+    StyleSheet,
+    View,
+    Text,
+    TextInput,
+    ScrollView,
+    TouchableOpacity,
+    Dimensions,
+    ImageBackground
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import Singleton from "../../Classes/User"
 import {PrzekaskiView} from "../Przekaski";
 import {UstawieniaView} from "../Ustawienia";
 import {useState} from "react";
-import Carousel from "react-native-snap-carousel";
+import Carousel, {Pagination} from "react-native-snap-carousel";
 
 export function Home({ navigation }){
     console.log(Singleton.name);
     const [activeIndex, setActiveIndex] = useState(0);
+    const checkName = (name) => (name !== null ? name : "Czas na kino!");
+    const checkDate = () => {
+        const hours = new Date().getHours();
+        return hours < 5 || hours >= 20 ? "Dobry wieczór," : "Dzień dobry,";
+    };
+
+    const checkHours = ([hours]) => {
+        const currHour = new Date().getHours();
+        return DateTime.parse(hours) > currHour ? <Text style={styles.tytulTypo1}>{hours}</Text> : hours//szary styl;
+    };
+
+    const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
     function ActiveSlider(index)
     {
         setActiveIndex(index);
         console.log(index);
     }
     const carouselItems = [
-        { title: 'Item 1', text: 'Text 1' },
-        { title: 'Item 2', text: 'Text 2' },
-        { title: 'Item 3', text: 'Text 3' },
-        { title: 'Item 4', text: 'Text 4' },
-        { title: 'Item 5', text: 'Text 5' },
+
+        { title: 'American Psycho', text: 'napisy', review:'6,9/10', times:['15:00','19:30','22:00'], imageSource: require('./assets/img1.png') },
+        { title: 'Chłopi', text: '', review:'6,9/10', times:['17:00','20:00'], imageSource: require('./assets/img2.png') },
+        { title: 'Toy Story', text: 'dubbing', review:'6,9/10', times:['18:30','21:00'], imageSource: require('./assets/img3.png') },
+        { title: 'Porady na zdrady', text: '', review:'6,9/10', times:['11:00','18:30','20:00'], imageSource: require('./assets/img4.png') },
+        { title: 'Black Swan - Czarny Łabądź', text: 'napisy', review:'6,9/10', times:['19:00','21:30'], imageSource: require('./assets/img5.png') },
     ];
     const renderItem = ({ item, index }) => {
         return (
-            <View
+            <ImageBackground
                 style={{
-                    backgroundColor: 'floralwhite',
+                    //backgroundColor: 'floralwhite',
                     borderRadius: 5,
-                    height: 250,
-                    marginLeft: 25,
-                    marginRight: 25,
+                    height: 500,
+                    //marginLeft: 25,
+                    //marginRight: 25,
                     justifyContent: 'center', // Center vertically
                     alignItems: 'center',
-                    //!TODO paginationItemPadSize: 2,
-                }}
-            >
 
-                <Image
-                    style={{
-                        top: 7,
-                        left: 37,
-                        width: 88,
-                        height: 112,
-                        position: "absolute",
-                    }}
-                    source={item.imageSource}
-                />
-                <Text style={{ fontSize: 30 }}>{item.title}</Text>
-                <Text>{item.text}</Text>
-            </View>
+                }}
+                source={item.imageSource}
+            >
+                <View style={styles}>
+                    <Text style={[ styles.tytulTypo]}>{item.title}</Text>
+                <Text style={styles.tytulParentLayout}>{item.text}</Text>
+                <Text>{item.review}</Text>
+                <Text>{item.times}</Text>
+                </View>
+            </ImageBackground>
         );
     };
     return (
         <ScrollView style={{ flex: 1 }}>
         <View style={styles.ekranGowny111}>
-            <View style={styles.groupParent}>
+            {/* usunalem jakiś view i przesunelo sie wszystko w prawo */}
                 <View style={[styles.groupView, styles.groupViewLayout]}>
                     <View style={styles.frameParent}>
                         <View style={styles.frameWrapper}>
                             <View style={styles.appNameWrapper}>
                                 <View style={styles.appName}>
                                     <Text style={[styles.dzieDobry, styles.dzieDobryLayout]}>
-                                        Dzień dobry,
+                                        {checkDate()}
                                     </Text>
                                     <Text style={[styles.agnieszka, styles.dzieDobryLayout]}>
-                                        {Singleton.name}
+                                        {checkName(Singleton.name)}
                                     </Text>
                                 </View>
                             </View>
@@ -82,17 +98,40 @@ export function Home({ navigation }){
                     </View>
                     <View style={
                         {
-                            marginTop: 150,
+                            //marginTop: 150,
+                            zIndex:0
                         }
                     }>
                         <Carousel
                             layout={'default'}
                             ref={(ref) => (this.carousel = ref)}
                             data={carouselItems}
-                            sliderWidth={300}
-                            itemWidth={300}
+                            sliderHeight={800}
+                            loop={true}
+                            itemHeight={900}
+                            sliderWidth={viewportWidth}
+                            itemWidth={viewportWidth}
                             renderItem={renderItem}
                             onSnapToItem={(index) => ActiveSlider(index)}
+                        />
+                        <Pagination
+                            dotsLength={carouselItems.length}
+                            activeDotIndex={activeIndex}
+                            containerStyle={{ marginTop: -25 }}
+                            dotStyle={{
+                                width: 20,
+                                height: 10,
+                                borderRadius: 5,
+                                marginHorizontal: 8,
+                                backgroundColor: 'rgba(49, 7, 139, 1)',
+                            }}
+                            inactiveDotStyle={{
+                                backgroundColor: 'rgba(125, 125, 125, 0.33)',
+                                width: 10,
+                                height: 10,
+                            }}
+                            inactiveDotOpacity={0.6}
+                            inactiveDotScale={0.8}
                         />
                     </View>
                 </View>
@@ -332,27 +371,7 @@ export function Home({ navigation }){
                         </View>
                     </View>
                 </View>
-            </View>
-            <View style={[styles.iphonestatusbar, styles.repertuarPosition]}>
-                <Text style={[styles.text5, styles.text5FlexBox]}>9.41</Text>
-                <View style={styles.signalParent}>
-                    <Image
-                        style={styles.signalIcon1}
-                        contentFit="cover"
-                        source={require("./assets/signal.png")}
-                    />
-                    <Image
-                        style={styles.wiFiIcon1}
-                        contentFit="cover"
-                        source={require("./assets/wifi.png")}
-                    />
-                    <Image
-                        style={styles.fullBatteryIcon1}
-                        contentFit="cover"
-                        source={require("./assets/full-battery.png")}
-                    />
-                </View>
-            </View>
+
         </View>
         </ScrollView>
     );
