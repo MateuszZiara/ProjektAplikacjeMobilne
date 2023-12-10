@@ -12,6 +12,9 @@ import {UstawieniaView} from "../views/Ustawienia";
 import {RepertuarView} from "../views/Repertuar";
 import {Bilety4_vip} from "../views/Bilety4_vip";
 import {SzczegolyKonta} from "../views/SzczegolyKonta";
+import {Koszyk_platnosc} from "../views/Koszyk_platnosc";
+import {Koszyk_blik} from "../views/Koszyk_blik";
+import {Koszyk_karta} from "../views/Koszyk_karta";
 
 
 
@@ -35,6 +38,9 @@ export default function StackNav() {
             <Stack.Screen name="UstawieniaView" component={UstawieniaView} options={optionScreen} />
             <Stack.Screen name="SzczegolyKonta" component={SzczegolyKonta} options={optionScreen} />
             <Stack.Screen name="RepertuarView" component={RepertuarView} options={optionScreen} />
+            <Stack.Screen name="Koszyk_platnosc" component={Koszyk_platnosc} options={optionScreen} />
+            <Stack.Screen name="Koszyk_blik" component={Koszyk_blik} options={optionScreen} />
+            <Stack.Screen name="Koszyk_karta" component={Koszyk_karta} options={optionScreen} />
 
 
         </Stack.Navigator>
