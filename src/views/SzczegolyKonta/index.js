@@ -1,8 +1,8 @@
 import * as React from "react";
-import { Text, StyleSheet, View } from "react-native";
 import { Image } from "expo-image";
 import { FontFamily, Color, FontSize, Border } from "./styles.js";
 import {styles} from "./styles";
+import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback} from "react-native";
 
 export function SzczegolyKonta({ navigation }) {
   return (
@@ -63,11 +63,13 @@ export function SzczegolyKonta({ navigation }) {
       </View>
       <View style={styles.frameParent}>
         <View style={[styles.backParent, styles.parentWrapperFlexBox]}>
-          <Image
-            style={styles.backIcon}
-            contentFit="cover"
-            source={require("./assets/back.png")}
-          />
+            <TouchableWithoutFeedback onPress={() => navigation.navigate('UstawieniaView')}>
+                <Image
+                    style={styles.backIcon}
+                    contentFit="cover"
+                    source={require("./assets/back.png")}
+                />
+            </TouchableWithoutFeedback>
           <View style={[styles.frameWrapper, styles.parentWrapperFlexBox]}>
             <View style={styles.appNameWrapper}>
               <View style={styles.appName}>
