@@ -76,7 +76,7 @@ export function SzczegolyKonta({ navigation }) {
                 <Text style={[styles.ustawienia, styles.garyLeeTypo]}>
                   Ustawienia konta
                 </Text>
-                <Text style={styles.ustawieniaKonta}>SzczegĂłĹ‚y Profilu</Text>
+                <Text style={styles.ustawieniaKonta}>Szczegóły Profilu</Text>
               </View>
             </View>
           </View>
