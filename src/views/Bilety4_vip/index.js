@@ -1,208 +1,44 @@
 import * as React from "react";
-import { Text, StyleSheet, View, ScrollView} from "react-native";
+import {Text, StyleSheet, View, ScrollView, FlatList, TouchableOpacity} from "react-native";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
+import Movie from "../../Classes/Movie";
+import {useEffect, useState} from "react";
+import {Bilety3_vip} from "../Bilety3_vip";
 
 export function Bilety4_vip({ navigation }) {
+  const renderItem = ({ item }) => (
+      <View style={styles.itemContainer}>
+        <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
+        <Image
+            style={styles.rightArrowIcon}
+            contentFit="cover"
+            source={require("./assets/right-arrow.png")}
+        />
+      </View>
+  );
+  const [refresh, setRefresh] = useState(false);
+  useEffect(() => {
+    const unsubscribe = navigation.addListener("focus", () => {
+      // The screen is focused
+      // Call the function to refresh the FlatList
+      refreshFlatList();
+    });
+
+    // Return the cleanup function to unsubscribe from the event
+    return unsubscribe;
+  }, [navigation, refresh]);
+
+  // Function to refresh the FlatList
+  const refreshFlatList = () => {
+    // Toggle the state to force a re-render
+    setRefresh((prevRefresh) => !prevRefresh);
+  };
   return (
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.wzr}>
-      <View style={[styles.repertuar, styles.repertuarPosition]}>
-        <View style={[styles.singleBar, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>18:30</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>21:30</Text>
-            <View style={styles.rightFlexBox}>
-              <Image
-                style={styles.rightArrowIcon}
-                contentFit="cover"
-                source={require("./assets/right-arrow.png")}
-              />
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>
-                Batman Początki
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>19:00</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>22:00</Text>
-            <View style={styles.frameWrapperLayout}>
-              <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-                <Image
-                  style={styles.rightArrowIcon}
-                  contentFit="cover"
-                  source={require("./assets/right-arrow.png")}
-                />
-              </View>
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul5, styles.tytulTypo]}>
-                Pięć Koszmarnych Nocy
-              </Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.frameView, styles.frameViewPosition]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>18:45</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>20:45</Text>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>
-                American Psycho
-              </Text>
-            </View>
-          </View>
-          <View style={[styles.singleBarInner, styles.frameWrapperLayout]}>
-            <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-              <Image
-                style={styles.rightArrowIcon}
-                contentFit="cover"
-                source={require("./assets/right-arrow1.png")}
-              />
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>19:00</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>20:30</Text>
-            <View style={styles.frameWrapperLayout}>
-              <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-                <Image
-                  style={styles.rightArrowIcon}
-                  contentFit="cover"
-                  source={require("./assets/right-arrow.png")}
-                />
-              </View>
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>Toy Story</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>19:30</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>22:30</Text>
-            <View style={styles.frameWrapperLayout}>
-              <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-                <Image
-                  style={styles.rightArrowIcon}
-                  contentFit="cover"
-                  source={require("./assets/right-arrow.png")}
-                />
-              </View>
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>Napoleon</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>19:15</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>20:15</Text>
-            <View style={styles.frameWrapperLayout}>
-              <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-                <Image
-                  style={styles.rightArrowIcon}
-                  contentFit="cover"
-                  source={require("./assets/right-arrow.png")}
-                />
-              </View>
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>Auta</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>19:15</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>20:15</Text>
-            <View style={styles.frameWrapperLayout}>
-              <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-                <Image
-                  style={styles.rightArrowIcon}
-                  contentFit="cover"
-                  source={require("./assets/right-arrow.png")}
-                />
-              </View>
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>Auta 2</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>19:15</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>20:15</Text>
-            <View style={styles.frameWrapperLayout}>
-              <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-                <Image
-                  style={styles.rightArrowIcon}
-                  contentFit="cover"
-                  source={require("./assets/right-arrow.png")}
-                />
-              </View>
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>Auta 3</Text>
-            </View>
-          </View>
-        </View>
-        <View style={[styles.singleBar1, styles.singleLayout]}>
-          <View style={[styles.tytulParent, styles.parentFlexBox]}>
-            <Text style={[styles.tytul, styles.tytulTypo1]}>19:15</Text>
-            <Text style={[styles.tytul1, styles.tytulTypo1]}>20:15</Text>
-            <View style={styles.frameWrapperLayout}>
-              <View style={[styles.rightArrowContainer, styles.sliderPosition]}>
-                <Image
-                  style={styles.rightArrowIcon}
-                  contentFit="cover"
-                  source={require("./assets/right-arrow.png")}
-                />
-              </View>
-            </View>
-          </View>
-          <View style={[styles.rectangleParent, styles.sliderPosition]}>
-            <View style={[styles.frameChild, styles.sliderPosition]} />
-            <View style={[styles.tytulWrapper, styles.frameViewPosition]}>
-              <Text style={[styles.tytul2, styles.tytulTypo]}>Toy Story</Text>
-            </View>
-          </View>
-        </View>
-      </View>
+
       <View style={styles.wzrChild} />
       <View style={[styles.repertuarPosition]}>
         <View style={[styles.homeinactiveParent, styles.parentFlexBox]}>
@@ -252,12 +88,16 @@ export function Bilety4_vip({ navigation }) {
           />
         </View>
       </View>
+
+
       <View style={[styles.backParent, styles.parentFlexBox]}>
+        <TouchableOpacity onPress={() =>navigation.navigate(Bilety3_vip)}>
         <Image
           style={styles.backIcon}
           contentFit="cover"
           source={require("./assets/back.png")}
         />
+        </TouchableOpacity>
         <View style={[styles.frameWrapper5, styles.frameWrapperFlexBox]}>
           <View style={styles.appNameWrapper}>
             <View style={[styles.appName, styles.appSpaceBlock]}>
@@ -266,8 +106,14 @@ export function Bilety4_vip({ navigation }) {
               </Text>
               <Text style={styles.ustawieniaKonta}>Rezerwacja</Text>
             </View>
+
           </View>
+
         </View>
+
+      </View>
+      <View style={styles.dynamiczneitemki}>
+
       </View>
       <View style={[styles.frameParent, styles.parentFlexBox]}>
         <View style={[styles.frameWrapper6, styles.frameWrapperFlexBox]}>
@@ -286,9 +132,22 @@ export function Bilety4_vip({ navigation }) {
             contentFit="cover"
             source={require("./assets/ellipse-19.png")}
           />
+
         </View>
+
       </View>
+
+      <View style={styles.dynamiczneitemki}>
+        <FlatList
+            key={refresh}
+            data={Movie.array}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id.toString()}
+        />
+      </View>
+
     </View>
+
       </ScrollView>
   );
 }

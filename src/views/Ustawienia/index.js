@@ -6,6 +6,7 @@ import { styles } from "./styles.js";
 import Singleton from "../../Classes/User";
 import {PrzekaskiView} from "../Przekaski";
 import {Home} from "../Home";
+import {SzczegolyKonta} from "../SzczegolyKonta";
 
 export function UstawieniaView({ navigation }) {
     {
@@ -52,7 +53,7 @@ export function UstawieniaView({ navigation }) {
 
                             </TouchableWithoutFeedback>
 
-                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Home')}>
+                            <TouchableWithoutFeedback onPress={() => navigation.navigate('SzczegolyKonta')}>
 
                                     <Image
                                         style={[styles.pencilIcon, styles.frameItemLayout]}
@@ -90,19 +91,21 @@ export function UstawieniaView({ navigation }) {
                                 </Text>
                             </View>
                         </View>
-                        <View style={styles.rectangleParent}>
-                            <View style={[styles.frameInner, styles.frameLayout]}/>
-                            <View style={[styles.adjustParent, styles.parentGroupPosition]}>
-                                <Image
-                                    style={styles.maskGroupIcon}
-                                    contentFit="cover"
-                                    source={require("./assets/mask-group.png")}
-                                />
-                                <Text style={[styles.garyLee, styles.garyTypo]}>
-                                    Ustawienia Konta
-                                </Text>
-                            </View>
-                        </View>
+
+                        <TouchableOpacity style={styles.rectangleParent}
+                                          onPress={() => navigation.navigate(SzczegolyKonta)}>
+                                <View style={[styles.frameInner, styles.frameLayout]}/>
+                                <View style={[styles.adjustParent, styles.parentGroupPosition]}>
+                                    <Image
+                                        style={styles.maskGroupIcon}
+                                        contentFit="cover"
+                                        source={require("./assets/mask-group.png")}
+                                    />
+                                    <Text style={[styles.garyLee, styles.garyTypo]}>
+                                        Ustawienia Konta </Text>
+                                </View>
+
+                        </TouchableOpacity>
                         <View style={styles.rectangleParent}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>

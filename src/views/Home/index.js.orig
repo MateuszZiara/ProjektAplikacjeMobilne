@@ -16,8 +16,12 @@ import Singleton from "../../Classes/User"
 import {PrzekaskiView} from "../Przekaski";
 import {UstawieniaView} from "../Ustawienia";
 import {useState} from "react";
+<<<<<<< HEAD
 import Carousel, {Pagination} from "react-native-snap-carousel";
+=======
+import Carousel from "react-native-snap-carousel";
 import {Grzechotnik} from "../Grzechotnik";
+>>>>>>> 20f1360c56e73c47e37520c8db3198732ed1d96b
 
 export function Home({ navigation }){
     console.log(Singleton.name);

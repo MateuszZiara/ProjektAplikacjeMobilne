@@ -34,11 +34,28 @@ export function PrzekaskiView({ navigation }) {
               if(Cart.array[i].id === 0)
               {
                   contains = true;
+                  Cart.array[i].amount++;
               }
           }
           if(contains === false)
           {
-              Cart.array.push({id: 0, img: './assets/pngitem-4868092-2.png', amount: 1})
+              Cart.array.push({ id: 0, img: require('../Przekaski/assets/pngitem-4868092-2.png'), amount: 1 });
+          }
+
+      }
+      if(index === 1)
+      {
+          for(let i = 0; i < Cart.array.length; ++i)
+          {
+              if(Cart.array[i].id === 1)
+              {
+                  contains = true;
+                  Cart.array[i].amount++;
+              }
+          }
+          if(contains === false)
+          {
+              Cart.array.push({ id: 1, img: require('../Przekaski/assets/image-10.png'), amount: 1 });
           }
 
       }

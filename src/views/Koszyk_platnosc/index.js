@@ -119,7 +119,8 @@ export function Koszyk_platnosc({ navigation }){
       </Text>
       <View style={[styles.rectangleParent, styles.textPosition]}>
         <View style={styles.frameItem} />
-        <View style={[styles.maskGroupParent, styles.parentFlexBox]}>
+        <TouchableOpacity style={[styles.maskGroupParent, styles.parentFlexBox]}
+                          onPress={() => navigation.navigate(Koszyk_karta)}>
           <Image
             style={styles.maskGroupIcon}
             contentFit="cover"
@@ -128,7 +129,7 @@ export function Koszyk_platnosc({ navigation }){
           <Text style={[styles.garyLee, styles.garyLeeTypo]}>
             Dodaj kartę płatniczą
           </Text>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
       </ScrollView>
