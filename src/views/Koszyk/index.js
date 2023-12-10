@@ -7,20 +7,34 @@ import {styles} from "./styles";
 import {Koszyk_platnosc} from "../Koszyk_platnosc";
 import {Home} from "../Home";
 import Cart from "../../Classes/Cart";
+import {useEffect, useState} from "react";
 
 export function Koszyk({ navigation }){
+  const popcornImage = require('../Przekaski/assets/pngitem-4868092-2.png');
   const renderItem = ({ item }) => (
-      <View >
-        <Image source={
-
-        } />
-        <Text style={
-          {
-            color: 'white',
-          }
-        }>{`ID: ${item.id}, Count: ${item.amount}`}</Text>
+      <View>
+        <Image source={item.img}  contentFit="cover" style={{height: 100, width: 100}}/>
+        <Text style={{ color: 'white' }}>{`ID: ${item.id}, Count: ${item.amount}`}</Text>
       </View>
   );
+  const [refresh, setRefresh] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener("focus", () => {
+      // The screen is focused
+      // Call the function to refresh the FlatList
+      refreshFlatList();
+    });
+
+    // Return the cleanup function to unsubscribe from the event
+    return unsubscribe;
+  }, [navigation, refresh]);
+
+  // Function to refresh the FlatList
+  const refreshFlatList = () => {
+    // Toggle the state to force a re-render
+    setRefresh((prevRefresh) => !prevRefresh);
+  };
   return (
       <ScrollView>
         <View style={[styles.wzr, styles.wzrLayout]}>
@@ -98,74 +112,19 @@ export function Koszyk({ navigation }){
                 </View>
               </View>
             </View>
-      </View>
-      <View style={{
-        marginTop: 300,
-      }}>
-        <FlatList
-            data={Cart.array}
-            renderItem={renderItem}
-            keyExtractor={(item) => item.id.toString()}
-        />
-        
-            <View style={styles.zestaw}>
-              <View style={[styles.duyPopcornParent, styles.parentLayout]}>
-                <Text style={[styles.duyPopcorn, styles.xFlexBox]}>
-                  Duży popcorn
-                </Text>
-                <Text style={[styles.z, styles.zTypo]}>18 zł</Text>
-                <Image
-                    style={[
-                      styles.closeUpDeliciousSaltedPopcIcon,
-                      styles.parentPosition,
-                    ]}
-                    contentFit="cover"
-                    source={require("./assets/closeupdelicioussaltedpopcornreadybeservedtransformed-1.png")}
-                />
-                <View style={styles.ellipseParent}>
-                  <Image
-                      style={[styles.groupChild, styles.childLayout]}
-                      contentFit="cover"
-                      source={require("./assets/ellipse-79.png")}
-                  />
-                  <Text style={[styles.x, styles.zTypo]}>2x</Text>
-                </View>
-              </View>
-              <View style={[styles.biletUlgowyParent, styles.parentLayout]}>
-                <Text style={[styles.biletUlgowy, styles.xFlexBox]}>
-                  Bilet Ulgowy
-                </Text>
-                <Text style={[styles.z1, styles.zTypo]}>18 zł</Text>
-                <Image
-                    style={styles.maskGroupIcon2}
-                    contentFit="cover"
-                    source={require("./assets/mask-group2.png")}
-                />
-                <Text style={[styles.z, styles.zTypo]}>16 zł</Text>
-              </View>
-              <View style={[styles.biletUlgowyParent, styles.parentLayout]}>
-                <Text style={[styles.biletUlgowy, styles.xFlexBox]}>
-                  Duży napój
-                </Text>
-                <Text style={[styles.z1, styles.zTypo]}>18 zł</Text>
-                <Image
-                    style={styles.image28Icon}
-                    contentFit="cover"
-                    source={require("./assets/image-28.png")}
-                />
-                <Text style={[styles.z, styles.zTypo]}>18 zł</Text>
-              </View>
-              <View style={styles.vectorParent}>
-                <Image
-                    style={styles.groupItem}
-                    contentFit="cover"
-                    source={require("./assets/line-1.png")}
-                />
-                <Text style={[styles.z5, styles.z5Typo]}>52 zł</Text>
-                <Text style={[styles.doZapaty, styles.z5Typo]}>Do zapłaty:</Text>
-              </View>
+            <View style={{
+              marginTop: 300,
+            }}>
+              <FlatList
+                  key={refresh} // Key is updated to force a re-render
+                  data={Cart.array}
+                  renderItem={renderItem}
+                  keyExtractor={(item) => item.id.toString()}
+              />
+
+
             </View>
-          </View>
+      </View>
           <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
             <View style={styles.frameItem} />
             <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
