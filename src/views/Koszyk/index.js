@@ -10,7 +10,6 @@ import Cart from "../../Classes/Cart";
 import {useEffect, useState} from "react";
 
 export function Koszyk({ navigation }){
-  const popcornImage = require('../Przekaski/assets/pngitem-4868092-2.png');
   const renderItem = ({ item }) => (
       <View>
         <Image source={item.img}  contentFit="cover" style={{height: 100, width: 100}}/>
