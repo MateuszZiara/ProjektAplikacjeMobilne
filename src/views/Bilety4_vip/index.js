@@ -1,15 +1,15 @@
 import * as React from "react";
-import {Text, StyleSheet, View, ScrollView, FlatList} from "react-native";
+import {Text, StyleSheet, View, ScrollView, FlatList, TouchableOpacity} from "react-native";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
-import Cart from "../../Classes/Cart";
 import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
+import {Bilety3_vip} from "../Bilety3_vip";
 
 export function Bilety4_vip({ navigation }) {
   const renderItem = ({ item }) => (
-      <View>
+      <View style={styles.itemContainer}>
         <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
         <Image
             style={styles.rightArrowIcon}
@@ -17,7 +17,6 @@ export function Bilety4_vip({ navigation }) {
             source={require("./assets/right-arrow.png")}
         />
       </View>
-
   );
   const [refresh, setRefresh] = useState(false);
   useEffect(() => {
@@ -89,12 +88,16 @@ export function Bilety4_vip({ navigation }) {
           />
         </View>
       </View>
+
+
       <View style={[styles.backParent, styles.parentFlexBox]}>
+        <TouchableOpacity onPress={() =>navigation.navigate(Bilety3_vip)}>
         <Image
           style={styles.backIcon}
           contentFit="cover"
           source={require("./assets/back.png")}
         />
+        </TouchableOpacity>
         <View style={[styles.frameWrapper5, styles.frameWrapperFlexBox]}>
           <View style={styles.appNameWrapper}>
             <View style={[styles.appName, styles.appSpaceBlock]}>
@@ -103,8 +106,14 @@ export function Bilety4_vip({ navigation }) {
               </Text>
               <Text style={styles.ustawieniaKonta}>Rezerwacja</Text>
             </View>
+
           </View>
+
         </View>
+
+      </View>
+      <View style={styles.dynamiczneitemki}>
+
       </View>
       <View style={[styles.frameParent, styles.parentFlexBox]}>
         <View style={[styles.frameWrapper6, styles.frameWrapperFlexBox]}>
@@ -123,9 +132,12 @@ export function Bilety4_vip({ navigation }) {
             contentFit="cover"
             source={require("./assets/ellipse-19.png")}
           />
+
         </View>
+
       </View>
-      <View>
+
+      <View style={styles.dynamiczneitemki}>
         <FlatList
             key={refresh}
             data={Movie.array}
@@ -133,7 +145,9 @@ export function Bilety4_vip({ navigation }) {
             keyExtractor={(item) => item.id.toString()}
         />
       </View>
+
     </View>
+
       </ScrollView>
   );
 }
