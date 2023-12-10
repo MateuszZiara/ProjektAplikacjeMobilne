@@ -129,7 +129,7 @@ export function SzczegolyKonta({ navigation }) {
             <View style={styles.frameItem} />
             <View style={[styles.frameView, styles.frameViewPosition]}>
               <View style={styles.garyLeeParent}>
-                <Text style={[styles.garyLee, styles.garyLeeTypo]}>HasĹ‚o</Text>
+                <Text style={[styles.garyLee, styles.garyLeeTypo]}>Hasło</Text>
                 <Text style={[styles.garyLee3, styles.garyTypo]}>
                   **********
                 </Text>

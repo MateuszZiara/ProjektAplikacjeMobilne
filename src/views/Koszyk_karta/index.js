@@ -3,6 +3,7 @@ import { Image } from "expo-image";
 import { StyleSheet, View, Text,ScrollView,TouchableWithoutFeedback, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {Koszyk_platnosc} from "../Koszyk_platnosc";
+import Carousel from "react-native-snap-carousel";
 
 import {styles} from "./styles";
 
