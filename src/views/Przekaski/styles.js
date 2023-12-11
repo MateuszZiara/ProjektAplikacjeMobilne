@@ -296,7 +296,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 0,
     marginLeft: 49,
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "left",
     overflow: "hidden",
   },
   frameGroup: {
@@ -484,10 +484,9 @@ export const styles = StyleSheet.create({
     overflow: "hidden",
   },
   ekranPrzeksek: {
-    borderRadius: 40,
     backgroundColor: "#000",
     flex: 1,
-    height: 896,
+    height: 796,
     overflow: "hidden",
     width: "100%",
   },
