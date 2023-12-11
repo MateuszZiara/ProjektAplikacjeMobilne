@@ -11,8 +11,7 @@ import {SzczegolyKonta} from "../SzczegolyKonta";
 export function UstawieniaView({ navigation }) {
     {
         return (
-            <View style={styles.wzr}>
-                <ScrollView style={styles.wzrInner}>
+                <ScrollView style={[styles.wzr]}>
                     <View style={styles.frameParent}>
                         <View style={styles.titleParent}>
                             <Text style={{fontFamily: 'Inter_900Black', fontSize: 40}}>Edytuj Profil</Text>
@@ -141,31 +140,6 @@ export function UstawieniaView({ navigation }) {
                         </View>
                     </View>
                 </ScrollView>
-                <View style={[styles.navigationBar, styles.navigationBarLayout]}>
-                    <View style={styles.homeinactiveParent}>
-                        <Image
-                            style={styles.iconLayout}
-                            contentFit="cover"
-                            source={require("./assets/homeinactive.png")}
-                        />
-                        <Image
-                            style={[styles.popcorninactiveIcon, styles.iconLayout]}
-                            contentFit="cover"
-                            source={require("./assets/popcorninactive.png")}
-                        />
-                        <Image
-                            style={[styles.popcorninactiveIcon, styles.iconLayout]}
-                            contentFit="cover"
-                            source={require("./assets/mask-group2.png")}
-                        />
-                        <Image
-                            style={[styles.popcorninactiveIcon, styles.iconLayout]}
-                            contentFit="cover"
-                            source={require("./assets/mask-group3.png")}
-                        />
-                    </View>
-                </View>
-            </View>
         );
     }
 }

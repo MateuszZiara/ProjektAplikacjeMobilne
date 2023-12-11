@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
     groupViewLayout: {
         width: 635,
         height: 543,
+
     },
     sliderPosition1: {
         width: 556,
@@ -215,6 +216,7 @@ export const styles = StyleSheet.create({
     },
     groupView: {
         height: 543,
+        alignItems: "flex-start"
     },
     searchBarChild: {
         borderRadius: 10,
@@ -225,7 +227,7 @@ export const styles = StyleSheet.create({
     znajdFilmW1: {
         width: 230,
         fontSize: FontSize.size_mini,
-        color: Color.colorLightgray_100,
+        color: '#ffaaaa',
         alignItems: "center",
         display: "flex",
     },
@@ -502,7 +504,7 @@ export const styles = StyleSheet.create({
     ekranGowny111: {
         backgroundColor: "#000",
         flex: 1,
-        height: 1496,
+        height: 1500,
         overflow: "hidden",
         width: "100%",
     },

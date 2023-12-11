@@ -18,6 +18,8 @@ import {UstawieniaView} from "../Ustawienia";
 import {useState} from "react";
 import Carousel, {Pagination} from "react-native-snap-carousel";
 import {Grzechotnik} from "../Grzechotnik";
+import {Login} from "../Login";
+
 
 export function Home({ navigation }){
     console.log(Singleton.name);
@@ -30,7 +32,7 @@ export function Home({ navigation }){
 
     const checkHours = ([hours]) => {
         const currHour = new Date().getHours();
-        return DateTime.parse(hours) > currHour ? <Text style={styles.tytulTypo1}>{hours}</Text> : hours//szary styl;
+        return DateTime.parse(hours) > currHour ? <Text style={styles.tytulTypo1}>{hours}</Text> : <Text style={styles.znajdFilmW1}>{hours}</Text>;
     };
 
     const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
@@ -42,32 +44,32 @@ export function Home({ navigation }){
     const carouselItems = [
 
         { title: 'American Psycho', text: 'napisy', review:'6,9/10', times:['15:00','19:30','22:00'], imageSource: require('./assets/img1.png') },
-        { title: 'Chłopi', text: '', review:'6,9/10', times:['17:00','20:00'], imageSource: require('./assets/img2.png') },
-        { title: 'Toy Story', text: 'dubbing', review:'6,9/10', times:['18:30','21:00'], imageSource: require('./assets/img3.png') },
-        { title: 'Porady na zdrady', text: '', review:'6,9/10', times:['11:00','18:30','20:00'], imageSource: require('./assets/img4.png') },
-        { title: 'Black Swan - Czarny Łabądź', text: 'napisy', review:'6,9/10', times:['19:00','21:30'], imageSource: require('./assets/img5.png') },
+        { title: 'Chłopi', text: '', review:'7,5/10', times:['17:00','20:00'], imageSource: require('./assets/img2.png') },
+        { title: 'Toy Story', text: 'dubbing', review:'7,2/10', times:['18:30','21:00'], imageSource: require('./assets/img3.png') },
+        { title: 'Oppenheimer', text: 'napisy', review:'9/10', times:['11:00','18:30','20:00'], imageSource: require('./assets/img4.png') },
+        { title: 'Black Swan - Czarny Łabędź', text: 'napisy', review:'8/10', times:['19:00','21:30'], imageSource: require('./assets/img5.png') },
     ];
     const renderItem = ({ item, index }) => {
         return (
             <ImageBackground
                 style={{
-                    //backgroundColor: 'floralwhite',
-                    borderRadius: 5,
+
+                    borderRadius: 0,
                     height: 500,
-                    //marginLeft: 25,
-                    //marginRight: 25,
+                    width: viewportWidth+15,
                     justifyContent: 'center', // Center vertically
                     alignItems: 'center',
-
                 }}
                 source={item.imageSource}
             >
-                <View style={styles}>
+
+                <View style={styles.tytulWrapper}>
                     <Text style={[ styles.tytulTypo]}>{item.title}</Text>
-                <Text style={styles.tytulParentLayout}>{item.text}</Text>
-                <Text>{item.review}</Text>
-                <Text>{item.times}</Text>
+                    <Text style={styles.tytulTypo1}>{item.text}</Text>
+                    <Text style={styles.tytulTypo1}>{item.review}</Text>
+                    <Text style={styles.tytulTypo1}>{item.times}</Text>
                 </View>
+
             </ImageBackground>
         );
     };
@@ -89,7 +91,10 @@ export function Home({ navigation }){
                                 </View>
                             </View>
                         </View>
-                        <TouchableOpacity style={styles.vectorWrapper} onPress={() => navigation.navigate(UstawieniaView)}>
+                        <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
+                           Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
+                        }
+                        }>
                             <Image
                                 style={styles.frameChild}
                                 contentFit="cover"
@@ -97,12 +102,21 @@ export function Home({ navigation }){
                             />
                         </TouchableOpacity>
                     </View>
+
                     <View style={
                         {
                             //marginTop: 150,
                             zIndex:0
                         }
                     }>
+                        <Image source={require('./gradientback.png')} style={{
+                            borderRadius: 0,
+                            height: 500,
+                            width: viewportWidth+15,
+                            justifyContent: 'center', // Center vertically
+                            alignItems: 'center',
+                        }}>
+
                         <Carousel
                             layout={'default'}
                             ref={(ref) => (this.carousel = ref)}
@@ -115,6 +129,7 @@ export function Home({ navigation }){
                             renderItem={renderItem}
                             onSnapToItem={(index) => ActiveSlider(index)}
                         />
+                        </Image>
                         <Pagination
                             dotsLength={carouselItems.length}
                             activeDotIndex={activeIndex}
@@ -135,6 +150,7 @@ export function Home({ navigation }){
                             inactiveDotScale={0.8}
                         />
                     </View>
+
                 </View>
 
                 <View style={[styles.searchBarWrapper, styles.wrapperLayout]}>
