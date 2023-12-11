@@ -39,7 +39,7 @@ export function PrzekaskiView({ navigation }) {
           }
           if(contains === false)
           {
-              Cart.array.push({ id: 0, img: require('../Przekaski/assets/pngitem-4868092-2.png'), amount: 1 });
+              Cart.array.push({ id: 0, img: require('../Przekaski/assets/pngitem-4868092-2.png'), amount: 1, name:"Mały popcorn" });
           }
 
       }
@@ -55,7 +55,7 @@ export function PrzekaskiView({ navigation }) {
           }
           if(contains === false)
           {
-              Cart.array.push({ id: 1, img: require('../Przekaski/assets/image-10.png'), amount: 1 });
+              Cart.array.push({ id: 1, img: require('../Przekaski/assets/image-10.png'), amount: 1, name:"Lody Oreo" });
           }
 
       }

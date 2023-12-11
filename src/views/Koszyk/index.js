@@ -11,9 +11,15 @@ import {useEffect, useState} from "react";
 
 export function Koszyk({ navigation }){
   const renderItem = ({ item }) => (
-      <View>
-        <Image source={item.img}  contentFit="cover" style={{height: 100, width: 100}}/>
-        <Text style={{ color: 'white' }}>{`ID: ${item.id}, Count: ${item.amount}`}</Text>
+      <View style={styles.zestaw}>
+        <View style={[styles.duyPopcornParent, styles.parentLayout, styles.itemContainer]}>
+          <Image source={item.img} contentFit="cover" style={styles.image} />
+          <View style={styles.textContainer}>
+            <Text style={ { color: 'white', fontSize: 16 }}>{`${item.name}`}</Text>
+            <Text style={{ color: 'white', fontSize: 16 }}>{`Ilość: ${item.amount}`}</Text>
+
+          </View>
+        </View>
       </View>
   );
   const [refresh, setRefresh] = useState(false);
@@ -115,9 +121,10 @@ export function Koszyk({ navigation }){
               marginTop: 300,
             }}>
               <FlatList
-                  key={refresh} // Key is updated to force a re-render
+                  key={refresh}
                   data={Cart.array}
                   renderItem={renderItem}
+                  style={styles.koszyk_items}
                   keyExtractor={(item) => item.id.toString()}
               />
 

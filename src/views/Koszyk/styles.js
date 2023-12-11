@@ -22,7 +22,7 @@ export const Padding = {
 };
 /* border radiuses */
 export const Border = {
-  br_16xl: 35,
+  br_16xl: 30,
   br_11xl: 30,
 };
 
@@ -77,6 +77,13 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     overflow: "hidden",
   },
+  koszyk_items: {
+    height:400,
+  },
+  koszyk_gb: {
+    textAlign:"center",
+    margin:"auto",
+  },
   zamwienieLayout: {
     width: 322,
     color: Color.colorWhitesmoke,
@@ -88,10 +95,10 @@ export const styles = StyleSheet.create({
     textAlign: "left",
   },
   parentLayout: {
-    width: 341,
+    width: 250,
     backgroundColor: Color.colorGray_100,
     borderRadius: Border.br_16xl,
-    height: 109,
+    height: 130,
     overflow: "hidden",
   },
   xFlexBox: {
@@ -436,10 +443,23 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
   zestaw: {
-    top: 268,
-    left: 33,
-    height: 342,
-    position: "absolute",
+    top:10,
+    left: 100,
+    height: 150,
+  },
+  itemContainer: {
+    flexDirection: 'row', // Ustawienie kierunku rozmieszczenia elementów na osi głównej na poziomy
+    alignItems: 'center', // Wyśrodkowanie elementów na osi poprzecznej
+    marginBottom: 10, // Dodaj margines na dole, aby oddzielić od kolejnego elementu, jeśli jest potrzebny
+  },
+  image: {
+    height: 100,
+    width: 100,
+    marginTop: 5,
+    marginRight: 10, // Dodaj margines z prawej strony obrazu, aby oddzielić od tekstu
+  },
+  textContainer: {
+    flex: 1, // Pozwala tekstowi zajmować dostępną przestrzeń
   },
   groupParent: {
     top: 21,
