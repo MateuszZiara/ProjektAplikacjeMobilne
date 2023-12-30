@@ -1,9 +1,9 @@
 import {StyleSheet} from "react-native";
 /* font sizes */
 export const FontSize = {
-    size_11xl: 30,
+    size_11xl: 16,
     size_mini: 15,
-    size_smi: 13,
+    size_smi: 16,
     size_sm: 14,
     size_xl: 20,
 };
@@ -149,12 +149,13 @@ export const styles = StyleSheet.create({
         position: "absolute",
     },
     tytulTypo: {
-        textAlign: "center",
+        textAlign: "left",
         //lineHeight: 21,
         fontSize: FontSize.size_11xl,
         color: Color.colorWhite,
        // fontFamily: FontFamily.poppinsSemiBold,
         fontWeight: "600",
+
     },
     text2Typo: {
       //  fontFamily: FontFamily.poppinsSemiBold,
@@ -296,9 +297,22 @@ export const styles = StyleSheet.create({
         textAlign: "left",
     },
     rightArrowIcon8: {
-        zIndex: 3,
+        zIndex:0,
         width: 26,
         height: 32,
+    },
+    rightArrowIcon: {
+        width: 13,
+        height: 16,
+    },
+    rightWrapperFlexBox: {
+        paddingVertical: 0,
+        paddingHorizontal: Padding.p_7xs,
+        backgroundColor: Color.colorGray_300,
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
+        overflow: "hidden",
     },
     rightArrowWrapper: {
         borderRadius: Border.br_mid,
@@ -390,7 +404,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
     },
     tytul2: {
-        width: 126,
+        width: 250,
     },
     tytulWrapper: {
         marginLeft: -101.5,
@@ -437,8 +451,8 @@ export const styles = StyleSheet.create({
     },
     najbliszeSeanse: {
         top: 77,
-        left: 219,
-        textAlign: "right",
+        left: 120,
+        textAlign: "center",
         lineHeight: 20,
         fontSize: FontSize.size_smi,
         color: Color.colorLightgray_100,
@@ -467,24 +481,22 @@ export const styles = StyleSheet.create({
         width: 414,
     },
     glowingSpaceshipOrbitsPlaneIcon1: {
-        top: -228,
-        left: 197,
-        width: 426,
-        height: 398,
-        position: "absolute",
+        width: '100%',
+        height: '100%',
     },
+
     komponentPrzekski1: {
         marginLeft: -185,
         borderRadius: Border.br_xl,
         height: 119,
         width: 370,
-        top: 0,
         overflow: "hidden",
+        left: "50%",
     },
     komponentPrzekskiFrame: {
         height: 119,
         marginTop: 32,
-        width: 414,
+
     },
     groupParent: {
         height: 753,
