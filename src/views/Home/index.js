@@ -21,6 +21,7 @@ import {Grzechotnik} from "../Grzechotnik";
 import {Login} from "../Login";
 
 
+
 export function Home({ navigation }){
     console.log(Singleton.name);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -30,7 +31,7 @@ export function Home({ navigation }){
         return hours < 5 || hours >= 20 ? "Dobry wieczór," : "Dzień dobry,";
     };
 
-    const checkHours = ([hours]) => {
+    const checkHours = ([hours]) => { //TODO jak będzie baza filmów to wrócić
         const currHour = new Date().getHours();
         return DateTime.parse(hours) > currHour ? <Text style={styles.tytulTypo1}>{hours}</Text> : <Text style={styles.znajdFilmW1}>{hours}</Text>;
     };
@@ -361,7 +362,7 @@ export function Home({ navigation }){
                 </View>
                 <View style={styles.komponentPrzekskiFrame}>
                     <View style={[styles.komponentPrzekski1, styles.repertuarPosition]}>
-                        <Image
+                        <ImageBackground
                             style={styles.glowingSpaceshipOrbitsPlaneIcon1}
                             contentFit="cover"
                             source={require("./assets/glowingspaceshiporbitsplanetstarrygalaxygeneratedbyai-11.png")}

@@ -7,14 +7,15 @@ import Singleton from "../../Classes/User";
 import {PrzekaskiView} from "../Przekaski";
 import {Home} from "../Home";
 import {SzczegolyKonta} from "../SzczegolyKonta";
+import {LoginView} from "../LoginView";
 
 export function UstawieniaView({ navigation }) {
     {
         return (
-                <ScrollView style={[styles.wzr]}>
+                <ScrollView>
                     <View style={styles.frameParent}>
                         <View style={styles.titleParent}>
-                            <Text style={{fontFamily: 'Inter_900Black', fontSize: 40}}>Edytuj Profil</Text>
+                            <Text style={{fontFamily: 'Inter_900Black', fontSize: 18, color: 'white', textAlign: "center", paddingTop: 30}}>Edytuj Profil</Text>
                             <View style={styles.frameGroup}>
                                 <View style={[styles.vectorWrapper, styles.wrapperFlexBox]}>
                                     <Image
@@ -29,7 +30,7 @@ export function UstawieniaView({ navigation }) {
                                         styles.vectorWrapperPosition,
                                     ]}
                                 >
-                                    <Text style={styles.agnieszkaKowal}>Agnieszka Kowal</Text>
+                                    <Text style={styles.agnieszkaKowal}>{Singleton.name}</Text>
                                     <View
                                         style={[
                                             styles.agnieszkakowalgmailcomWrapper,
@@ -37,13 +38,13 @@ export function UstawieniaView({ navigation }) {
                                         ]}
                                     >
                                         <Text style={styles.agnieszkakowalgmailcom}>
-                                            agnieszkakowal@gmail.com
+                                            agnieszkakowal@gmail.com {/*TODO wstawic login*/}
                                         </Text>
                                     </View>
                                 </View>
                             </View>
 
-                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Home')}>
+                            <TouchableWithoutFeedback onPress={() => navigation.navigate('SzczegolyKonta')}>
                                     <Image
                                         style={[styles.frameItem, styles.frameItemLayout]}
                                         contentFit="cover"
@@ -63,6 +64,8 @@ export function UstawieniaView({ navigation }) {
 
 
                         </View>
+
+
                         <TouchableOpacity style={styles.rectangleParent}
                                           onPress={() => navigation.navigate(PrzekaskiView)}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
@@ -77,7 +80,7 @@ export function UstawieniaView({ navigation }) {
                         </TouchableOpacity>
 
 
-                        <View style={styles.rectangleParent}>
+                        <TouchableOpacity style={styles.rectangleParent}  onPress={() => navigation.navigate(SzczegolyKonta)}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.adjustParent, styles.parentGroupPosition]}>
                                 <Image
@@ -89,7 +92,7 @@ export function UstawieniaView({ navigation }) {
                                     Powiadomienia
                                 </Text>
                             </View>
-                        </View>
+                        </TouchableOpacity>
 
                         <TouchableOpacity style={styles.rectangleParent}
                                           onPress={() => navigation.navigate(SzczegolyKonta)}>
@@ -103,9 +106,9 @@ export function UstawieniaView({ navigation }) {
                                     <Text style={[styles.garyLee, styles.garyTypo]}>
                                         Ustawienia Konta </Text>
                                 </View>
-
                         </TouchableOpacity>
-                        <View style={styles.rectangleParent}>
+
+                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate()}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image
@@ -115,8 +118,9 @@ export function UstawieniaView({ navigation }) {
                                 />
                                 <Text style={styles.garyLee3}>Historia Zakupów</Text>
                             </View>
-                        </View>
-                        <View style={styles.rectangleParent1}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.rectangleParent1} onPress={() => navigation.navigate()}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image
@@ -126,18 +130,20 @@ export function UstawieniaView({ navigation }) {
                                 />
                                 <Text style={styles.garyLee3}>Centrum Pomocy</Text>
                             </View>
-                        </View>
-                        <View style={styles.rectangleParent}>
-                            <View style={[styles.frameChild4, styles.frameLayout]}/>
-                            <View style={[styles.logoutParent, styles.parentGroupPosition]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate(LoginView)} /*//TODO Nap rzyszlosc funkcje wylogowujaca*/>
+                            <View style={[styles.frameInner, styles.frameLayout]}/>
+                            <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image
-                                    style={styles.adjustIcon}
+                                    style={styles.maskGroupIcon}
                                     contentFit="cover"
                                     source={require("./assets/logout.png")}
                                 />
-                                <Text style={[styles.garyLee5, styles.garyTypo]}>Wyloguj</Text>
+                                <Text style={styles.garyLee3}>Wyloguj</Text>
                             </View>
-                        </View>
+                        </TouchableOpacity>
+
                     </View>
                 </ScrollView>
         );

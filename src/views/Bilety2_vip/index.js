@@ -206,6 +206,7 @@ export function Bilety2_vip({ navigation }) {
         </View>
       </View>
       <TouchableOpacity onPress={() =>navigation.navigate(Bilety3_vip)}>
+
       <View style={styles.rectangleParent}>
         <View style={styles.frameItem} />
         <View style={styles.garyLeeParent}>

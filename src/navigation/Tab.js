@@ -12,6 +12,8 @@ const optionScreen = {
     tabBarShowLabel: false
 }
 
+//TODO referencja do tabnav w app.js aby móc przekazać tab do innych okien nie będących tu dodanych
+
 const Tab = createBottomTabNavigator();
 
 export default function TabNav() {

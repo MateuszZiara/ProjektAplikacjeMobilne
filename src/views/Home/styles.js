@@ -296,6 +296,7 @@ export const styles = StyleSheet.create({
         textAlign: "left",
     },
     rightArrowIcon8: {
+        zIndex: 3,
         width: 26,
         height: 32,
     },

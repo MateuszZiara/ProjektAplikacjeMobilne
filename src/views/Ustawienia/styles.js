@@ -220,16 +220,16 @@ export const styles = StyleSheet.create({
     titleParent: {
         borderRadius: 34,
         height: 299,
-        backgroundColor: Color.colorSilver,
+        backgroundColor: "rgba(196, 196, 196, 0.10)",
         width: 370,
         overflow: "hidden",
     },
     frameInner: {
-        backgroundColor: Color.colorSilver,
+        backgroundColor: "rgba(196, 196, 196, 0.10)"
     },
     adjustIcon: {
-        height: 46,
-        width: 46,
+        height: 42,
+        width: 42,
     },
     garyLee: {
         color: Color.colorWhite,
@@ -276,7 +276,12 @@ export const styles = StyleSheet.create({
         top: 22,
     },
     frameParent: {
-        height: 712,
+        height: 990,
+        backgroundColor: "#000",
+        flex: 1,
+        overflow: "hidden",
+        width: "100%",
+        paddingLeft: 10
     },
     wzrInner: {
         top: 37,
@@ -322,13 +327,6 @@ export const styles = StyleSheet.create({
         height: 142,
         left: "50%",
         overflow: "hidden",
-    },
-    wzr: {
-        backgroundColor: "#000",
-        flex: 1,
-        height: 891,
-        overflow: "hidden",
-        width: "100%",
     },
    /* FontFamily: {
         poppinsMedium: "Poppins-Medium",
