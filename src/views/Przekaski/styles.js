@@ -37,12 +37,10 @@ export const styles = StyleSheet.create({
   sliderLayout: {
     height: 186,
     width: 578,
-    top: 0,
     position: "absolute",
   },
   image2IconLayout: {
-    height: 184,
-    top: 0,
+    height: 184
   },
   sliderBg: {
     backgroundColor: "transparent",
@@ -133,7 +131,6 @@ export const styles = StyleSheet.create({
     width: 35,
   },
   image2Icon: {
-    left: 8,
     width: 434,
     position: "absolute",
   },
@@ -394,8 +391,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center', // Align items to the center horizontally
     justifyContent: 'center', // Align items to the center vertically
     height: 172,
+    left: '28%',
     position: 'absolute',
-    left: '50%',
     marginLeft: -150, // Adjusted to half of the width of your block
     top: 73,
     flexDirection: 'row',

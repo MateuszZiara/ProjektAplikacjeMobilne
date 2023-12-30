@@ -79,10 +79,10 @@ export function Koszyk({ navigation }){
                     <View style={styles.appNameWrapper}>
                       <View style={[styles.appName, styles.appSpaceBlock]}>
                         <Text style={[styles.twojeKonto, styles.zamwienieLayout]}>
-                          Twoje konto
+                          Twoje zamówienie
                         </Text>
                         <Text style={[styles.zamwienie, styles.zamwienieLayout]}>
-                          Zamówienie
+                          Koszyk
                         </Text>
                       </View>
                     </View>
@@ -99,28 +99,8 @@ export function Koszyk({ navigation }){
                     </TouchableOpacity>
                   </View>
                 </View>
+              </View>
 
-              </View>
-              <View style={[styles.backParent, styles.frameParentFlexBox]}>
-                <TouchableOpacity onPress={() =>navigation.navigate(Home)}>
-                <Image
-                    style={styles.backIcon}
-                    contentFit="cover"
-                    source={require("./assets/back.png")}
-                />
-                </TouchableOpacity>
-                <View style={[styles.frameView, styles.frameParentFlexBox]}>
-                  <View style={styles.appNameContainer}>
-                    <View style={[styles.appName1, styles.appSpaceBlock]}>
-                      <Text
-                          style={[styles.zamwienie1, styles.garyLeeTypo]}
-                      >{`Zamówienie
-`}</Text>
-                      <Text style={styles.ustawieniaKonta}>Koszyk</Text>
-                    </View>
-                  </View>
-                </View>
-              </View>
             </View>
             <View style={{
               marginTop: 300,

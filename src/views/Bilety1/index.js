@@ -44,24 +44,6 @@ export function Bilety1({ navigation }) {
                         </View>
                     </View>
                     <View style={styles.maskGroupParent}>
-                        <View style={[styles.maskGroup, styles.iconLayout]}>
-                            <Image
-                                style={[styles.maskGroupChild, styles.wzrLayout]}
-                                contentFit="cover"
-                                source={require("./assets/group-1597883025.png")}
-                            />
-                            <Image
-                                style={styles.maskGroupItem}
-                                contentFit="cover"
-                                source={require("./assets/group-1597883024.png")}
-                            />
-                            <Image
-                                style={styles.maskGroupInner}
-                                contentFit="cover"
-                                source={require("./assets/ellipse-1.png")}
-                            />
-                            <Text style={[styles.text, styles.textFlexBox]}>2</Text>
-                        </View>
                         <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
                             Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
                         }}>
@@ -88,7 +70,7 @@ export function Bilety1({ navigation }) {
                         <TouchableOpacity onPress={() => {{Ticket.id = 2} navigation.navigate(Bilety2_vip)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
 
-                            <Text style={[styles.normalny, styles.vipClr]}>Ulgowy</Text>
+                            <Text style={[styles.ulgowy, styles.vipClr]}>Ulgowy</Text>
                             <Image
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"
@@ -110,7 +92,7 @@ export function Bilety1({ navigation }) {
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => {{Ticket.id = 4} navigation.navigate(Bilety2_vip)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
-                            <Text style={[styles.lodyOreo, styles.vipClr] }>Rodzinny</Text>
+                            <Text style={[styles.rodzinny, styles.vipClr] }>Rodzinny</Text>
                             <Image
                                 style={styles.maskGroupIcon}
                                 contentFit="cover"
@@ -199,10 +181,6 @@ const styles = StyleSheet.create({
         //fontFamily: FontFamily.poppinsSemiBold,
         fontWeight: "600",
         textAlign: "left",
-    },
-    iconLayout: {
-        height: 35,
-        width: 35,
     },
     textFlexBox: {
         display: "flex",
@@ -339,11 +317,6 @@ const styles = StyleSheet.create({
         textAlign: "left",
         position: "absolute",
     },
-    maskGroup: {
-        top: 8,
-        left: 0,
-        position: "absolute",
-    },
     frameChild: {
         width: 71,
         height: 71,
@@ -395,8 +368,8 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         fontSize: FontSize.size_lg,
         top: 119,
-        color: 'lightgray',
         left: "50%",
+        color: 'lightgray',
         position: "absolute",
     },
     ulgowyParent: {
@@ -412,17 +385,17 @@ const styles = StyleSheet.create({
         fontSize: FontSize.size_lg,
         top: 119,
         color: 'lightgray',
-        left: "50%",
+        left: "55%",
         position: "absolute",
     },
-    lodyOreo: {
+    rodzinny: {
         marginLeft: -42.5,
        // fontFamily: FontFamily.poppinsBold,
         fontWeight: "700",
         fontSize: FontSize.size_lg,
         top: 119,
         color: Color.colorLightgray,
-        left: "50%",
+        left: "53%",
         position: "absolute",
     },
     sliderPrzekasek1: {
@@ -437,8 +410,6 @@ const styles = StyleSheet.create({
         position: "absolute",
     },
     headerEkranuPrzeksek: {
-        top: 21,
-        left: 3,
         height: 657,
         width: 578,
         position: "absolute",
@@ -513,10 +484,9 @@ const styles = StyleSheet.create({
         position: "absolute",
     },
     wzr: {
-
         backgroundColor: "#000",
         flex: 1,
-        height: 700,
+        height: 750,
         overflow: "hidden",
     },
 });

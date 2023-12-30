@@ -77,10 +77,7 @@ export function PrzekaskiView({ navigation }) {
               justifyContent: 'center', // Center vertically
               alignItems: 'center',
                 marginTop: 20,
-
-
-
-              //!TODO paginationItemPadSize: 2,
+                //paginationItemPadSize: 2,
             }}
         >
 
@@ -103,8 +100,11 @@ export function PrzekaskiView({ navigation }) {
   return (
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.ekranPrzeksek}>
-      <View style={[styles.headerEkranuPrzeksek, styles.sliderLayout]}>
-        <View style={[styles.slider, styles.sliderLayout]}>
+
+
+
+        <View style={[styles.headerEkranuPrzeksek, styles.sliderLayout]}>
+            <View style={[styles.slider]}>
           <Image
             style={[styles.image2Icon, styles.image2IconLayout]}
             contentFit="cover"
@@ -126,6 +126,9 @@ export function PrzekaskiView({ navigation }) {
             colors={["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"]}
           />
         </View>
+
+
+
         <View style={[styles.frameParent, styles.frameParentFlexBox]}>
           <View style={[styles.frameWrapper, styles.frameParentFlexBox]}>
             <View style={styles.appNameWrapper}>
@@ -215,9 +218,13 @@ export function PrzekaskiView({ navigation }) {
             layout={'default'}
             ref={(ref) => (this.carousel = ref)}
             data={carouselItems}
-            sliderWidth={300}
-            itemWidth={300}
+            sliderWidth={700}
+            itemWidth={200}
+            activeSlideAlignment={"start"}
+            inactiveSlideScale={1}
+            inactiveSlideOpacity={1}
             renderItem={renderItem}
+            loop={true}
             onSnapToItem={(index) => ActiveSlider(index)}
         />
           <Pagination

@@ -32,8 +32,7 @@ export const styles = StyleSheet.create({
     overflow: "hidden",
   },
   navigationBarLayout: {
-    width: 430,
-    bottom: 0,
+    width: 430
   },
   frameParentFlexBox: {
 
@@ -462,7 +461,6 @@ export const styles = StyleSheet.create({
     flex: 1, // Pozwala tekstowi zajmować dostępną przestrzeń
   },
   groupParent: {
-    top: 21,
     left: 3,
     height: 610,
     width: 578,

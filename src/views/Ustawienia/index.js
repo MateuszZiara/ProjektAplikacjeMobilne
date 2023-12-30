@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback} from "react-native";
+import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback, StatusBar} from "react-native";
 import { Image } from "expo-image";
 import { Border, FontSize, FontFamily, Color } from "./styles.js";
 import { styles } from "./styles.js";
@@ -132,7 +132,7 @@ export function UstawieniaView({ navigation }) {
                             </View>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate(LoginView)} /*//TODO Nap rzyszlosc funkcje wylogowujaca*/>
+                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate(LoginView)} /*//TODO Ziara chuju tu!*/>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image
@@ -144,6 +144,17 @@ export function UstawieniaView({ navigation }) {
                             </View>
                         </TouchableOpacity>
 
+                    </View>
+                    <View
+                        style={[
+                            styles.iphonestatusbarOgranicznik,
+                            styles.iphonestatusbarPosition,
+                        ]}
+                    >
+                        <StatusBar
+                            style={styles.iphonestatusbarPosition}
+                            barStyle="light-content"
+                        />
                     </View>
                 </ScrollView>
         );

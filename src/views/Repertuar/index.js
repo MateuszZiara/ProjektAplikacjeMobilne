@@ -386,6 +386,8 @@ export function RepertuarView({ navigation }) {
           Sprawdź nasze nowości.
         </Text>
       </View>
+
+
       <View style={[styles.headerEkranuPrzeksek, styles.sliderLayout]}>
         <View style={[styles.slider, styles.sliderLayout]}>
           <Image
@@ -409,6 +411,8 @@ export function RepertuarView({ navigation }) {
             colors={["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"]}
           />
         </View>
+
+
         <View style={[styles.frameParent1, styles.frameParentFlexBox]}>
           <View style={[styles.frameWrapper7, styles.frameParentFlexBox]}>
             <View style={styles.appNameWrapper}>
