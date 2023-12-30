@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     parentLayout: {
         height: 172,
         width: 161,
-        backgroundColor: 'gray',
+        backgroundColor: Color.colorGray_100,
         borderRadius: Border.br_11xl,
         overflow: "hidden",
     },

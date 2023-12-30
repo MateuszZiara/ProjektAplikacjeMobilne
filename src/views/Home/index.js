@@ -220,11 +220,11 @@ export function Home({ navigation }){
                             <View style={[styles.tytulParent, styles.tytulParentLayout]}>
                                 <Text style={[styles.tytul, styles.tytulTypo1]}>18:30</Text>
                                 <Text style={[styles.tytul1, styles.tytulTypo1]}>21:30</Text>
-                                <View style={[styles.rightArrowContainer, styles.frameLayout]}>
+                                <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
                                     <Image
-                                        style={styles.rightArrowIcon9}
+                                        style={styles.rightArrowIcon}
                                         contentFit="cover"
-                                        source={require("./assets/right-arrow1.png")}
+                                        source={require("./assets/right-arrow.png")}
                                     />
                                 </View>
                             </View>
@@ -242,11 +242,11 @@ export function Home({ navigation }){
                                 <Text style={[styles.tytul, styles.tytulTypo1]}>19:00</Text>
                                 <Text style={[styles.tytul1, styles.tytulTypo1]}>22:00</Text>
                                 <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowFrame, styles.frameLayout]}>
+                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
                                         <Image
-                                            style={styles.rightArrowIcon9}
+                                            style={styles.rightArrowIcon}
                                             contentFit="cover"
-                                            source={require("./assets/right-arrow1.png")}
+                                            source={require("./assets/right-arrow.png")}
                                         />
                                     </View>
                                 </View>
@@ -274,11 +274,11 @@ export function Home({ navigation }){
                                 </View>
                             </View>
                             <View style={[styles.singleBarInner, styles.frameLayout]}>
-                                <View style={[styles.rightArrowFrame, styles.frameLayout]}>
+                                <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
                                     <Image
-                                        style={styles.rightArrowIcon9}
+                                        style={styles.rightArrowIcon}
                                         contentFit="cover"
-                                        source={require("./assets/right-arrow1.png")}
+                                        source={require("./assets/right-arrow.png")}
                                     />
                                 </View>
                             </View>
@@ -288,11 +288,11 @@ export function Home({ navigation }){
                                 <Text style={[styles.tytul, styles.tytulTypo1]}>19:00</Text>
                                 <Text style={[styles.tytul1, styles.tytulTypo1]}>20:30</Text>
                                 <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowFrame, styles.frameLayout]}>
+                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
                                         <Image
-                                            style={styles.rightArrowIcon9}
+                                            style={styles.rightArrowIcon}
                                             contentFit="cover"
-                                            source={require("./assets/right-arrow1.png")}
+                                            source={require("./assets/right-arrow.png")}
                                         />
                                     </View>
                                 </View>
@@ -311,11 +311,11 @@ export function Home({ navigation }){
                                 <Text style={[styles.tytul, styles.tytulTypo1]}>19:30</Text>
                                 <Text style={[styles.tytul1, styles.tytulTypo1]}>22:30</Text>
                                 <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowFrame, styles.frameLayout]}>
+                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
                                         <Image
-                                            style={styles.rightArrowIcon9}
+                                            style={styles.rightArrowIcon}
                                             contentFit="cover"
-                                            source={require("./assets/right-arrow1.png")}
+                                            source={require("./assets/right-arrow.png")}
                                         />
                                     </View>
                                 </View>
@@ -334,11 +334,11 @@ export function Home({ navigation }){
                                 <Text style={[styles.tytul, styles.tytulTypo1]}>19:15</Text>
                                 <Text style={[styles.tytul1, styles.tytulTypo1]}>20:15</Text>
                                 <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowFrame, styles.frameLayout]}>
+                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
                                         <Image
-                                            style={styles.rightArrowIcon9}
+                                            style={styles.rightArrowIcon}
                                             contentFit="cover"
-                                            source={require("./assets/right-arrow1.png")}
+                                            source={require("./assets/right-arrow.png")}
                                         />
                                     </View>
                                 </View>
@@ -359,31 +359,31 @@ export function Home({ navigation }){
                         </Text>
                     </View>
                 </View>
-                <View style={styles.komponentPrzekskiFrame}>
-                    <View style={[styles.komponentPrzekski1, styles.repertuarPosition]}>
-                        <Image
-                            style={styles.glowingSpaceshipOrbitsPlaneIcon1}
-                            contentFit="cover"
-                            source={require("./assets/glowingspaceshiporbitsplanetstarrygalaxygeneratedbyai-11.png")}
+            <View style={styles.komponentPrzekskiFrame}>
+                <View style={[styles.komponentPrzekski1, styles.repertuarPosition]}>
+                    <ImageBackground
+                        style={styles.glowingSpaceshipOrbitsPlaneIcon1}
+                        resizeMode="cover"  // Dodaj tę linię
+                        source={require("./assets/popcorn.png")}
                         />
-                        <LinearGradient
-                            style={[styles.komponentPrzekskiChild, styles.sliderChildBg]}
-                            locations={[0, 0.69]}
-                            colors={["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"]}
-                        />
+
                         <View style={styles.frameGroup}>
                             <View>
+
                                 <Text style={[styles.wylosujSwjRabat1, styles.znajdFilmW1Typo]}>
                                     Jedyne w swoim rodzaju
                                 </Text>
                                 <Text style={styles.grzechotnik}>Przekąski</Text>
                             </View>
                             <View style={[styles.rightArrowWrapper, styles.rightFlexBox]}>
+
+                                <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
                                 <Image
                                     style={styles.rightArrowIcon8}
                                     contentFit="cover"
-                                    source={require("./assets/right-arrow2.png")}
+                                    source={require("./assets/right-arrow.png")}
                                 />
+                                    </TouchableOpacity>
                             </View>
                         </View>
                     </View>

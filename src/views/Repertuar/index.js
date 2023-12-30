@@ -159,9 +159,7 @@ export function RepertuarView({ navigation }) {
             <Text style={[styles.tytul, styles.tytulTypo1]}>19:15</Text>
             <Text style={[styles.tytul1, styles.tytulTypo1]}>20:15</Text>
             <View style={styles.wrapperLayout}>
-              <View
-                style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}
-              >
+              <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
                 <Image
                   style={styles.rightArrowIcon}
                   contentFit="cover"
