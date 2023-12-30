@@ -5,6 +5,7 @@ import {StyleSheet} from "react-native";
 export const FontSize = {
   extraSmall_size: 12,
   size_mid: 17,
+  size_high: 25,
 };
 /* Colors */
 export const Color = {
@@ -81,10 +82,13 @@ export const styles = StyleSheet.create({
   },
   garyLeeTypo: {
     height: 53,
-
+    top: 10,
+    left:23,
+    marginTop:10,
     fontWeight: "500",
-    fontSize: FontSize.size_mid,
-    textAlign: "left",
+    fontSize: FontSize.size_high,
+    textAlign: "center",
+
   },
   garyLeeParent: {
     top: 16,
