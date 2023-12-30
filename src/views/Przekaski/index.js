@@ -6,6 +6,9 @@ import {Color, styles} from "./styles"
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {useState} from "react";
 import Cart from "../../Classes/Cart";
+import Singleton from "../../Classes/User";
+import {Login} from "../Login";
+import {UstawieniaView} from "../Ustawienia";
 
 export function PrzekaskiView({ navigation }) {
   const width = Dimensions.get('window').width;
@@ -136,14 +139,20 @@ export function PrzekaskiView({ navigation }) {
               </View>
             </View>
           </View>
-          <View style={[styles.vectorWrapper, styles.frameParentFlexBox]}>
+
+              <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
+                  Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
+              }}>
             <Image
               style={styles.frameChild}
               contentFit="cover"
               source={require("./assets/ellipse-19.png")}
             />
-          </View>
+              </TouchableOpacity>
+
+
         </View>
+
       </View>
       <View style={styles.komponentPrzekskiParent}>
         <View style={[styles.komponentPrzekski, styles.komponentLayout]}>

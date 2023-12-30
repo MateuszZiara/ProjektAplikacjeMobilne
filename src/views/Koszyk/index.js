@@ -8,6 +8,9 @@ import {Koszyk_platnosc} from "../Koszyk_platnosc";
 import {Home} from "../Home";
 import Cart from "../../Classes/Cart";
 import {useEffect, useState} from "react";
+import Singleton from "../../Classes/User";
+import {Login} from "../Login";
+import {UstawieniaView} from "../Ustawienia";
 
 export function Koszyk({ navigation }){
   const renderItem = ({ item }) => (
@@ -85,13 +88,15 @@ export function Koszyk({ navigation }){
                     </View>
                   </View>
                   <View style={styles.frameContainer}>
-                    <View style={[styles.vectorWrapper, styles.frameParentFlexBox]}>
+                    <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
+                      Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
+                    }}>
                       <Image
                           style={styles.frameChild}
                           contentFit="cover"
                           source={require("./assets/ellipse-19.png")}
                       />
-                    </View>
+                    </TouchableOpacity>
                   </View>
                 </View>
 

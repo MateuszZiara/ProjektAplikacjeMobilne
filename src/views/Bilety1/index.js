@@ -4,6 +4,9 @@ import {StyleSheet, View, Text, StatusBar, ScrollView, Button, TouchableOpacity}
 import { LinearGradient } from "expo-linear-gradient";
 import {Bilety2_vip} from "../Bilety2_vip";
 import Ticket from "../../Classes/Ticket";
+import Singleton from "../../Classes/User";
+import {Login} from "../Login";
+import {UstawieniaView} from "../Ustawienia";
 export function Bilety1({ navigation }) {
     return (
         <ScrollView>
@@ -59,13 +62,15 @@ export function Bilety1({ navigation }) {
                             />
                             <Text style={[styles.text, styles.textFlexBox]}>2</Text>
                         </View>
-                        <View style={[styles.vectorWrapper, styles.frameParentFlexBox]}>
+                        <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
+                            Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
+                        }}>
                             <Image
                                 style={styles.frameChild}
                                 contentFit="cover"
                                 source={require("./assets/ellipse-19.png")}
                             />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <View style={styles.sliderPrzekasekParent} >
@@ -508,10 +513,10 @@ const styles = StyleSheet.create({
         position: "absolute",
     },
     wzr: {
-        borderRadius: 40,
+
         backgroundColor: "#000",
         flex: 1,
-        height: 896,
+        height: 700,
         overflow: "hidden",
     },
 });

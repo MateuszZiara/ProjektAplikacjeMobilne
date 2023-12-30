@@ -149,7 +149,7 @@ export const styles = StyleSheet.create({
   },
   repertuar3Layout: {
     width: 322,
-    color: Color.colorWhitesmoke_200,
+    color: Color.colorWhitesmoke_100,
     textAlign: "left",
   },
   tytul: {

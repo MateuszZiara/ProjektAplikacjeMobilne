@@ -1,9 +1,12 @@
 import * as React from "react";
-import {Text, StyleSheet, View, ScrollView, ScrollViewBase} from "react-native";
+import {Text, StyleSheet, View, ScrollView, ScrollViewBase, TouchableOpacity} from "react-native";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { Color, FontFamily, FontSize, Padding, Border } from "./styles.js";
 import {styles} from "./styles.js"
+import Singleton from "../../Classes/User";
+import {Login} from "../Login";
+import {UstawieniaView} from "../Ustawienia";
 export function RepertuarView({ navigation }) {
   return (
       <ScrollView>
@@ -421,13 +424,15 @@ export function RepertuarView({ navigation }) {
               </View>
             </View>
           </View>
-          <View style={[styles.vectorWrapper, styles.frameParentFlexBox]}>
+          <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
+            Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
+          }}>
             <Image
-              style={styles.ellipseIcon}
-              contentFit="cover"
-              source={require("./assets/ellipse-19.png")}
+                style={styles.ellipseIcon}
+                contentFit="cover"
+                source={require("./assets/ellipse-19.png")}
             />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
