@@ -11,7 +11,9 @@ import {Bilety3_vip} from "../Bilety3_vip";
 import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
 import Search from "../../Classes/Search";
-export function RepertuarView({ navigation }) {
+import {Home} from "../Home";
+export function RepertuarSearch({ navigation }) {
+
   const renderItem = ({ item }) => (
       <View style={styles.itemContainer}>
         <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
@@ -22,7 +24,9 @@ export function RepertuarView({ navigation }) {
         />
       </View>
   );
+
   const [refresh, setRefresh] = useState(false);
+  const [filteredMovies, setFilteredMovies] = useState([]);
   useEffect(() => {
     const unsubscribe = navigation.addListener("focus", () => {
       // The screen is focused
@@ -37,7 +41,10 @@ export function RepertuarView({ navigation }) {
   // Function to refresh the FlatList
   const refreshFlatList = () => {
     // Toggle the state to force a re-render
+    const filtered = Movie.array.filter(item => item.name.toLowerCase().includes(Search.phrase.toLowerCase()));
+    setFilteredMovies(filtered);
     setRefresh((prevRefresh) => !prevRefresh);
+
   };
   return (
       <ScrollView style={{ flex: 1 }}>
@@ -95,6 +102,13 @@ export function RepertuarView({ navigation }) {
 
 
           <View style={[styles.backParent, styles.parentFlexBox]}>
+            <TouchableOpacity onPress={() =>navigation.navigate(Home)}>
+              <Image
+                  style={styles.backIcon}
+                  contentFit="cover"
+                  source={require("./assets/back.png")}
+              />
+            </TouchableOpacity>
             <View style={[styles.frameWrapper5, styles.frameWrapperFlexBox]}>
               <View style={styles.appNameWrapper}>
                 <View style={[styles.appName, styles.appSpaceBlock]}>
@@ -137,7 +151,7 @@ export function RepertuarView({ navigation }) {
           <View style={styles.dynamiczneitemki}>
             <FlatList
                 key={refresh}
-                data={Movie.array}
+                data={filteredMovies}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id.toString()}
             />

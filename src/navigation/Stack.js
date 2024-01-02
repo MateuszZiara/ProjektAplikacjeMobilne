@@ -16,6 +16,7 @@ import {Koszyk_platnosc} from "../views/Koszyk_platnosc";
 import {Koszyk_blik} from "../views/Koszyk_blik";
 import {Koszyk_karta} from "../views/Koszyk_karta";
 import {Grzechotnik} from "../views/Grzechotnik";
+import {RepertuarSearch} from "../views/RepertuarSearch";
 
 
 
@@ -43,6 +44,7 @@ export default function StackNav() {
             <Stack.Screen name="Koszyk_blik" component={Koszyk_blik} options={optionScreen} />
             <Stack.Screen name="Koszyk_karta" component={Koszyk_karta} options={optionScreen} />
             <Stack.Screen name="Grzechotnik" component={Grzechotnik} options={optionScreen} />
+            <Stack.Screen name="RepertuarSearch" component={RepertuarSearch} options={optionScreen} />
 
         </Stack.Navigator>
 

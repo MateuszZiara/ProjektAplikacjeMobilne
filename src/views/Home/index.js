@@ -19,7 +19,10 @@ import {useState} from "react";
 import Carousel, {Pagination} from "react-native-snap-carousel";
 import {Grzechotnik} from "../Grzechotnik";
 import {Login} from "../Login";
-
+import * as DateTime from "react-native-svg";
+import Search from "../../Classes/Search"
+import {RepertuarView} from "../Repertuar";
+import {RepertuarSearch} from "../RepertuarSearch";
 
 
 export function Home({ navigation }){
@@ -30,7 +33,13 @@ export function Home({ navigation }){
         const hours = new Date().getHours();
         return hours < 5 || hours >= 20 ? "Dobry wieczór," : "Dzień dobry,";
     };
-
+    const [phrase, setPhrase] = useState('');
+    function searchLogic()
+    {
+        Search.phrase = phrase;
+        console.log(Search.phrase);
+        navigation.navigate(RepertuarSearch)
+    }
     const checkHours = ([hours]) => { //TODO jak będzie baza filmów to wrócić
         const currHour = new Date().getHours();
         return DateTime.parse(hours) > currHour ? <Text style={styles.tytulTypo1}>{hours}</Text> : <Text style={styles.znajdFilmW1}>{hours}</Text>;
@@ -40,7 +49,7 @@ export function Home({ navigation }){
     function ActiveSlider(index)
     {
         setActiveIndex(index);
-        console.log(index);
+
     }
     const carouselItems = [
 
@@ -157,13 +166,15 @@ export function Home({ navigation }){
                 <View style={[styles.searchBarWrapper, styles.wrapperLayout]}>
                     <View style={styles.searchBar}>
                         <View style={styles.znajdFilmWRepertuarzeParent}>
-                            <TextInput style={[styles.znajdFilmW1, styles.znajdFilmW1Typo]} placeholder='Znajdź film w repertuarze' placeholderTextColor='white'>
+                            <TextInput style={[styles.znajdFilmW1, styles.znajdFilmW1Typo]} placeholder='Znajdź film w repertuarze' placeholderTextColor='white' value={phrase} onChangeText={(text) => setPhrase(text)}>
                             </TextInput>
+                            <TouchableOpacity onPress={() => searchLogic()}>
                             <Image
                                 style={styles.logoIcon1}
                                 contentFit="cover"
                                 source={require("./assets/logo.png")}
                             />
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>
