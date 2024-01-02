@@ -276,7 +276,7 @@ export function Home({ navigation }){
                         </View>
                     </View>
                 </View>
-
+            <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
             <View style={styles.komponentPrzekskiFrame}>
                 <View style={[styles.komponentPrzekski1, styles.repertuarPosition]}>
                     <ImageBackground
@@ -295,18 +295,18 @@ export function Home({ navigation }){
                             </View>
                             <View style={[styles.rightArrowWrapper, styles.rightFlexBox]}>
 
-                                <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
+
                                 <Image
                                     style={styles.rightArrowIcon8}
                                     contentFit="cover"
                                     source={require("./assets/right-arrow.png")}
                                 />
-                                    </TouchableOpacity>
+
                             </View>
                         </View>
                     </View>
                 </View>
-
+            </TouchableOpacity>
         </View>
         </ScrollView>
     );
