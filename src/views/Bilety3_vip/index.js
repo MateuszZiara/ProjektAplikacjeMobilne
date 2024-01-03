@@ -8,6 +8,7 @@ import {Calendar} from "react-native-calendars";
 import {Przekaski2View} from "../Przekaski2";
 import {Bilety4_vip} from "../Bilety4_vip";
 import {Bilety2_vip} from "../Bilety2_vip";
+import {UserAvatar} from "../../components/UserAvatar";
 
 export function Bilety3_vip({ navigation }) {
   const [selected, setSelected] = useState('');
@@ -75,13 +76,7 @@ export function Bilety3_vip({ navigation }) {
             </View>
           </View>
         </View>
-        <View style={[styles.vectorWrapper, styles.wrapperParentFlexBox]}>
-          <Image
-            style={styles.frameChild}
-            contentFit="cover"
-            source={require("./assets/ellipse-19.png")}
-          />
-        </View>
+        <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
       </View>
       <Calendar
           onDayPress={day => {

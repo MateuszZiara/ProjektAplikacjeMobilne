@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Image } from "expo-image";
 import {
-    StyleSheet,
     View,
     Text,
     TextInput,
@@ -19,11 +18,44 @@ import {useState} from "react";
 import Carousel, {Pagination} from "react-native-snap-carousel";
 import {Grzechotnik} from "../Grzechotnik";
 import {Login} from "../Login";
+import { Avatar } from 'react-native-paper';
+import zIndex from "@mui/material/styles/zIndex";
+import {UserAvatar} from "../../components/UserAvatar";
+function IfAvailableToday({ hours }) {
+    const currentHour = new Date().getHours();
 
+    const timeComponents = hours.map((hour, index) => {
+        const argumentHour = parseInt(hour, 10);
 
+        if (!isNaN(argumentHour)) {
+            let style = argumentHour > currentHour ? styles.active : styles.inactive;
+            if (index === hours.length - 1) { //nie wchodzą
+            return (
+                <View key={index} >
+                    <Text style={[styles.sliderh2,style]}>{hour} </Text>
+                </View>
+            );
+        }
+        else{
+            return (
+                <View key={index} >
+                    <Text style={[styles.cayRepertuar,style]}>{hour} | </Text>
+                </View>
+            );
+        }
+
+        }
+    });
+    return (
+        <View style={{ flexDirection: 'row' }}>
+            {timeComponents}
+        </View>
+    );
+
+}
 
 export function Home({ navigation }){
-    console.log(Singleton.name);
+    {/* console.log(Singleton.name); */}
     const [activeIndex, setActiveIndex] = useState(0);
     const checkName = (name) => (name !== null ? name : "Czas na kino!");
     const checkDate = () => {
@@ -40,7 +72,7 @@ export function Home({ navigation }){
     function ActiveSlider(index)
     {
         setActiveIndex(index);
-        console.log(index);
+        {/* console.log(index); */}  //TU BYŁ PROBLEM Z TYM RENDEROWANIEM XDDD //TODO PureComponents
     }
     const carouselItems = [
 
@@ -60,15 +92,19 @@ export function Home({ navigation }){
                     width: viewportWidth+15,
                     justifyContent: 'center', // Center vertically
                     alignItems: 'center',
+                    zIndex: 0
                 }}
                 source={item.imageSource}
             >
+            <Image source={require('./assets/gradientback.png')} style={{zIndex: 1}} />
+                <View style={styles.sliderView}>
+                    <Text style={styles.sliderh1}>{item.title}</Text>
+                    <View style={{flexDirection: 'row'}}>
+                        <Text style={styles.sliderh2}>{item.text}</Text>
+                        <Text style={[styles.sliderh2,{marginLeft: 20}]}>{item.review}</Text>
+                    </View>
+                    <View style={{flexDirection: 'row'}}>{item.times.map((time, index) => <IfAvailableToday key={index} hours={[time]} />)}</View>
 
-                <View style={styles.tytulWrapper}>
-                    <Text style={[ styles.tytulTypo]}>{item.title}</Text>
-                    <Text style={styles.tytulTypo1}>{item.text}</Text>
-                    <Text style={styles.tytulTypo1}>{item.review}</Text>
-                    <Text style={styles.tytulTypo1}>{item.times}</Text>
                 </View>
 
             </ImageBackground>
@@ -77,7 +113,6 @@ export function Home({ navigation }){
     return (
         <ScrollView style={{ flex: 1 }}>
         <View style={styles.ekranGowny111}>
-            {/* usunalem jakiś view i przesunelo sie wszystko w prawo */}
                 <View style={[styles.groupView, styles.groupViewLayout]}>
                     <View style={styles.frameParent}>
                         <View style={styles.frameWrapper}>
@@ -92,25 +127,16 @@ export function Home({ navigation }){
                                 </View>
                             </View>
                         </View>
-                        <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
-                           Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
-                        }
-                        }>
-                            <Image
-                                style={styles.frameChild}
-                                contentFit="cover"
-                                source={require("./assets/ellipse-19.png")}
-                            />
-                        </TouchableOpacity>
+                        <View style={{left:-5}}>
+                            <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
+                        </View>
                     </View>
-
                     <View style={
                         {
-                            //marginTop: 150,
                             zIndex:0
                         }
                     }>
-                        <Image source={require('./gradientback.png')} style={{
+                        <Image source={require('./assets/gradientback.png')} style={{
                             borderRadius: 0,
                             height: 500,
                             width: viewportWidth+15,

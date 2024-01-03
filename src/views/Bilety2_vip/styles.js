@@ -195,7 +195,6 @@ export const styles = StyleSheet.create({
     left: 0,
   },
   headerEkranuPrzeksek: {
-    top: 21,
     left: -3,
   },
   text: {
@@ -391,7 +390,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
   },
   frameParent: {
-    top: 79,
+    top: 60,
     left: 32,
     justifyContent: "center",
     alignItems: "center",
@@ -433,7 +432,6 @@ export const styles = StyleSheet.create({
   },
   wzr: {
     backgroundColor: Color.colorBlack,
-    flex: 1,
     width: "100%",
     height: 896,
     overflow: "hidden",

@@ -212,7 +212,6 @@ export const styles = StyleSheet.create({
     width: 578,
   },
   headerEkranuPrzeksek: {
-    top: 21,
     left: -3,
     position: "absolute",
   },
@@ -287,7 +286,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   frameParent: {
-    top: 79,
+    top: 60,
     left: 32,
     justifyContent: "center",
     flexDirection: "row",

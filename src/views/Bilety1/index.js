@@ -7,6 +7,7 @@ import Ticket from "../../Classes/Ticket";
 import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
+import {UserAvatar} from "../../components/UserAvatar";
 export function Bilety1({ navigation }) {
     return (
         <ScrollView>
@@ -44,15 +45,7 @@ export function Bilety1({ navigation }) {
                         </View>
                     </View>
                     <View style={styles.maskGroupParent}>
-                        <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
-                            Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
-                        }}>
-                            <Image
-                                style={styles.frameChild}
-                                contentFit="cover"
-                                source={require("./assets/ellipse-19.png")}
-                            />
-                        </TouchableOpacity>
+                        <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
                     </View>
                 </View>
                 <View style={styles.sliderPrzekasekParent} >
@@ -333,9 +326,7 @@ const styles = StyleSheet.create({
         position: "absolute",
     },
     maskGroupParent: {
-        width: 110,
-        height: 55,
-        marginLeft: 82,
+        marginLeft: 85,
     },
     frameParent: {
         top: 58,

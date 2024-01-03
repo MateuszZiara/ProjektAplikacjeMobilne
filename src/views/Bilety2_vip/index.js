@@ -7,6 +7,7 @@ import {Bilety3_vip} from "../Bilety3_vip";
 import {useState} from "react";
 import Ticket from "../../Classes/Ticket";
 import {Bilety1} from "../Bilety1";
+import {UserAvatar} from "../../components/UserAvatar";
 
 export function Bilety2_vip({ navigation }) {
   const [number, setNumber] = useState(0);
@@ -89,7 +90,7 @@ export function Bilety2_vip({ navigation }) {
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.wzr}>
 
-      <View style={[styles.headerEkranuPrzeksek, styles.sliderLayout]}>
+      <View style={[styles.sliderLayout, styles.headerEkranuPrzeksek]}>
         <View style={[styles.slider, styles.sliderLayout]}>
           <Image
             style={[styles.image2Icon, styles.image2IconPosition]}
@@ -112,15 +113,6 @@ export function Bilety2_vip({ navigation }) {
             colors={["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"]}
           />
         </View>
-      </View>
-      <View
-        style={[
-          styles.iphonestatusbarOgranicznik,
-          styles.iphonestatusbarPosition,
-        ]}
-      >
-
-
       </View>
       <View style={[styles.biletVipParent, styles.parentBg]}>
         <Text style={[styles.biletVip, styles.zTypo]}>
@@ -197,13 +189,7 @@ export function Bilety2_vip({ navigation }) {
             </View>
           </View>
         </View>
-        <View style={styles.vectorWrapper}>
-          <Image
-            style={styles.frameChild}
-            contentFit="cover"
-            source={require("./assets/ellipse-19.png")}
-          />
-        </View>
+        <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
       </View>
       <TouchableOpacity onPress={() =>navigation.navigate(Bilety3_vip)}>
 

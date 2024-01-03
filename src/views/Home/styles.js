@@ -201,7 +201,7 @@ export const styles = StyleSheet.create({
         borderStyle: "solid",
         borderColor: "rgba(255, 255, 255, 0.14)",
         borderWidth: 4,
-        marginLeft: 52,
+        marginLeft: 20,
         justifyContent: "center",
         flexDirection: "row",
         alignItems: "center",
@@ -521,4 +521,35 @@ export const styles = StyleSheet.create({
         overflow: "hidden",
         width: "100%",
     },
+    active: {
+        color: '#ffffff'
+    },
+    inactive: {
+        color: 'rgba(44,43,43,0.5)'
+    },
+    sliderView: {
+        marginLeft: -101.5,
+        top: 50,
+        justifyContent: "space-between",
+        width: 203,
+    },
+    sliderh1: {
+        lineHeight: 45,
+        width: 900,
+        fontSize: 30,
+        color: Color.colorWhite,
+        display: "flex",
+        textAlign: "left",
+        //   fontFamily: FontFamily.poppinsSemiBold,
+        fontWeight: "600",
+    },
+    sliderh2: {
+        lineHeight: 30,
+        fontSize: 20,
+        color: Color.colorWhite,
+        display: "flex",
+        textAlign: "left",
+        //   fontFamily: FontFamily.poppinsSemiBold,
+        fontWeight: "600",
+    }
 });
