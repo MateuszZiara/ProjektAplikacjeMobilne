@@ -18,7 +18,6 @@ import {Koszyk_karta} from "../views/Koszyk_karta";
 import {Grzechotnik} from "../views/Grzechotnik";
 
 
-
 const Stack = createNativeStackNavigator();
 const optionScreen = {
     headerShown: false

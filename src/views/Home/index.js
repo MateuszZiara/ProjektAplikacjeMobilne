@@ -22,6 +22,7 @@ import {Login} from "../Login";
 
 
 
+
 export function Home({ navigation }){
     console.log(Singleton.name);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -195,17 +196,19 @@ export function Home({ navigation }){
                                     Wylosuj swój rabat
                                 </Text>
 
-                                <TouchableOpacity onPress={() => navigation.navigate(Grzechotnik)}>
+
                                     <Text style={styles.grzechotnik}>Grzechotnik</Text>
-                                </TouchableOpacity>
+
 
                             </View>
                             <View style={[styles.rightArrowWrapper, styles.rightFlexBox]}>
+                                <TouchableOpacity onPress={() => navigation.navigate(Grzechotnik)}>
                                 <Image
                                     style={styles.rightArrowIcon8}
                                     contentFit="cover"
                                     source={require("./assets/right-arrow.png")}
                                 />
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>
