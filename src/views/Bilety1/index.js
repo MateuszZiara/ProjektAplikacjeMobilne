@@ -8,6 +8,7 @@ import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
 import {UserAvatar} from "../../components/UserAvatar";
+import TicketToBuy from "../../Classes/TicketToBuy";
 export function Bilety1({ navigation }) {
     return (
         <ScrollView>
@@ -50,7 +51,7 @@ export function Bilety1({ navigation }) {
                 </View>
                 <View style={styles.sliderPrzekasekParent} >
                     <View style={[styles.sliderPrzekasek, styles.sliderPosition]}>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 1} navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 1; TicketToBuy.id = 1; TicketToBuy.name = 'VIP'; TicketToBuy.number = 1} navigation.navigate(Bilety2_vip)}}>
                         <View style={styles.parentLayout}>
                             <Text style={[styles.vip, styles.vipClr]}>VIP</Text>
                             <Image
@@ -60,7 +61,7 @@ export function Bilety1({ navigation }) {
                             />
                         </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 2} navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 2;TicketToBuy.id = 2; TicketToBuy.name = 'Ulgowy'; TicketToBuy.number = 1} navigation.navigate(Bilety2_vip)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
 
                             <Text style={[styles.ulgowy, styles.vipClr]}>Ulgowy</Text>
@@ -73,7 +74,7 @@ export function Bilety1({ navigation }) {
                         </TouchableOpacity>
                     </View>
                     <View style={[styles.sliderPrzekasek1, styles.sliderPosition]}>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 3} navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 3;TicketToBuy.id = 3; TicketToBuy.name = 'Normalny'; TicketToBuy.number = 1 } navigation.navigate(Bilety2_vip)}}>
                         <View style={styles.parentLayout}>
                             <Image
                                 style={styles.maskGroupIcon}
@@ -83,7 +84,7 @@ export function Bilety1({ navigation }) {
                             <Text style={[styles.normalny, styles.vipClr]}>Normalny</Text>
                         </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 4} navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 4; TicketToBuy.id = 4; TicketToBuy.name = 'Rodzinny'; TicketToBuy.number = 1} navigation.navigate(Bilety2_vip)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
                             <Text style={[styles.rodzinny, styles.vipClr] }>Rodzinny</Text>
                             <Image

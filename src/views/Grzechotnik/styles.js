@@ -1,6 +1,6 @@
+/* fonts */
 import {StyleSheet} from "react-native";
 
-/* fonts */
 export const FontFamily = {
   poppinsMedium: "Poppins-Medium",
 };
@@ -8,7 +8,8 @@ export const FontFamily = {
 export const Color = {
   colorWhite: "#fff",
 };
-const styles = StyleSheet.create({
+
+export const styles = StyleSheet.create({
   grzechotnikTypo: {
     color: Color.colorWhite,
     fontFamily: FontFamily.poppinsMedium,
@@ -16,28 +17,20 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   image8Icon: {
-    top: 79,
+
     left: 0,
     width: 951,
     height: 691,
     position: "absolute",
   },
-  d6688b6a38d34b6fB2976b8248Icon: {
-    marginLeft: -207,
-    top: 242,
-    width: 414,
-    height: 654,
-    left: "50%",
-    position: "absolute",
-  },
   grzechotnik: {
     marginLeft: -161,
     top: 98,
+    left: "50%",
     fontSize: 20,
     textAlign: "center",
     width: 322,
     height: 53,
-    left: "50%",
   },
   backIcon: {
     top: 110,
@@ -47,8 +40,8 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   zagrzechotaj: {
-    top: 53,
-    left: 265,
+    top: 50,
+    left: 266,
     fontSize: 19,
     textAlign: "left",
   },
@@ -59,4 +52,13 @@ const styles = StyleSheet.create({
     height: 896,
     overflow: "hidden",
   },
+  button: {
+    width:50,
+    height:50,
+  },
+  text: {
+    textAlign:"center",
+    top:250,
+
+  }
 });
