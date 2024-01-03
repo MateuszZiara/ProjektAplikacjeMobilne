@@ -72,7 +72,7 @@ export const BottomTabIcon = ({ routeName, focused }) => {
             {
 
                 if(Cart.array.length !== 0) {
-                    console.log('Cart.array.length');
+
                     return <View style={styles.rectFocus}>
                         <Image
                             style={styles.imgActive}
@@ -92,7 +92,7 @@ export const BottomTabIcon = ({ routeName, focused }) => {
             else
             {
                 if(Cart.array.length !== 0) {
-                    console.log('Cart.array.length');
+
                     return <Image
                             style={styles.img}
                             source={require('../images/CartContains(inactive).png')}

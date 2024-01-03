@@ -8,22 +8,56 @@ import {
     ScrollView,
     TouchableOpacity,
     Dimensions,
-    ImageBackground
+    ImageBackground, FlatList
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import Singleton from "../../Classes/User"
 import {PrzekaskiView} from "../Przekaski";
 import {UstawieniaView} from "../Ustawienia";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Carousel, {Pagination} from "react-native-snap-carousel";
 import {Grzechotnik} from "../Grzechotnik";
 import {Login} from "../Login";
-
+import * as DateTime from "react-native-svg";
+import Search from "../../Classes/Search"
+import {RepertuarView} from "../Repertuar";
+import {RepertuarSearch} from "../RepertuarSearch";
+import Movie from "../../Classes/Movie";
 
 
 
 export function Home({ navigation }){
+    const renderItemList = ({ item }) => (
+        <View style={styles.itemContainer}>
+            <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
+            <Image
+                style={styles.rightArrowIcon}
+                contentFit="cover"
+                source={require("./assets/right-arrow.png")}
+            />
+        </View>
+    );
+    const [refresh, setRefresh] = useState(false);
+    useEffect(() => {
+        const unsubscribe = navigation.addListener("focus", () => {
+            // The screen is focused
+            // Call the function to refresh the FlatList
+            refreshFlatList();
+        });
+
+        // Return the cleanup function to unsubscribe from the event
+        return unsubscribe;
+    }, [navigation, refresh]);
+
+    // Function to refresh the FlatList
+    const refreshFlatList = () => {
+        // Toggle the state to force a re-render
+        setRefresh((prevRefresh) => !prevRefresh);
+    };
+
+
+
     console.log(Singleton.name);
     const [activeIndex, setActiveIndex] = useState(0);
     const checkName = (name) => (name !== null ? name : "Czas na kino!");
@@ -31,7 +65,13 @@ export function Home({ navigation }){
         const hours = new Date().getHours();
         return hours < 5 || hours >= 20 ? "Dobry wieczór," : "Dzień dobry,";
     };
-
+    const [phrase, setPhrase] = useState('');
+    function searchLogic()
+    {
+        Search.phrase = phrase;
+        console.log(Search.phrase);
+        navigation.navigate(RepertuarSearch)
+    }
     const checkHours = ([hours]) => { //TODO jak będzie baza filmów to wrócić
         const currHour = new Date().getHours();
         return DateTime.parse(hours) > currHour ? <Text style={styles.tytulTypo1}>{hours}</Text> : <Text style={styles.znajdFilmW1}>{hours}</Text>;
@@ -41,7 +81,7 @@ export function Home({ navigation }){
     function ActiveSlider(index)
     {
         setActiveIndex(index);
-        console.log(index);
+
     }
     const carouselItems = [
 
@@ -158,13 +198,15 @@ export function Home({ navigation }){
                 <View style={[styles.searchBarWrapper, styles.wrapperLayout]}>
                     <View style={styles.searchBar}>
                         <View style={styles.znajdFilmWRepertuarzeParent}>
-                            <TextInput style={[styles.znajdFilmW1, styles.znajdFilmW1Typo]} placeholder='Znajdź film w repertuarze' placeholderTextColor='white'>
+                            <TextInput style={[styles.znajdFilmW1, styles.znajdFilmW1Typo]} placeholder='Znajdź film w repertuarze' placeholderTextColor='white' value={phrase} onChangeText={(text) => setPhrase(text)}>
                             </TextInput>
+                            <TouchableOpacity onPress={() => searchLogic()}>
                             <Image
                                 style={styles.logoIcon1}
                                 contentFit="cover"
                                 source={require("./assets/logo.png")}
                             />
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>
@@ -219,150 +261,25 @@ export function Home({ navigation }){
                             <Text style={styles.cayRepertuar}>Cały repertuar</Text>
                         </View>
                     </View>
-                    <View style={[styles.repertuar, styles.repertuarPosition]}>
-                        <View style={[styles.singleBar, styles.singleLayout]}>
-                            <View style={[styles.tytulParent, styles.tytulParentLayout]}>
-                                <Text style={[styles.tytul, styles.tytulTypo1]}>18:30</Text>
-                                <Text style={[styles.tytul1, styles.tytulTypo1]}>21:30</Text>
-                                <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
-                                    <Image
-                                        style={styles.rightArrowIcon}
-                                        contentFit="cover"
-                                        source={require("./assets/right-arrow.png")}
-                                    />
-                                </View>
-                            </View>
-                            <View style={styles.rectangleParent}>
-                                <View style={styles.rectangleParent} />
-                                <View style={[styles.tytulWrapper, styles.tytulPosition]}>
-                                    <Text style={[styles.tytul2, styles.tytulTypo]}>
-                                        Batman Początki
-                                    </Text>
-                                </View>
-                            </View>
-                        </View>
-                        <View style={[styles.singleBar1, styles.singleLayout]}>
-                            <View style={[styles.tytulParent, styles.tytulParentLayout]}>
-                                <Text style={[styles.tytul, styles.tytulTypo1]}>19:00</Text>
-                                <Text style={[styles.tytul1, styles.tytulTypo1]}>22:00</Text>
-                                <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
-                                        <Image
-                                            style={styles.rightArrowIcon}
-                                            contentFit="cover"
-                                            source={require("./assets/right-arrow.png")}
-                                        />
-                                    </View>
-                                </View>
-                            </View>
-                            <View style={styles.rectangleParent}>
-                                <View style={styles.rectangleParent} />
-                                <View style={[styles.tytulWrapper, styles.tytulPosition]}>
-                                    <Text style={[styles.tytul5, styles.tytulTypo]}>
-                                        Pięć Koszmarnych Nocy
-                                    </Text>
-                                </View>
-                            </View>
-                        </View>
-                        <View style={[styles.singleBar1, styles.singleLayout]}>
-                            <View style={[styles.tytulParent1, styles.tytulPosition]}>
-                                <Text style={[styles.tytul, styles.tytulTypo1]}>18:45</Text>
-                                <Text style={[styles.tytul1, styles.tytulTypo1]}>20:45</Text>
-                            </View>
-                            <View style={styles.rectangleParent}>
-                                <View style={styles.rectangleParent} />
-                                <View style={[styles.tytulWrapper, styles.tytulPosition]}>
-                                    <Text style={[styles.tytul2, styles.tytulTypo]}>
-                                        American Psycho
-                                    </Text>
-                                </View>
-                            </View>
-                            <View style={[styles.singleBarInner, styles.frameLayout]}>
-                                <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
-                                    <Image
-                                        style={styles.rightArrowIcon}
-                                        contentFit="cover"
-                                        source={require("./assets/right-arrow.png")}
-                                    />
-                                </View>
-                            </View>
-                        </View>
-                        <View style={[styles.singleBar1, styles.singleLayout]}>
-                            <View style={[styles.tytulParent, styles.tytulParentLayout]}>
-                                <Text style={[styles.tytul, styles.tytulTypo1]}>19:00</Text>
-                                <Text style={[styles.tytul1, styles.tytulTypo1]}>20:30</Text>
-                                <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
-                                        <Image
-                                            style={styles.rightArrowIcon}
-                                            contentFit="cover"
-                                            source={require("./assets/right-arrow.png")}
-                                        />
-                                    </View>
-                                </View>
-                            </View>
-                            <View style={styles.rectangleParent}>
-                                <View style={styles.rectangleParent} />
-                                <View style={[styles.tytulWrapper, styles.tytulPosition]}>
-                                    <Text style={[styles.tytul2, styles.tytulTypo]}>
-                                        Toy Story
-                                    </Text>
-                                </View>
-                            </View>
-                        </View>
-                        <View style={[styles.singleBar1, styles.singleLayout]}>
-                            <View style={[styles.tytulParent, styles.tytulParentLayout]}>
-                                <Text style={[styles.tytul, styles.tytulTypo1]}>19:30</Text>
-                                <Text style={[styles.tytul1, styles.tytulTypo1]}>22:30</Text>
-                                <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
-                                        <Image
-                                            style={styles.rightArrowIcon}
-                                            contentFit="cover"
-                                            source={require("./assets/right-arrow.png")}
-                                        />
-                                    </View>
-                                </View>
-                            </View>
-                            <View style={styles.rectangleParent}>
-                                <View style={styles.rectangleParent} />
-                                <View style={[styles.tytulWrapper, styles.tytulPosition]}>
-                                    <Text style={[styles.tytul2, styles.tytulTypo]}>
-                                        Napoleon
-                                    </Text>
-                                </View>
-                            </View>
-                        </View>
-                        <View style={[styles.singleBar1, styles.singleLayout]}>
-                            <View style={[styles.tytulParent, styles.tytulParentLayout]}>
-                                <Text style={[styles.tytul, styles.tytulTypo1]}>19:15</Text>
-                                <Text style={[styles.tytul1, styles.tytulTypo1]}>20:15</Text>
-                                <View style={styles.frameLayout}>
-                                    <View style={[styles.rightArrowContainer, styles.rightWrapperFlexBox]}>
-                                        <Image
-                                            style={styles.rightArrowIcon}
-                                            contentFit="cover"
-                                            source={require("./assets/right-arrow.png")}
-                                        />
-                                    </View>
-                                </View>
-                            </View>
-                            <View style={styles.rectangleParent}>
-                                <View style={styles.rectangleParent} />
-                                <View style={[styles.tytulWrapper, styles.tytulPosition]}>
-                                    <Text style={[styles.tytul2, styles.tytulTypo]}>Auta 2</Text>
-                                </View>
-                            </View>
-                        </View>
-                    </View>
+
                     <Text style={styles.najbliszeSeanse}>Najbliższe seanse</Text>
                     <View style={[styles.repertuarParent, styles.repertuarPosition]}>
+
                         <Text style={[styles.repertuar1, styles.text2Typo]}>Repertuar</Text>
                         <Text style={[styles.sprawdNaszeNowoci1, styles.znajdFilmW1Typo]}>
                             Sprawdź nasze nowości.
                         </Text>
+                        <View>
+                            <FlatList
+                                key={refresh}
+                                data={Movie.array}
+                                renderItem={renderItemList}
+                                keyExtractor={(item) => item.id.toString()}
+                            />
+                        </View>
                     </View>
                 </View>
+            <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
             <View style={styles.komponentPrzekskiFrame}>
                 <View style={[styles.komponentPrzekski1, styles.repertuarPosition]}>
                     <ImageBackground
@@ -381,18 +298,18 @@ export function Home({ navigation }){
                             </View>
                             <View style={[styles.rightArrowWrapper, styles.rightFlexBox]}>
 
-                                <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
+
                                 <Image
                                     style={styles.rightArrowIcon8}
                                     contentFit="cover"
                                     source={require("./assets/right-arrow.png")}
                                 />
-                                    </TouchableOpacity>
+
                             </View>
                         </View>
                     </View>
                 </View>
-
+            </TouchableOpacity>
         </View>
         </ScrollView>
     );

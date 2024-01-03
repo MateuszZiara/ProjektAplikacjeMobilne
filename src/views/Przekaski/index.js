@@ -16,7 +16,7 @@ export function PrzekaskiView({ navigation }) {
   function ActiveSlider(index)
   {
     setActiveIndex(index);
-    console.log(index);
+
   }
   const carouselItems  = [
     { text: 'Mały Popcorn', imageSource: require("./assets/pngitem-4868092-2.png") },
@@ -27,13 +27,16 @@ export function PrzekaskiView({ navigation }) {
   ];
   function addToCart(index)
   {
-      console.log("start");
-      console.log(Cart.array.length);
+
       let contains = false;
-      if(index === 0)
+        console.log("index");
+        console.log(index);
+      if(index === 3 || index === 8)
       {
+
           for(let i = 0; i < Cart.array.length; ++i)
           {
+
               if(Cart.array[i].id === 0)
               {
                   contains = true;
@@ -46,7 +49,7 @@ export function PrzekaskiView({ navigation }) {
           }
 
       }
-      if(index === 1)
+      if(index === 4)
       {
           for(let i = 0; i < Cart.array.length; ++i)
           {
