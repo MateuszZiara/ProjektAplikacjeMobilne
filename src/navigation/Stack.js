@@ -19,7 +19,6 @@ import {Grzechotnik} from "../views/Grzechotnik";
 import {RepertuarSearch} from "../views/RepertuarSearch";
 
 
-
 const Stack = createNativeStackNavigator();
 const optionScreen = {
     headerShown: false

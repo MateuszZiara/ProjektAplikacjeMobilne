@@ -26,6 +26,7 @@ import {RepertuarSearch} from "../RepertuarSearch";
 import Movie from "../../Classes/Movie";
 
 
+
 export function Home({ navigation }){
     const renderItemList = ({ item }) => (
         <View style={styles.itemContainer}>
@@ -237,17 +238,19 @@ export function Home({ navigation }){
                                     Wylosuj swój rabat
                                 </Text>
 
-                                <TouchableOpacity onPress={() => navigation.navigate(Grzechotnik)}>
+
                                     <Text style={styles.grzechotnik}>Grzechotnik</Text>
-                                </TouchableOpacity>
+
 
                             </View>
                             <View style={[styles.rightArrowWrapper, styles.rightFlexBox]}>
+                                <TouchableOpacity onPress={() => navigation.navigate(Grzechotnik)}>
                                 <Image
                                     style={styles.rightArrowIcon8}
                                     contentFit="cover"
                                     source={require("./assets/right-arrow.png")}
                                 />
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>
