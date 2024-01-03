@@ -6,9 +6,64 @@ import {styles} from "./styles";
 import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
 import {Bilety3_vip} from "../Bilety3_vip";
-
+import TicketToBuy from "../../Classes/TicketToBuy";
+import Cart from "../../Classes/Cart";
+import {Home} from "../Home";
 export function Bilety4_vip({ navigation }) {
+  function addToCart(item)
+  {
+    let contains = false;
+    TicketToBuy.time = item.start + " - " + item.end;
+    console.log(TicketToBuy.time);
+    TicketToBuy.name = item.name;
+    let check = TicketToBuy.name + " " + TicketToBuy.time;
+    for(let i = 0; i < Cart.array.length; ++i)
+    {
+
+      if(Cart.array[i].id === TicketToBuy.id && Cart.array[i].name === check)
+      {
+        contains = true;
+        Cart.array[i].amount += TicketToBuy.number;
+      }
+    }
+    if(contains === false) {
+      if (TicketToBuy.id === 1) {
+        Cart.array.push({
+          id: TicketToBuy.id,
+          img: require("./assets/mask-group.png"),
+          amount: TicketToBuy.number,
+          name: TicketToBuy.name + " " + TicketToBuy.time
+        })
+      }
+      if (TicketToBuy.id === 2) {
+        Cart.array.push({
+          id: TicketToBuy.id,
+          img: require("./assets/mask-group1.png"),
+          amount: TicketToBuy.number,
+          name: TicketToBuy.name + " " + TicketToBuy.time
+        })
+      }
+      if (TicketToBuy.id === 3) {
+        Cart.array.push({
+          id: TicketToBuy.id,
+          img: require("./assets/mask-group2.png"),
+          amount: TicketToBuy.number,
+          name: TicketToBuy.name + " " + TicketToBuy.time
+        })
+      }
+      if (TicketToBuy.id === 4) {
+        Cart.array.push({
+          id: TicketToBuy.id,
+          img: require("./assets/mask-group3.png"),
+          amount: TicketToBuy.number,
+          name: TicketToBuy.name + " " + TicketToBuy.time
+        })
+      }
+    }
+    navigation.navigate(Home)
+  }
   const renderItem = ({ item }) => (
+      <TouchableOpacity onPress={() => addToCart(item)}>
       <View style={styles.itemContainer}>
         <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
         <Image
@@ -17,6 +72,7 @@ export function Bilety4_vip({ navigation }) {
             source={require("./assets/right-arrow.png")}
         />
       </View>
+      </TouchableOpacity>
   );
   const [refresh, setRefresh] = useState(false);
   useEffect(() => {

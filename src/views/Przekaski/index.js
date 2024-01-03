@@ -29,8 +29,6 @@ export function PrzekaskiView({ navigation }) {
   {
 
       let contains = false;
-        console.log("index");
-        console.log(index);
       if(index === 3 || index === 8)
       {
 

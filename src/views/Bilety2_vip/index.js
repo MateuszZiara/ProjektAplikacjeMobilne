@@ -7,6 +7,7 @@ import {Bilety3_vip} from "../Bilety3_vip";
 import {useState} from "react";
 import Ticket from "../../Classes/Ticket";
 import {Bilety1} from "../Bilety1";
+import TicketToBuy from "../../Classes/TicketToBuy";
 
 export function Bilety2_vip({ navigation }) {
   const [number, setNumber] = useState(0);
@@ -205,7 +206,7 @@ export function Bilety2_vip({ navigation }) {
           />
         </View>
       </View>
-      <TouchableOpacity onPress={() =>navigation.navigate(Bilety3_vip)}>
+      <TouchableOpacity onPress={() =>{{TicketToBuy.number = number}navigation.navigate(Bilety3_vip)}}>
 
       <View style={styles.rectangleParent}>
         <View style={styles.frameItem} />
