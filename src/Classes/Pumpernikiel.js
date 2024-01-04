@@ -5,6 +5,8 @@ class Pumpernikiel {
         if (!instance) {
             instance = this;
             this.licznik = 0
+            this.boolX = true;
+            this.boolY = false;
         }
 
         return instance;

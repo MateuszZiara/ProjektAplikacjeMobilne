@@ -26,11 +26,15 @@ export function Grzechotnik({ navigation }) {
                 if (x >= 1) {
                     setCheck("lewo");
                     setCurrentImage("macka_lewo");
-                    Pumpernikiel.licznik ++;
-                    console.log(Pumpernikiel.licznik);
+                    if(Pumpernikiel.boolX) {
+                        Pumpernikiel.licznik++;
+                        Pumpernikiel.boolX = false;
+                        Pumpernikiel.boolY = true;
+                    }
+
                     if(Pumpernikiel.licznik === 4)
                     {
-                        console.log("ez");
+
                         Pumpernikiel.licznik = 0;
                         _unsubscribe();
                         navigation.navigate(Rabat);
@@ -39,7 +43,11 @@ export function Grzechotnik({ navigation }) {
 
                     setCheck("prawo");
                     setCurrentImage("macka_prawo");
-                    Pumpernikiel.licznik++;
+                    if(Pumpernikiel.boolY) {
+                        Pumpernikiel.boolY = false;
+                        Pumpernikiel.boolX = true;
+                        Pumpernikiel.licznik++;
+                    }
 
                     if(Pumpernikiel.licznik === 4)
                     {
