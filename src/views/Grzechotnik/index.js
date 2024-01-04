@@ -4,7 +4,7 @@ import { Gyroscope } from "expo-sensors";
 import { styles } from "./styles";
 import {Home} from "../Home";
 import {Rabat} from "../Rabat";
-
+import Pumpernikiel from "../../Classes/Pumpernikiel";
 export function Grzechotnik({ navigation }) {
     const [gyroscopeData, setGyroscopeData] = useState({ x: 0, y: 0, z: 0 });
     const [subscription, setSubscription] = useState(null);
@@ -23,36 +23,29 @@ export function Grzechotnik({ navigation }) {
             Gyroscope.addListener(({ x, y, z }) => {
                 setGyroscopeData({ x, y, z });
                 // Sprawdzanie wartości żyroskopu i ustawianie odpowiedniego obrazu
-
-
                 if (x >= 1) {
                     setCheck("lewo");
                     setCurrentImage("macka_lewo");
-                    setLicznik(licznik +1);
-
-                    console.log(licznik);
-                    if(licznik === 4)
+                    Pumpernikiel.licznik ++;
+                    console.log(Pumpernikiel.licznik);
+                    if(Pumpernikiel.licznik === 4)
                     {
-
+                        console.log("ez");
+                        Pumpernikiel.licznik = 0;
                         _unsubscribe();
-                        setLicznik(0);
                         navigation.navigate(Rabat);
-                        console.log('test');
                     }
                 } else if (y >= 1) {
 
                     setCheck("prawo");
                     setCurrentImage("macka_prawo");
-                    console.log(licznik);
-                    setLicznik(licznik +1);
+                    Pumpernikiel.licznik++;
 
-                    if(licznik === 4)
+                    if(Pumpernikiel.licznik === 4)
                     {
-
+                        Pumpernikiel.licznik = 0;
                         _unsubscribe();
-                        setLicznik(0);
                         navigation.navigate(Rabat);
-                        console.log('test');
                     }
                 }
             })
@@ -88,7 +81,6 @@ export function Grzechotnik({ navigation }) {
             setLicznik((prevLicznik) => prevLicznik + 1);
             if(licznik === 4)
             {
-                console.log('gb1');
                 _unsubscribe();
                 setLicznik(0);
                 navigation.navigate(Rabat);
@@ -100,11 +92,8 @@ export function Grzechotnik({ navigation }) {
             setCurrentImage("macka_lewo");
             setCheck("lewo");
             setLicznik((prevLicznik) => prevLicznik + 1);
-            console.log(licznik);
-            console.log('gbTO2');
             if(licznik === 4)
             {
-                console.log('gb2');
                 _unsubscribe();
                 setLicznik(0);
                 navigation.navigate(Rabat);
@@ -120,20 +109,6 @@ export function Grzechotnik({ navigation }) {
 
 
 
-    const handleZagrzechotajPressOut = () => {
-        _unsubscribe();
-    };
-
-    const handleZagrzechotajClick = () => {
-        if (!buttonDisabled) {
-            setButtonDisabled(true);
-            _subscribe();
-            setTimeout(() => {
-                setButtonDisabled(false);
-                _unsubscribe();
-            }, 5000); // Blokada na 5 sekund
-        }
-    };
 
     return (
         <View style={styles.container}>
