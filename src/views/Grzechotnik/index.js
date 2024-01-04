@@ -7,9 +7,11 @@ export function Grzechotnik({ navigation }) {
     const [gyroscopeData, setGyroscopeData] = useState({ x: 0, y: 0, z: 0 });
     const [subscription, setSubscription] = useState(null);
     const [currentImage, setCurrentImage] = useState("macka_lewo");
+    const [buttonDisabled, setButtonDisabled] = useState(false);
 
     const _slow = () => Gyroscope.setUpdateInterval(1000);
     const _fast = () => Gyroscope.setUpdateInterval(16);
+    const [Check, setCheck] = useState('');
 
     const _subscribe = () => {
         setSubscription(
@@ -18,8 +20,10 @@ export function Grzechotnik({ navigation }) {
 
                 // Sprawdzanie wartości żyroskopu i ustawianie odpowiedniego obrazu
                 if (x >= 1) {
+                    setCheck("lewo");
                     setCurrentImage("macka_lewo");
                 } else if (y >= 1) {
+                    setCheck("prawo");
                     setCurrentImage("macka_prawo");
                 }
             })
@@ -42,17 +46,37 @@ export function Grzechotnik({ navigation }) {
     }, []); // Pusta tablica dependencies oznacza, że useEffect zostanie wywołany tylko po zamontowaniu komponentu
 
     const handleZagrzechotajPressIn = () => {
+        let xAdd=0;
+        let yAdd=0;
+        if(Check==="lewo"){
+            xAdd=10;
+        }
+        else if (Check==="prawo")
+        {
+            yAdd=10;
+        }
+
         setGyroscopeData((prevData) => ({
-            x: prevData.x + 1,
-            y: prevData.y + 0.1,
+
+            x: prevData.x + xAdd,
+            y: prevData.y + yAdd,
             z: prevData.z + 0.1,
         }));
-
-        _subscribe();
     };
 
     const handleZagrzechotajPressOut = () => {
         _unsubscribe();
+    };
+
+    const handleZagrzechotajClick = () => {
+        if (!buttonDisabled) {
+            setButtonDisabled(true);
+            _subscribe();
+            setTimeout(() => {
+                setButtonDisabled(false);
+                _unsubscribe();
+            }, 5000); // Blokada na 5 sekund
+        }
     };
 
     return (
@@ -71,7 +95,11 @@ export function Grzechotnik({ navigation }) {
                 source={require("./assets/back.png")}
             />
 
-            <TouchableOpacity onPressIn={handleZagrzechotajPressIn}>
+            <TouchableOpacity
+                onPressIn={handleZagrzechotajPressIn}
+                onPress={handleZagrzechotajClick}
+                disabled={buttonDisabled}>
+
                 <Text style={[styles.zagrzechotaj, styles.grzechotnikTypo]}>
                     Zagrzechotaj
                 </Text>
@@ -91,7 +119,7 @@ export function Grzechotnik({ navigation }) {
             <View style={styles.grzechotnik}>
                 <TouchableOpacity onPress={() => (subscription ? _unsubscribe() : _subscribe())}>
                     <View style={styles.button}>
-                        <Text>{subscription ? 'Off' : 'On'}</Text>
+                        <Text>{subscription ? "Off" : "On"}</Text>
                     </View>
                 </TouchableOpacity>
             </View>
