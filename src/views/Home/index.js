@@ -61,6 +61,7 @@ function IfAvailableToday({ hours }) {
 
 }
 
+
 export function Home({ navigation }){
     const renderItemList = ({ item }) => (
         <View style={styles.itemContainer}>
