@@ -58,7 +58,12 @@ export const styles = StyleSheet.create({
   },
   text: {
     textAlign:"center",
-    top:250,
-
-  }
+    top:150,
+  },
+  mackaImage: {
+    width: "75%",
+    height: "75%",
+    left:75,
+    marginTop:100,
+  },
 });

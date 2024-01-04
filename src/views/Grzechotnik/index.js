@@ -4,20 +4,24 @@ import { Gyroscope } from "expo-sensors";
 import { styles } from "./styles";
 
 export function Grzechotnik({ navigation }) {
-    const [{ x, y, z }, setData] = useState({
-        x: 0,
-        y: 0,
-        z: 0,
-    });
+    const [gyroscopeData, setGyroscopeData] = useState({ x: 0, y: 0, z: 0 });
     const [subscription, setSubscription] = useState(null);
+    const [currentImage, setCurrentImage] = useState("macka_lewo");
 
     const _slow = () => Gyroscope.setUpdateInterval(1000);
     const _fast = () => Gyroscope.setUpdateInterval(16);
 
     const _subscribe = () => {
         setSubscription(
-            Gyroscope.addListener((gyroscopeData) => {
-                setData(gyroscopeData);
+            Gyroscope.addListener(({ x, y, z }) => {
+                setGyroscopeData({ x, y, z });
+
+                // Sprawdzanie wartości żyroskopu i ustawianie odpowiedniego obrazu
+                if (x >= 1) {
+                    setCurrentImage("macka_lewo");
+                } else if (y >= 1) {
+                    setCurrentImage("macka_prawo");
+                }
             })
         );
     };
@@ -27,12 +31,21 @@ export function Grzechotnik({ navigation }) {
         setSubscription(null);
     };
 
-    const handleZagrzechotajPressIn = () => {
+    useEffect(() => {
+        // Wywołaj funkcję _subscribe, aby rozpocząć odczyt żyroskopu
+        _subscribe();
 
-        setData((prevData) => ({
+        // Wywołaj funkcję _unsubscribe przy zakończeniu komponentu
+        return () => {
+            _unsubscribe();
+        };
+    }, []); // Pusta tablica dependencies oznacza, że useEffect zostanie wywołany tylko po zamontowaniu komponentu
+
+    const handleZagrzechotajPressIn = () => {
+        setGyroscopeData((prevData) => ({
             x: prevData.x + 1,
-            y: prevData.y + 1,
-            z: prevData.z + 1,
+            y: prevData.y + 0.1,
+            z: prevData.z + 0.1,
         }));
 
         _subscribe();
@@ -58,36 +71,36 @@ export function Grzechotnik({ navigation }) {
                 source={require("./assets/back.png")}
             />
 
-            <TouchableOpacity
-                onPressIn={handleZagrzechotajPressIn}
-                onPressOut={handleZagrzechotajPressOut}
-            >
+            <TouchableOpacity onPressIn={handleZagrzechotajPressIn}>
                 <Text style={[styles.zagrzechotaj, styles.grzechotnikTypo]}>
                     Zagrzechotaj
                 </Text>
             </TouchableOpacity>
 
             <Text style={styles.text}>Gyroscope:</Text>
-            <Text style={styles.text}>x: {x}</Text>
-            <Text style={styles.text}>y: {y}</Text>
-            <Text style={styles.text}>z: {z}</Text>
+            <Text style={styles.text}>x: {gyroscopeData.x}</Text>
+            <Text style={styles.text}>y: {gyroscopeData.y}</Text>
+            <Text style={styles.text}>z: {gyroscopeData.z}</Text>
+
+            <Image
+                style={styles.mackaImage}
+                resizeMode="contain"
+                source={images[currentImage]}
+            />
+
             <View style={styles.grzechotnik}>
                 <TouchableOpacity onPress={() => (subscription ? _unsubscribe() : _subscribe())}>
                     <View style={styles.button}>
                         <Text>{subscription ? 'Off' : 'On'}</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={_slow}>
-                    <View style={styles.button}>
-                        <Text>Slow</Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={_fast}>
-                    <View style={styles.button}>
-                        <Text>Fast</Text>
-                    </View>
-                </TouchableOpacity>
             </View>
         </View>
     );
 }
+
+// Zdefiniuj obiekty obrazów
+const images = {
+    macka_lewo: require("./assets/macka_lewo.png"),
+    macka_prawo: require("./assets/macka_prawo.png"),
+};
