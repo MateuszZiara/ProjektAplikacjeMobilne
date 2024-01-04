@@ -6,6 +6,7 @@ class Singleton {
             instance = this;
             this.name = null;
             this.id = null;
+            this.email = null;
         }
 
         return instance;

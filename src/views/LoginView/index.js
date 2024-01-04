@@ -27,6 +27,7 @@ export function LoginView({ navigation }) {
                     // Successful login
                     setError(false);
                     Singleton.setNameAndId(user.personal, key);
+                    Singleton.email = user.email;
                     navigation.navigate(TabNav);
                     return;
                 }

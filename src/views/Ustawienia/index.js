@@ -10,6 +10,7 @@ import {SzczegolyKonta} from "../SzczegolyKonta";
 import {LoginView} from "../LoginView";
 
 export function UstawieniaView({ navigation }) {
+
     {
         return (
                 <ScrollView>
@@ -38,7 +39,7 @@ export function UstawieniaView({ navigation }) {
                                         ]}
                                     >
                                         <Text style={styles.agnieszkakowalgmailcom}>
-                                            agnieszkakowal@gmail.com {/*TODO wstawic login*/}
+                                            {Singleton.email}
                                         </Text>
                                     </View>
                                 </View>

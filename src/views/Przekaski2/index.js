@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import {StyleSheet, View, Text, Pressable, ScrollView} from "react-native";
+import {StyleSheet, View, Text, Pressable, ScrollView, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles"
+import {PrzekaskiView} from "../Przekaski";
 
 export function Przekaski2View({ navigation }) {
   return (
@@ -55,11 +56,13 @@ export function Przekaski2View({ navigation }) {
           </View>
         </View>
         <View style={[styles.backParent, styles.parentFlexBox]}>
+          <TouchableOpacity onPress={() => navigation.navigate(PrzekaskiView)}>
           <Image
             style={styles.backIcon}
             contentFit="cover"
             source={require("./assets/back.png")}
           />
+          </TouchableOpacity>
           <View style={[styles.frameContainer, styles.frameFlexBox]}>
             <View style={styles.appNameContainer}>
               <View style={[styles.appName1, styles.appSpaceBlock]}>

@@ -9,6 +9,7 @@ import Cart from "../../Classes/Cart";
 import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
+import {Przekaski2View} from "../Przekaski2";
 
 export function PrzekaskiView({ navigation }) {
   const width = Dimensions.get('window').width;
@@ -158,7 +159,9 @@ export function PrzekaskiView({ navigation }) {
         </View>
 
       </View>
+
       <View style={styles.komponentPrzekskiParent}>
+        <TouchableOpacity onPress={() => navigation.navigate(Przekaski2View)}>
         <View style={[styles.komponentPrzekski, styles.komponentLayout]}>
           <View style={[styles.maskGroup, styles.maskGroupLayout]}>
             <Image
@@ -174,14 +177,17 @@ export function PrzekaskiView({ navigation }) {
           >
             <Pressable style={[styles.pressable, styles.pressablePosition]} />
           </LinearGradient>
+
           <View style={[styles.frameGroup, styles.frameParentFlexBox]}>
             <View>
               <Text style={[styles.ucztaWTrakcie, styles.dlaCiebieITypo]}>
                 Uczta w trakcie seansu
               </Text>
+
               <Text style={[styles.przekski1, styles.textFlexBox]}>
                 Przekąski
               </Text>
+
             </View>
             <View style={[styles.rightArrowWrapper, styles.frameParentFlexBox]}>
               <Image
@@ -192,6 +198,8 @@ export function PrzekaskiView({ navigation }) {
             </View>
           </View>
         </View>
+        </TouchableOpacity>
+
         <View style={styles.sliderNav}>
           <Pagination
               dotsLength={carouselItems.length}

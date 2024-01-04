@@ -2,9 +2,13 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { FontFamily, Color, FontSize, Border } from "./styles.js";
 import {styles} from "./styles";
-import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback} from "react-native";
-
+import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback, TextInput} from "react-native";
+import Singleton from "../../Classes/User"
+import {useState} from "react";
 export function SzczegolyKonta({ navigation }) {
+  const [editPersonality, setEditPersonality] = useState(false);
+  const [editEmail, setEditEmail] = useState(false);
+  const [editPass, setEditPass] = useState(false);
   return (
     <View style={styles.wzr}>
       <View
@@ -112,17 +116,45 @@ export function SzczegolyKonta({ navigation }) {
             <View style={[styles.frameView, styles.frameViewPosition]}>
               <View style={styles.garyLeeParent}>
                 <Text style={[styles.garyLee, styles.garyLeeTypo]}>
-                  Nazwa urzytkownika
+                  Nazwa uzytkownika
                 </Text>
-                <Text style={[styles.garyLee1, styles.garyTypo]}>
-                  Agnieszka Kowal
-                </Text>
+                {editPersonality ? (
+                    <TextInput
+                        placeholder={Singleton.name}
+                        value={Singleton.name} // You may want to bind the value to the state or some variable
+                        onChangeText={(text) => {
+                          // Handle text input changes if necessary
+                        }}
+                        style={[
+                          styles.garyLee1,
+                          styles.garyTypo,
+                          {
+                            borderBottomWidth: 1, // Example: Add a bottom border
+                            borderColor: 'blue', // Example: Border color
+
+                          },
+                            ]}
+                    />
+                ) : (
+                    <Text style={[styles.garyLee1, styles.garyTypo]}>
+                      {Singleton.name}
+                    </Text>
+                )}
               </View>
+              <TouchableOpacity onPress={() =>
+              {
+                if(editPersonality === true) {
+                  setEditPersonality(false);
+                }
+                else
+                  setEditPersonality(true);
+              }}>
               <Image
                 style={[styles.pencilIcon1, styles.pencilIconLayout]}
                 contentFit="cover"
                 source={require("./assets/pencil1.png")}
               />
+              </TouchableOpacity>
             </View>
           </View>
           <View style={styles.rectangleParent}>
@@ -146,15 +178,43 @@ export function SzczegolyKonta({ navigation }) {
             <View style={[styles.frameView, styles.frameViewPosition]}>
               <View style={styles.garyLeeParent}>
                 <Text style={[styles.garyLee, styles.garyLeeTypo]}>Email</Text>
-                <Text style={[styles.garyLee5, styles.garyTypo]}>
-                  agnieszkakowal@gmail.com
-                </Text>
+                {editEmail ? (
+                    <TextInput
+                        placeholder={Singleton.name}
+                        value={Singleton.name}  t
+                        onChangeText={(text) => {
+
+                        }}
+                        style={[
+                          styles.garyLee1,
+                          styles.garyTypo,
+                          {
+                            borderBottomWidth: 1, // Example: Add a bottom border
+                            borderColor: 'blue', // Example: Border color
+
+                          },
+                        ]}
+                    />
+                ) : (
+                    <Text style={[styles.garyLee1, styles.garyTypo]}>
+                      {Singleton.name}
+                    </Text>
+                )}
               </View>
-              <Image
-                style={[styles.pencilIcon3, styles.pencilIconLayout]}
-                contentFit="cover"
-                source={require("./assets/pencil1.png")}
-              />
+              <TouchableOpacity onPress={() =>
+              {
+                if(editEmail === true) {
+                  setEditEmail(false);
+                }
+                else
+                  setEditEmail(true);
+              }}>
+                <Image
+                    style={[styles.pencilIcon1, styles.pencilIconLayout]}
+                    contentFit="cover"
+                    source={require("./assets/pencil1.png")}
+                />
+              </TouchableOpacity>
             </View>
           </View>
         </View>
