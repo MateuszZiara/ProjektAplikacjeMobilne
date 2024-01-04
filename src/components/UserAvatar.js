@@ -1,14 +1,13 @@
 import React from 'react';
-import { Avatar } from 'react-native-paper';
-import { View, TouchableOpacity } from 'react-native';
+import {Avatar} from 'react-native-paper';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 import Singleton from '../Classes/User';
-import {StyleSheet} from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 function stringAvatar(name) {
     if (name && name !== '') {
         name = name.toUpperCase();
-        return name.split(0,1);
+        return name.split(" ").map((n) => n[0]).join("");
     } else {
         return '?';
     }

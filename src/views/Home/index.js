@@ -21,13 +21,15 @@ import {Login} from "../Login";
 import { Avatar } from 'react-native-paper';
 import zIndex from "@mui/material/styles/zIndex";
 import {UserAvatar} from "../../components/UserAvatar";
-function IfAvailableToday({ hours }) {
-    const currentHour = new Date().getHours();
 import * as DateTime from "react-native-svg";
 import Search from "../../Classes/Search"
 import {RepertuarView} from "../Repertuar";
 import {RepertuarSearch} from "../RepertuarSearch";
 import Movie from "../../Classes/Movie";
+
+function IfAvailableToday({ hours }) {
+    const currentHour = new Date().getHours();
+
 
     const timeComponents = hours.map((hour, index) => {
         const argumentHour = parseInt(hour, 10);
@@ -117,7 +119,7 @@ export function Home({ navigation }){
     const carouselItems = [
 
         { title: 'American Psycho', text: 'napisy', review:'6,9/10', times:['15:00','19:30','22:00'], imageSource: require('./assets/img1.png') },
-        { title: 'Chłopi', text: '', review:'7,5/10', times:['17:00','20:00'], imageSource: require('./assets/img2.png') },
+        { title: 'Chłopi', text: 'oryginał', review:'7,5/10', times:['17:00','20:00'], imageSource: require('./assets/img2.png') },
         { title: 'Toy Story', text: 'dubbing', review:'7,2/10', times:['18:30','21:00'], imageSource: require('./assets/img3.png') },
         { title: 'Oppenheimer', text: 'napisy', review:'9/10', times:['11:00','18:30','20:00'], imageSource: require('./assets/img4.png') },
         { title: 'Black Swan - Czarny Łabędź', text: 'napisy', review:'8/10', times:['19:00','21:30'], imageSource: require('./assets/img5.png') },
@@ -141,7 +143,7 @@ export function Home({ navigation }){
                     <Text style={styles.sliderh1}>{item.title}</Text>
                     <View style={{flexDirection: 'row'}}>
                         <Text style={styles.sliderh2}>{item.text}</Text>
-                        <Text style={[styles.sliderh2,{marginLeft: 20}]}>{item.review}</Text>
+                        <Text style={[styles.sliderh2r,{marginLeft: 20}]}>{item.review}</Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>{item.times.map((time, index) => <IfAvailableToday key={index} hours={[time]} />)}</View>
 
@@ -171,11 +173,7 @@ export function Home({ navigation }){
                             <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
                         </View>
                     </View>
-                    <View style={
-                        {
-                            zIndex:0
-                        }
-                    }>
+                    <View style={[{zIndex:0}]}>
                         <Image source={require('./assets/gradientback.png')} style={{
                             borderRadius: 0,
                             height: 500,
@@ -217,7 +215,6 @@ export function Home({ navigation }){
                             inactiveDotScale={0.8}
                         />
                     </View>
-
                 </View>
 
                 <View style={[styles.searchBarWrapper, styles.wrapperLayout]}>

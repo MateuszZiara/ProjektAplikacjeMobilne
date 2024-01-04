@@ -59,7 +59,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
     },
     napisyTypo: {
-     //   fontFamily: FontFamily.poppinsMedium,
+        fontFamily: 'poppins400',
         fontWeight: "500",
     },
     text5FlexBox: {
@@ -90,7 +90,7 @@ export const styles = StyleSheet.create({
     },
     znajdFilmW1Typo: {
         color: Color.colorLightgray_100,
-        //fontFamily: FontFamily.poppinsMedium,
+        fontFamily: 'poppins500',
         fontWeight: "500",
         textAlign: "left",
     },
@@ -133,7 +133,7 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         display: "flex",
         textAlign: "left",
-     //   fontFamily: FontFamily.poppinsSemiBold,
+        fontFamily: 'poppins600',
         fontWeight: "600",
     },
     frameLayout: {
@@ -153,24 +153,24 @@ export const styles = StyleSheet.create({
         //lineHeight: 21,
         fontSize: FontSize.size_11xl,
         color: Color.colorWhite,
-       // fontFamily: FontFamily.poppinsSemiBold,
+        fontFamily: 'poppins600',
         fontWeight: "600",
 
     },
     text2Typo: {
-      //  fontFamily: FontFamily.poppinsSemiBold,
+        fontFamily: 'poppins600',
         fontWeight: "600",
     },
     dzieDobry: {
         fontSize: 17,
         height: 53,
-      //  fontFamily: FontFamily.poppinsMedium,
+        fontFamily: 'poppins500',
         fontWeight: "500",
     },
     agnieszka: {
         fontSize: 33,
         marginTop: -29,
-    //   fontFamily: FontFamily.poppinsSemiBold,
+        fontFamily: 'poppins600',
         fontWeight: "600",
     },
     appName: {
@@ -290,7 +290,7 @@ export const styles = StyleSheet.create({
         width: 217,
         marginTop: -4,
         color: Color.colorWhitesmoke_100,
-      //  fontFamily: FontFamily.poppinsMedium,
+        fontFamily: 'poppins600',
         fontWeight: "500",
         alignItems: "center",
         display: "flex",
@@ -344,7 +344,7 @@ export const styles = StyleSheet.create({
         letterSpacing: 0.4,
         lineHeight: 18,
         fontSize: FontSize.size_smi,
-       // fontFamily: FontFamily.poppinsMedium,
+       fontFamily: 'poppins400',
         fontWeight: "500",
         color: Color.colorWhite,
         textAlign: "left",
@@ -534,13 +534,12 @@ export const styles = StyleSheet.create({
         width: 203,
     },
     sliderh1: {
-        lineHeight: 45,
-        width: 900,
-        fontSize: 30,
+        width: 450,
+        fontSize: 32,
         color: Color.colorWhite,
         display: "flex",
         textAlign: "left",
-        //   fontFamily: FontFamily.poppinsSemiBold,
+        fontFamily: 'poppins600',
         fontWeight: "600",
     },
     sliderh2: {
@@ -549,7 +548,26 @@ export const styles = StyleSheet.create({
         color: Color.colorWhite,
         display: "flex",
         textAlign: "left",
-        //   fontFamily: FontFamily.poppinsSemiBold,
-        fontWeight: "600",
-    }
+        fontFamily: 'poppins600',
+        fontWeight: "500",
+    },
+    sliderh2r: {
+        lineHeight: 30,
+        fontSize: 20,
+        color: Color.colorWhite,
+        left: 90,
+        display: "flex",
+        textAlign: "right",
+        fontFamily: 'poppins600',
+        fontWeight: "500",
+    },
+    sliderLayered: {
+        overflow: 'hidden',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: 'rgba(87,84,84,0.65)'
+
+}
+
 });
