@@ -3,13 +3,14 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 import { Gyroscope } from "expo-sensors";
 import { styles } from "./styles";
 import {Home} from "../Home";
+import {Rabat} from "../Rabat";
 
 export function Grzechotnik({ navigation }) {
     const [gyroscopeData, setGyroscopeData] = useState({ x: 0, y: 0, z: 0 });
     const [subscription, setSubscription] = useState(null);
     const [currentImage, setCurrentImage] = useState("macka_lewo");
     const [buttonDisabled, setButtonDisabled] = useState(false);
-
+    const [licznik, setLicznik] = useState(1);
     const _slow = () => Gyroscope.setUpdateInterval(1000);
     const _fast = () => Gyroscope.setUpdateInterval(16);
     const [Check, setCheck] = useState("lewo");
@@ -18,17 +19,41 @@ export function Grzechotnik({ navigation }) {
     const [zagrzechotaj, setZagrzechotaj] = useState(false);
     const _subscribe = () => {
         setSubscription(
+
             Gyroscope.addListener(({ x, y, z }) => {
                 setGyroscopeData({ x, y, z });
-                console.log("test");
                 // Sprawdzanie wartości żyroskopu i ustawianie odpowiedniego obrazu
+
 
                 if (x >= 1) {
                     setCheck("lewo");
                     setCurrentImage("macka_lewo");
+                    setLicznik(licznik +1);
+
+                    console.log(licznik);
+                    if(licznik === 4)
+                    {
+
+                        _unsubscribe();
+                        setLicznik(0);
+                        navigation.navigate(Rabat);
+                        console.log('test');
+                    }
                 } else if (y >= 1) {
+
                     setCheck("prawo");
                     setCurrentImage("macka_prawo");
+                    console.log(licznik);
+                    setLicznik(licznik +1);
+
+                    if(licznik === 4)
+                    {
+
+                        _unsubscribe();
+                        setLicznik(0);
+                        navigation.navigate(Rabat);
+                        console.log('test');
+                    }
                 }
             })
         );
@@ -60,12 +85,30 @@ export function Grzechotnik({ navigation }) {
             xAdd = 10;
             setCurrentImage("macka_prawo");
             setCheck("prawo");
+            setLicznik((prevLicznik) => prevLicznik + 1);
+            if(licznik === 4)
+            {
+                console.log('gb1');
+                _unsubscribe();
+                setLicznik(0);
+                navigation.navigate(Rabat);
+            }
         }
         else if (Check==="prawo")
         {
             yAdd=10;
             setCurrentImage("macka_lewo");
             setCheck("lewo");
+            setLicznik((prevLicznik) => prevLicznik + 1);
+            console.log(licznik);
+            console.log('gbTO2');
+            if(licznik === 4)
+            {
+                console.log('gb2');
+                _unsubscribe();
+                setLicznik(0);
+                navigation.navigate(Rabat);
+            }
         }
         setGyroscopeData((prevData) => ({
 
@@ -74,6 +117,8 @@ export function Grzechotnik({ navigation }) {
             z: prevData.z + 0.1,
         }));
     };
+
+
 
     const handleZagrzechotajPressOut = () => {
         _unsubscribe();
@@ -86,7 +131,7 @@ export function Grzechotnik({ navigation }) {
             setTimeout(() => {
                 setButtonDisabled(false);
                 _unsubscribe();
-            }, 0); // Blokada na 5 sekund
+            }, 5000); // Blokada na 5 sekund
         }
     };
 
@@ -110,10 +155,7 @@ export function Grzechotnik({ navigation }) {
                 source={require("./assets/back.png")}
             />
             </TouchableOpacity>
-            <TouchableOpacity
-                onPressIn={handleZagrzechotajPressIn}
-
-                disabled={buttonDisabled}>
+            <TouchableOpacity onPressIn={handleZagrzechotajPressIn} disabled={buttonDisabled}>
 
                 <Text style={[styles.zagrzechotaj, styles.grzechotnikTypo]}>
                     Zagrzechotaj
@@ -133,13 +175,7 @@ export function Grzechotnik({ navigation }) {
                 source={images[currentImage]}
             />
 
-            <View style={styles.grzechotnik}>
-                <TouchableOpacity onPress={() => (subscription ? _unsubscribe() : _subscribe())}>
-                    <View style={styles.button}>
-                        <Text>{subscription ? "Off" : "On"}</Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
+
         </View>
     );
 }
