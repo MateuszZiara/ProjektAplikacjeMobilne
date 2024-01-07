@@ -52,6 +52,14 @@ export const styles = StyleSheet.create({
     left: 0,
     top: 0,
   },
+  FontDoRenderItem: {
+
+    fontSize: 20,
+    textAlign: 'center',
+    marginTop: 10,
+    marginBottom: 10,
+    color: 'white'
+  },
   frameViewPosition: {
     marginTop: -10,
     alignItems: "center",

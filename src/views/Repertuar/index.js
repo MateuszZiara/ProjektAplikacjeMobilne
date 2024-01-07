@@ -12,16 +12,7 @@ import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
 import Search from "../../Classes/Search";
 export function RepertuarView({ navigation }) {
-  const renderItem = ({ item }) => (
-      <View style={styles.itemContainer}>
-        <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
-        <Image
-            style={styles.rightArrowIcon}
-            contentFit="cover"
-            source={require("./assets/right-arrow.png")}
-        />
-      </View>
-  );
+
   const [refresh, setRefresh] = useState(false);
   useEffect(() => {
     const unsubscribe = navigation.addListener("focus", () => {
@@ -94,21 +85,7 @@ export function RepertuarView({ navigation }) {
           </View>
 
 
-          <View style={[styles.backParent, styles.parentFlexBox]}>
-            <View style={[styles.frameWrapper5, styles.frameWrapperFlexBox]}>
-              <View style={styles.appNameWrapper}>
-                <View style={[styles.appName, styles.appSpaceBlock]}>
-                  <Text style={[styles.ustawienia, styles.biletyLayout]}>
-                    Bilety
-                  </Text>
-                  <Text style={styles.ustawieniaKonta}>Rezerwacja</Text>
-                </View>
 
-              </View>
-
-            </View>
-
-          </View>
           <View style={styles.dynamiczneitemki}>
 
           </View>
@@ -117,9 +94,9 @@ export function RepertuarView({ navigation }) {
               <View style={styles.appNameContainer}>
                 <View style={[styles.appName1, styles.appSpaceBlock]}>
                   <Text style={[styles.dlaCiebieI, styles.biletyLayout]}>
-                    Dla ciebie i dla rodziny
+                   Wszystkie filmy
                   </Text>
-                  <Text style={[styles.bilety, styles.biletyLayout]}>Bilety</Text>
+                  <Text style={[styles.bilety, styles.biletyLayout]}>Repertuar</Text>
                 </View>
               </View>
             </View>
@@ -138,7 +115,18 @@ export function RepertuarView({ navigation }) {
             <FlatList
                 key={refresh}
                 data={Movie.array}
-                renderItem={renderItem}
+                renderItem={({ item }) => (
+                    <View style={styles.itemContainer}>
+                      <Text style={[styles.tytulTypo, styles.FontDoRenderItem]}>
+                        {`${item.name} ${item.start} ${item.end}`}
+                      </Text>
+                      <Image
+                          style={styles.rightArrowIcon}
+                          contentFit="cover"
+                          source={require("./assets/right-arrow.png")}
+                      />
+                    </View>
+                )}
                 keyExtractor={(item) => item.id.toString()}
             />
           </View>

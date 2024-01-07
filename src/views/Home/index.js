@@ -64,8 +64,8 @@ function IfAvailableToday({ hours }) {
 
 export function Home({ navigation }){
     const renderItemList = ({ item }) => (
-        <View style={styles.itemContainer}>
-            <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
+        <View style={[styles.itemContainer, styles.renderItemContainer]}>
+            <Text style={styles.renderItemText}>{`${item.name} ${item.start} ${item.end}`}</Text>
             <Image
                 style={styles.rightArrowIcon}
                 contentFit="cover"
@@ -73,6 +73,7 @@ export function Home({ navigation }){
             />
         </View>
     );
+
     const [refresh, setRefresh] = useState(false);
     useEffect(() => {
         const unsubscribe = navigation.addListener("focus", () => {
@@ -279,11 +280,7 @@ export function Home({ navigation }){
                     </View>
                 </View>
                 <View style={styles.frameView}>
-                    <View style={[styles.buttonWrapper, styles.buttonLayout]}>
-                        <View style={[styles.button, styles.buttonLayout]}>
-                            <Text style={styles.cayRepertuar}>Cały repertuar</Text>
-                        </View>
-                    </View>
+
 
                     <Text style={styles.najbliszeSeanse}>Najbliższe seanse</Text>
                     <View style={[styles.repertuarParent, styles.repertuarPosition]}>
@@ -292,7 +289,7 @@ export function Home({ navigation }){
                         <Text style={[styles.sprawdNaszeNowoci1, styles.znajdFilmW1Typo]}>
                             Sprawdź nasze nowości.
                         </Text>
-                        <View>
+                        <View style={styles.repertuar_gb}>
                             <FlatList
                                 key={refresh}
                                 data={Movie.array}

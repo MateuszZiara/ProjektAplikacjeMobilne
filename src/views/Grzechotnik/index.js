@@ -32,7 +32,7 @@ export function Grzechotnik({ navigation }) {
                         Pumpernikiel.boolY = true;
                     }
 
-                    if(Pumpernikiel.licznik === 4)
+                    if(Pumpernikiel.licznik === 50)
                     {
 
                         Pumpernikiel.licznik = 0;
@@ -49,7 +49,7 @@ export function Grzechotnik({ navigation }) {
                         Pumpernikiel.licznik++;
                     }
 
-                    if(Pumpernikiel.licznik === 4)
+                    if(Pumpernikiel.licznik === 50)
                     {
                         Pumpernikiel.licznik = 0;
                         _unsubscribe();

@@ -375,16 +375,6 @@ export const styles = StyleSheet.create({
         width: 13,
         height: 16,
     },
-    rightArrowContainer: {
-        paddingVertical: 0,
-        paddingHorizontal: Padding.p_7xs,
-        backgroundColor: Color.colorGray_200,
-        justifyContent: "center",
-        flexDirection: "row",
-        alignItems: "center",
-        overflow: "hidden",
-        borderRadius: Border.br_xl,
-    },
     tytulParent: {
         marginTop: -10.5,
         top: "50%",
@@ -393,14 +383,6 @@ export const styles = StyleSheet.create({
         left: "50%",
         flexDirection: "row",
         alignItems: "center",
-        position: "absolute",
-    },
-    rectangleParent: {
-        width: 203,
-        height: 46,
-        borderRadius: Border.br_xl,
-        left: 0,
-        top: 0,
         position: "absolute",
     },
     tytul2: {
@@ -460,10 +442,41 @@ export const styles = StyleSheet.create({
         fontWeight: "600",
         position: "absolute",
     },
+    renderItemContainer: {
+        marginBottom: 15,
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    renderItemText: {
+        fontSize: FontSize.size_xl,
+        color: Color.colorWhite,
+        marginRight: 10,
+        textAlignVertical: 'center',
+
+
+    },
+    rightArrowIcon_gb: {
+        width: 13,
+        height: 16,
+    },
     repertuar1: {
         fontSize: 23,
         color: "#f5f5f5",
         textAlign: "left",
+    },
+    repertuar_gb: {
+        fontSize: FontSize.size_xl,
+        color: "#f5f5f5",
+        alignItems:"center",
+        justifyContent: "center",
+        marginTop:100,
+        flex: 1,
+
+
+    },
+    itemText: {
+        fontSize: 40,
+        color: "#f5f5f5",
     },
     sprawdNaszeNowoci1: {
         fontSize: 16,
@@ -484,7 +497,6 @@ export const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
-
     komponentPrzekski1: {
         marginLeft: -185,
         borderRadius: Border.br_xl,
@@ -492,12 +504,14 @@ export const styles = StyleSheet.create({
         width: 370,
         overflow: "hidden",
         left: "50%",
+        marginTop: -200,
     },
     komponentPrzekskiFrame: {
         height: 119,
         marginTop: 32,
 
     },
+
     groupParent: {
         height: 753,
         width: 414,
