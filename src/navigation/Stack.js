@@ -18,6 +18,9 @@ import {Koszyk_karta} from "../views/Koszyk_karta";
 import {Grzechotnik} from "../views/Grzechotnik";
 import {RepertuarSearch} from "../views/RepertuarSearch";
 import {Rabat} from "../views/Rabat";
+import {Koszyk_gotowka} from "../views/Koszyk_gotowka";
+import {Gotowka_przetwarzanie} from "../views/Gotowka_przetwarzanie";
+import {Zatwierdz_platnosc} from "../views/Zatwierdz_platnosc";
 
 
 const Stack = createNativeStackNavigator();
@@ -46,6 +49,9 @@ export default function StackNav() {
             <Stack.Screen name="Grzechotnik" component={Grzechotnik} options={optionScreen} />
             <Stack.Screen name="RepertuarSearch" component={RepertuarSearch} options={optionScreen} />
             <Stack.Screen name="Rabat" component={Rabat} options={optionScreen} />
+            <Stack.Screen name="Koszyk_gotowka" component={Koszyk_gotowka} options={optionScreen} />
+            <Stack.Screen name="Gotowka_przetwarzanie" component={Gotowka_przetwarzanie} options={optionScreen} />
+            <Stack.Screen name="Zatwierdz_platnosc" component={Zatwierdz_platnosc} options={optionScreen} />
 
         </Stack.Navigator>
 

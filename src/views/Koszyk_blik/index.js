@@ -4,6 +4,7 @@ import {StyleSheet, View, Text, ScrollView, TouchableOpacity} from "react-native
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import {Koszyk_platnosc} from "../Koszyk_platnosc";
+import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
 
 export function Koszyk_blik({ navigation }){
   return (
@@ -103,7 +104,6 @@ export function Koszyk_blik({ navigation }){
           <Text style={styles.patnoKart}>Płatność kartą </Text>
           <Text style={styles.patnoKart}>Gotówka przy kasie </Text>
           <Text style={styles.blik}>BLIK                            </Text>
-          <Text style={styles.patnoKart}>Paypal</Text>
         </Text>
       </Text>
 
@@ -115,9 +115,11 @@ export function Koszyk_blik({ navigation }){
             contentFit="cover"
             source={require("./assets/mask-group.png")}
           />
+          <TouchableOpacity onPress={() =>navigation.navigate(Zatwierdz_platnosc)}>
           <Text style={[styles.garyLee, styles.garyLeeTypo]}>
             Zatwierdź płatność
           </Text>
+          </TouchableOpacity>
         </View>
       </View>
 
