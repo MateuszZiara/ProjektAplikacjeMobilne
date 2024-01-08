@@ -9,7 +9,8 @@ import {Home} from "../Home";
 import {SzczegolyKonta} from "../SzczegolyKonta";
 import {LoginView} from "../LoginView";
 import {Login} from "../Login";
-
+import User from "../../Classes/User"
+import Cart from "../../Classes/Cart"
 export function UstawieniaView({ navigation }) {
 
     {
@@ -135,8 +136,11 @@ export function UstawieniaView({ navigation }) {
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.rectangleParent} onPress={() =>{
-                            
-                            navigation.navigate(Login)
+                            User.id = 0;
+                            User.email = null;
+                            User.name = null;
+                            Cart.array = [];
+                            navigation.navigate(Login);
                         }} /*//TODO Ziara chuju tu!*/>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>

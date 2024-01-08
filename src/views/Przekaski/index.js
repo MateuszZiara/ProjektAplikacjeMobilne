@@ -10,6 +10,7 @@ import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
 import {Przekaski2View} from "../Przekaski2";
+import async from "async";
 
 export function PrzekaskiView({ navigation }) {
   const width = Dimensions.get('window').width;
@@ -19,6 +20,33 @@ export function PrzekaskiView({ navigation }) {
     setActiveIndex(index);
 
   }
+
+
+    async function getItemById(id) {
+        try {
+            // Fetch data from the database
+            const response = await fetch('https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app/przekaski.json');
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch data');
+            }
+
+            const data = await response.json();
+
+            // Find the item with the given ID
+            const item = data.foodProducts.find(product => product.id === id);
+
+            // Log the item's name or indicate if not found
+            if (item) {
+                console.log(`Item Name: ${item.name}`);
+            } else {
+                console.log('Item not found');
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error.message);
+        }
+    }
+
   const carouselItems  = [
     { text: 'Mały Popcorn', imageSource: require("./assets/pngitem-4868092-2.png") },
     { text: 'Lody Oreo', imageSource: require("./assets/image-10.png") },
@@ -28,7 +56,8 @@ export function PrzekaskiView({ navigation }) {
   ];
   function addToCart(index)
   {
-
+        //Baza test
+        getItemById(index-2);
       let contains = false;
       if(index === 3 || index === 8)
       {
