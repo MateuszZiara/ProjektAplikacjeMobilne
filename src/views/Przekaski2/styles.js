@@ -181,7 +181,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   frameParent: {
-    top: 58,
+    top: 38,
     left: 29,
     justifyContent: "center",
     alignItems: "center",
@@ -324,7 +324,7 @@ export const styles = StyleSheet.create({
   sliderPrzekasek1: {
     marginLeft: -179,
     top: 15,
-    height: 732,
+    height: 542,
   },
   sliderPrzekasekParent: {
     marginLeft: -261,
@@ -391,7 +391,7 @@ export const styles = StyleSheet.create({
     overflow: "hidden",
   },
   headerEkranuPrzeksekParent: {
-    top: 21,
+    top: 5,
     left: 3,
     height: 733,
     width: 578,
@@ -434,7 +434,6 @@ export const styles = StyleSheet.create({
     height: 32,
   },
   wzr: {
-    borderRadius: 40,
     backgroundColor: "#000",
     flex: 1,
     height: 896,

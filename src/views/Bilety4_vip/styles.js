@@ -273,7 +273,7 @@ export const styles = StyleSheet.create({
   },
   slider: {
     left: 0,
-    top: 0,
+    top: -20,
   },
   headerEkranuPrzeksek: {
     top: 21,
@@ -354,7 +354,7 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
   },
   frameParent: {
-    top: 79,
+    top: 59,
     left: 32,
     justifyContent: "center",
     position: "absolute",

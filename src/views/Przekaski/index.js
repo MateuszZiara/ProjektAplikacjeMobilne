@@ -10,6 +10,7 @@ import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
 import {Przekaski2View} from "../Przekaski2";
+import {UserAvatar} from "../../components/UserAvatar";
 
 export function PrzekaskiView({ navigation }) {
   const width = Dimensions.get('window').width;
@@ -144,18 +145,9 @@ export function PrzekaskiView({ navigation }) {
               </View>
             </View>
           </View>
-
-              <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
-                  Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
-              }}>
-            <Image
-              style={styles.frameChild}
-              contentFit="cover"
-              source={require("./assets/ellipse-19.png")}
-            />
-              </TouchableOpacity>
-
-
+            <View style={{left:-5}}>
+                <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
+            </View>
         </View>
 
       </View>

@@ -281,14 +281,14 @@
 [
     {
         "id": 1,
-        "IMDB API": "xxxxx"
+        "TMDB API": "xxxxx"
     },
     {
         "id": 2,
-        "IMDB API": "xxxxx"
+        "TMDB API": "xxxxx"
     },
     {
         "id": 3,
-        "IMDB API": "xxxxx"
+        "TMDB API": "xxxxx"
     }
 ]}

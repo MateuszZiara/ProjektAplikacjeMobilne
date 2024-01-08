@@ -4,6 +4,7 @@ import {StyleSheet, View, Text, Pressable, ScrollView, TouchableOpacity} from "r
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles"
 import {PrzekaskiView} from "../Przekaski";
+import {UserAvatar} from "../../components/UserAvatar";
 
 export function Przekaski2View({ navigation }) {
   return (
@@ -46,12 +47,9 @@ export function Przekaski2View({ navigation }) {
                 </View>
               </View>
             </View>
-            <View style={[styles.vectorWrapper, styles.parentFlexBox]}>
-              <Image
-                style={styles.frameChild}
-                contentFit="cover"
-                source={require("./assets/ellipse-19.png")}
-              />
+
+            <View style={{left:-5}}>
+              <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
             </View>
           </View>
         </View>
@@ -104,14 +102,6 @@ export function Przekaski2View({ navigation }) {
                 source={require("./assets/pngitem-388402-1.png")}
               />
             </View>
-            <View style={[styles.lodyOreoParent, styles.parentLayout]}>
-              <Text style={[styles.maaKawa, styles.nachosTypo]}>Mała kawa</Text>
-              <Image
-                style={styles.pngitem38362491Icon}
-                contentFit="cover"
-                source={require("./assets/pngitem-3836249-1.png")}
-              />
-            </View>
           </View>
           <View style={[styles.sliderPrzekasek1, styles.sliderPosition]}>
             <View style={styles.parentLayout}>
@@ -140,14 +130,6 @@ export function Przekaski2View({ navigation }) {
                 style={styles.image29Icon}
                 contentFit="cover"
                 source={require("./assets/image-29.png")}
-              />
-            </View>
-            <View style={[styles.lodyOreoParent, styles.parentLayout]}>
-              <Text style={[styles.lemoniada, styles.lodyTypo]}>Lemoniada</Text>
-              <Image
-                style={styles.pngitem10184351Icon}
-                contentFit="cover"
-                source={require("./assets/pngitem-1018435-1.png")}
               />
             </View>
           </View>

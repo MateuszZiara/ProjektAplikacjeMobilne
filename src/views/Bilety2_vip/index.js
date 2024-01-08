@@ -190,7 +190,9 @@ export function Bilety2_vip({ navigation }) {
             </View>
           </View>
         </View>
-        <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
+        <View style={{left:-10}}>
+          <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
+        </View>
       </View>
       <TouchableOpacity onPress={() =>{{TicketToBuy.number = number}navigation.navigate(Bilety3_vip)}}>
 

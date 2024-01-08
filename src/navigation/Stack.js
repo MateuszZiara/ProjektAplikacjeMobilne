@@ -18,6 +18,7 @@ import {Koszyk_karta} from "../views/Koszyk_karta";
 import {Grzechotnik} from "../views/Grzechotnik";
 import {RepertuarSearch} from "../views/RepertuarSearch";
 import {Rabat} from "../views/Rabat";
+import {Bilety5} from "../views/Bilety5";
 
 
 const Stack = createNativeStackNavigator();
@@ -34,6 +35,7 @@ export default function StackNav() {
             <Stack.Screen name="Bilety2_vip" component={Bilety2_vip} options={optionScreen} />
             <Stack.Screen name="Bilety3_vip" component={Bilety3_vip} options={optionScreen} />
             <Stack.Screen name="Bilety4_vip" component={Bilety4_vip} options={optionScreen} />
+            <Stack.Screen name="Bilety5" component={Bilety5} options={optionScreen} />
             <Stack.Screen name="Przekaski2View" component={Przekaski2View} options={optionScreen} />
             <Stack.Screen name="TabNav" component={TabNav} options={optionScreen} />
             <Stack.Screen name="Test" component={Test} options={optionScreen} />

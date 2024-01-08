@@ -9,6 +9,8 @@ import {Bilety3_vip} from "../Bilety3_vip";
 import TicketToBuy from "../../Classes/TicketToBuy";
 import Cart from "../../Classes/Cart";
 import {Home} from "../Home";
+import {UserAvatar} from "../../components/UserAvatar";
+import {Bilety5} from "../Bilety5";
 export function Bilety4_vip({ navigation }) {
   function addToCart(item)
   {
@@ -60,7 +62,7 @@ export function Bilety4_vip({ navigation }) {
         })
       }
     }
-    navigation.navigate(Home)
+    navigation.navigate(Bilety5)
   }
   const renderItem = ({ item }) => (
       <TouchableOpacity onPress={() => addToCart(item)}>
@@ -96,30 +98,6 @@ export function Bilety4_vip({ navigation }) {
     <View style={styles.wzr}>
 
       <View style={styles.wzrChild} />
-      <View style={[styles.repertuarPosition]}>
-        <View style={[styles.homeinactiveParent, styles.parentFlexBox]}>
-          <Image
-            style={styles.iconLayout}
-            contentFit="cover"
-            source={require("./assets/homeinactive.png")}
-          />
-          <Image
-            style={[styles.popcorninactiveIcon, styles.iconLayout]}
-            contentFit="cover"
-            source={require("./assets/popcorninactive.png")}
-          />
-          <Image
-            style={[styles.popcorninactiveIcon, styles.iconLayout]}
-            contentFit="cover"
-            source={require("./assets/mask-group.png")}
-          />
-          <Image
-            style={[styles.popcorninactiveIcon, styles.iconLayout]}
-            contentFit="cover"
-            source={require("./assets/mask-group1.png")}
-          />
-        </View>
-      </View>
       <View style={[styles.headerEkranuPrzeksek, styles.sliderLayout]}>
         <View style={[styles.slider, styles.sliderLayout]}>
           <Image
@@ -182,13 +160,8 @@ export function Bilety4_vip({ navigation }) {
             </View>
           </View>
         </View>
-        <View style={[styles.vectorWrapper, styles.parentFlexBox]}>
-          <Image
-            style={styles.ellipseIcon}
-            contentFit="cover"
-            source={require("./assets/ellipse-19.png")}
-          />
-
+        <View style={{left:-10}}>
+          <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
         </View>
 
       </View>

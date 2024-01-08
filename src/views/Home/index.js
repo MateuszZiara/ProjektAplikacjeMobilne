@@ -243,14 +243,6 @@ export function Home({ navigation }){
                     <View style={[styles.komponentPrzekski, styles.repertuarPosition]}>
                         <View style={styles.maskGroup}>
                             <Image
-                                style={[
-                                    styles.glowingSpaceshipOrbitsPlaneIcon,
-                                    styles.iconPosition,
-                                ]}
-                                contentFit="cover"
-                                source={require("./assets/glowingspaceshiporbitsplanetstarrygalaxygeneratedbyai-1.png")}
-                            />
-                            <Image
                                 style={[styles.image8Icon, styles.iconPosition]}
                                 contentFit="cover"
                                 source={require("./assets/image-8.png")}

@@ -76,7 +76,9 @@ export function Bilety3_vip({ navigation }) {
             </View>
           </View>
         </View>
-        <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
+        <View style={{left:-10}}>
+          <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
+        </View>
       </View>
       <Calendar
           onDayPress={day => {
