@@ -6,6 +6,7 @@ import {styles} from "./styles";
 import {Koszyk_blik} from "../Koszyk_blik";
 import {Koszyk} from "../Koszyk";
 import {Koszyk_karta} from "../Koszyk_karta";
+import {Koszyk_gotowka} from "../Koszyk_gotowka";
 export function Koszyk_platnosc({ navigation }){
   return (
       <ScrollView>
@@ -107,11 +108,10 @@ export function Koszyk_platnosc({ navigation }){
 
           <Text style={styles.patnoKart} onPress={() =>navigation.navigate(Koszyk_karta)}>Płatność kartą </Text>
 
-          <Text style={styles.gotwkaPrzyKasie}>Gotówka przy kasie </Text>
+          <Text style={styles.gotwkaPrzyKasie} onPress={() =>navigation.navigate(Koszyk_gotowka)}>Gotówka przy kasie </Text>
 
           <Text style={styles.blik} onPress={() =>navigation.navigate(Koszyk_blik)}>BLIK                          </Text>
 
-          <Text style={styles.gotwkaPrzyKasie}>Paypal</Text>
 
       </Text>
       <Text style={[styles.oOOO, styles.oOOOTypo]}>

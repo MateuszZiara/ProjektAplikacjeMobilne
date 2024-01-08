@@ -18,10 +18,13 @@ import {Koszyk_karta} from "../views/Koszyk_karta";
 import {Grzechotnik} from "../views/Grzechotnik";
 import {RepertuarSearch} from "../views/RepertuarSearch";
 import {Rabat} from "../views/Rabat";
+<<<<<<< HEAD
 import {Bilety5} from "../views/Bilety5";
+=======
 import {Koszyk_gotowka} from "../views/Koszyk_gotowka";
 import {Gotowka_przetwarzanie} from "../views/Gotowka_przetwarzanie";
 import {Zatwierdz_platnosc} from "../views/Zatwierdz_platnosc";
+>>>>>>> fa03e217c89c298cc35efd11202c6e08fccf0ebc
 
 
 const Stack = createNativeStackNavigator();

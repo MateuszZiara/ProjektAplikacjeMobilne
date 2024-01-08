@@ -6,6 +6,8 @@ import {Koszyk_platnosc} from "../Koszyk_platnosc";
 import Carousel from "react-native-snap-carousel";
 
 import {styles} from "./styles";
+import {Gotowka_przetwarzanie} from "../Gotowka_przetwarzanie";
+import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
 
 
 export function Koszyk_karta({ navigation }){
@@ -61,9 +63,11 @@ export function Koszyk_karta({ navigation }){
             contentFit="cover"
             source={require("./assets/mask-group.png")}
           />
+          <TouchableOpacity onPress={() =>navigation.navigate(Zatwierdz_platnosc)}>
           <Text style={[styles.garyLee, styles.garyLeeTypo]}>
             Zatwierdź płatność
           </Text>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={[styles.karty, styles.parentFlexBox]}>
@@ -174,7 +178,6 @@ export function Koszyk_karta({ navigation }){
           <Text style={styles.patnoKart}>Płatność kartą </Text>
           <Text style={styles.gotwkaPrzyKasie}>Gotówka przy kasie </Text>
           <Text style={styles.blik}>BLIK                           </Text>
-          <Text style={styles.gotwkaPrzyKasie}>Paypal</Text>
 
       </Text>
       <View style={styles.sliderNav}>
