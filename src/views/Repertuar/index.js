@@ -20,6 +20,7 @@ import {Bilety3_vip} from "../Bilety3_vip";
 import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
 import Search from "../../Classes/Search";
+import {PrzekaskiView} from "../Przekaski";
 export function RepertuarView({ navigation }) {
 
   const [refresh, setRefresh] = useState(false);
@@ -115,12 +116,13 @@ export function RepertuarView({ navigation }) {
               </View>
             </View>
             <View style={[styles.vectorWrapper, styles.parentFlexBox]}>
+              <TouchableOpacity onPress={() => navigation.navigate(UstawieniaView)}>
               <Image
                   style={styles.ellipseIcon}
                   contentFit="cover"
                   source={require("./assets/ellipse-19.png")}
               />
-
+              </TouchableOpacity>
             </View>
 
           </View>
