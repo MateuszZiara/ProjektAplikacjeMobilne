@@ -1,7 +1,9 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import {StyleSheet, View, Text, TouchableOpacity} from "react-native";
 import { Image } from "expo-image";
 import { styles } from "./styles";
+import {Bilety2_vip} from "../Bilety2_vip";
+import {Grzechotnik} from "../Grzechotnik";
 
 export function Rabat({ navigation }) {
   return (
@@ -35,11 +37,13 @@ export function Rabat({ navigation }) {
         />
       </View>
       <View style={[styles.backParent, styles.parentFlexBox]}>
+          <TouchableOpacity onPress={() =>navigation.navigate(Grzechotnik)}>
         <Image
           style={styles.backIcon1}
           contentFit="cover"
           source={require("./assets/back.png")}
         />
+          </TouchableOpacity>
         <Text style={[styles.grzechotnik, styles.grzechotnikFlexBox]}>
           Oto twój wygrzechotany rabat!
         </Text>
