@@ -491,12 +491,12 @@ export const styles = StyleSheet.create({
     position: "absolute",
   },
   rectangleParent: {
-    top: 648,
+    top: 500,
   },
   wzr: {
     backgroundColor: Color.colorBlack,
     flex: 1,
-    height: 896,
+    height: 735,
     overflow: "hidden",
   },
 });

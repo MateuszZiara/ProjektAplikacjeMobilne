@@ -66,11 +66,9 @@ export function Grzechotnik({ navigation }) {
     };
 
     useEffect(() => {
-        // Wywołaj funkcję _subscribe, aby rozpocząć odczyt żyroskopu
+
         if(!zagrzechotaj)
             _subscribe();
-
-        // Wywołaj funkcję _unsubscribe przy zakończeniu komponentu
         return () => {
             console.log("Unsubscribing gyroscope");
             _unsubscribe();

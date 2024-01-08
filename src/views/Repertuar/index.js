@@ -1,5 +1,14 @@
 import * as React from "react";
-import {Text, StyleSheet, View, ScrollView, ScrollViewBase, TouchableOpacity, FlatList} from "react-native";
+import {
+  Text,
+  StyleSheet,
+  View,
+  ScrollView,
+  ScrollViewBase,
+  TouchableOpacity,
+  FlatList,
+  SectionList
+} from "react-native";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { Color, FontFamily, FontSize, Padding, Border } from "./styles.js";
@@ -24,7 +33,12 @@ export function RepertuarView({ navigation }) {
     // Return the cleanup function to unsubscribe from the event
     return unsubscribe;
   }, [navigation, refresh]);
-
+  const sections = [
+    {
+      title: 'Repertuar',
+      data: Movie.array, // Assuming Movie.array is an array of movie items
+    },
+  ];
   // Function to refresh the FlatList
   const refreshFlatList = () => {
     // Toggle the state to force a re-render
@@ -112,9 +126,8 @@ export function RepertuarView({ navigation }) {
           </View>
 
           <View style={styles.dynamiczneitemki}>
-            <FlatList
-                key={refresh}
-                data={Movie.array}
+            <SectionList
+                sections={sections}
                 renderItem={({ item }) => (
                     <View style={styles.itemContainer}>
                       <Text style={[styles.tytulTypo, styles.FontDoRenderItem]}>
@@ -129,6 +142,7 @@ export function RepertuarView({ navigation }) {
                 )}
                 keyExtractor={(item) => item.id.toString()}
             />
+
           </View>
 
         </View>

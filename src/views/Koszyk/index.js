@@ -44,7 +44,7 @@ export function Koszyk({ navigation }){
     setRefresh((prevRefresh) => !prevRefresh);
   };
   return (
-      <ScrollView>
+
         <View style={[styles.wzr, styles.wzrLayout]}>
 
           <View style={styles.groupParent}>
@@ -103,7 +103,8 @@ export function Koszyk({ navigation }){
 
             </View>
             <View style={{
-              marginTop: 300,
+              marginTop: 200,
+              height: 350,
             }}>
               <FlatList
                   key={refresh}
@@ -115,24 +116,25 @@ export function Koszyk({ navigation }){
 
 
             </View>
-      </View>
-          <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
-            <View style={styles.frameItem} />
-            <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
-              <TouchableOpacity onPress={() =>navigation.navigate(Koszyk_platnosc)}>
-              <Image
-                  style={styles.maskGroupIcon3}
-                  contentFit="cover"
-                  source={require("./assets/mask-group3.png")}
-              />
-              <Text style={[styles.garyLee, styles.garyLeeTypo]}>
-                Przejdź do Płatności
-              </Text>
-              </TouchableOpacity>
+            <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
+              <View style={styles.frameItem} />
+              <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
+                <TouchableOpacity onPress={() =>navigation.navigate(Koszyk_platnosc)}>
+                  <Image
+                      style={styles.maskGroupIcon3}
+                      contentFit="cover"
+                      source={require("./assets/mask-group3.png")}
+                  />
+                  <Text style={[styles.garyLee, styles.garyLeeTypo]}>
+                    Przejdź do Płatności
+                  </Text>
+                </TouchableOpacity>
+              </View>
             </View>
-          </View>
+      </View>
+
         </View>
-      </ScrollView>
+
   );
 }
 

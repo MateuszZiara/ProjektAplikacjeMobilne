@@ -8,6 +8,7 @@ import {PrzekaskiView} from "../Przekaski";
 import {Home} from "../Home";
 import {SzczegolyKonta} from "../SzczegolyKonta";
 import {LoginView} from "../LoginView";
+import {Login} from "../Login";
 
 export function UstawieniaView({ navigation }) {
 
@@ -133,7 +134,10 @@ export function UstawieniaView({ navigation }) {
                             </View>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate(LoginView)} /*//TODO Ziara chuju tu!*/>
+                        <TouchableOpacity style={styles.rectangleParent} onPress={() =>{
+                            
+                            navigation.navigate(Login)
+                        }} /*//TODO Ziara chuju tu!*/>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image

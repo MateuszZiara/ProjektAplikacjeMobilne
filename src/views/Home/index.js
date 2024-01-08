@@ -7,7 +7,7 @@ import {
     ScrollView,
     TouchableOpacity,
     Dimensions,
-    ImageBackground, FlatList
+    ImageBackground, FlatList, SectionList
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
@@ -73,7 +73,12 @@ export function Home({ navigation }){
             />
         </View>
     );
-
+    const sections = [
+        {
+            title: 'Repertuar',
+            data: Movie.array, // Assuming Movie.array is an array of movie items
+        },
+    ];
     const [refresh, setRefresh] = useState(false);
     useEffect(() => {
         const unsubscribe = navigation.addListener("focus", () => {
@@ -290,10 +295,12 @@ export function Home({ navigation }){
                             Sprawdź nasze nowości.
                         </Text>
                         <View style={styles.repertuar_gb}>
-                            <FlatList
-                                key={refresh}
-                                data={Movie.array}
+                            <SectionList
+                                sections={sections}
                                 renderItem={renderItemList}
+                                renderSectionHeader={({ section: { title } }) => (
+                                    <Text style={styles.sectionHeader}>{title}</Text>
+                                )}
                                 keyExtractor={(item) => item.id.toString()}
                             />
                         </View>
