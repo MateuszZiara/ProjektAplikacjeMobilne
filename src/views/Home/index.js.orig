@@ -7,7 +7,7 @@ import {
     ScrollView,
     TouchableOpacity,
     Dimensions,
-    ImageBackground, FlatList
+    ImageBackground, FlatList, SectionList
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
@@ -18,19 +18,18 @@ import {useEffect, useState} from "react";
 import Carousel, {Pagination} from "react-native-snap-carousel";
 import {Grzechotnik} from "../Grzechotnik";
 import {Login} from "../Login";
-<<<<<<< HEAD
 import { Avatar } from 'react-native-paper';
 import zIndex from "@mui/material/styles/zIndex";
 import {UserAvatar} from "../../components/UserAvatar";
-function IfAvailableToday({ hours }) {
-    const currentHour = new Date().getHours();
-=======
 import * as DateTime from "react-native-svg";
 import Search from "../../Classes/Search"
 import {RepertuarView} from "../Repertuar";
 import {RepertuarSearch} from "../RepertuarSearch";
 import Movie from "../../Classes/Movie";
->>>>>>> ed5eb3ce7e487bf0b5175cd6a75e459901aa8526
+
+function IfAvailableToday({ hours }) {
+    const currentHour = new Date().getHours();
+
 
     const timeComponents = hours.map((hour, index) => {
         const argumentHour = parseInt(hour, 10);
@@ -62,13 +61,11 @@ import Movie from "../../Classes/Movie";
 
 }
 
+
 export function Home({ navigation }){
-<<<<<<< HEAD
-    {/* console.log(Singleton.name); */}
-=======
     const renderItemList = ({ item }) => (
-        <View style={styles.itemContainer}>
-            <Text style={{ color: 'white' }}>{`${item.name} ${item.start} ${item.end}`}</Text>
+        <View style={[styles.itemContainer, styles.renderItemContainer]}>
+            <Text style={styles.renderItemText}>{`${item.name} ${item.start} ${item.end}`}</Text>
             <Image
                 style={styles.rightArrowIcon}
                 contentFit="cover"
@@ -76,6 +73,12 @@ export function Home({ navigation }){
             />
         </View>
     );
+    const sections = [
+        {
+            title: 'Repertuar',
+            data: Movie.array, // Assuming Movie.array is an array of movie items
+        },
+    ];
     const [refresh, setRefresh] = useState(false);
     useEffect(() => {
         const unsubscribe = navigation.addListener("focus", () => {
@@ -96,8 +99,6 @@ export function Home({ navigation }){
 
 
 
-    console.log(Singleton.name);
->>>>>>> ed5eb3ce7e487bf0b5175cd6a75e459901aa8526
     const [activeIndex, setActiveIndex] = useState(0);
     const checkName = (name) => (name !== null ? name : "Czas na kino!");
     const checkDate = () => {
@@ -120,16 +121,12 @@ export function Home({ navigation }){
     function ActiveSlider(index)
     {
         setActiveIndex(index);
-<<<<<<< HEAD
         {/* console.log(index); */}  //TU BYŁ PROBLEM Z TYM RENDEROWANIEM XDDD //TODO PureComponents
-=======
-
->>>>>>> ed5eb3ce7e487bf0b5175cd6a75e459901aa8526
     }
     const carouselItems = [
 
         { title: 'American Psycho', text: 'napisy', review:'6,9/10', times:['15:00','19:30','22:00'], imageSource: require('./assets/img1.png') },
-        { title: 'Chłopi', text: '', review:'7,5/10', times:['17:00','20:00'], imageSource: require('./assets/img2.png') },
+        { title: 'Chłopi', text: 'oryginał', review:'7,5/10', times:['17:00','20:00'], imageSource: require('./assets/img2.png') },
         { title: 'Toy Story', text: 'dubbing', review:'7,2/10', times:['18:30','21:00'], imageSource: require('./assets/img3.png') },
         { title: 'Oppenheimer', text: 'napisy', review:'9/10', times:['11:00','18:30','20:00'], imageSource: require('./assets/img4.png') },
         { title: 'Black Swan - Czarny Łabędź', text: 'napisy', review:'8/10', times:['19:00','21:30'], imageSource: require('./assets/img5.png') },
@@ -153,7 +150,7 @@ export function Home({ navigation }){
                     <Text style={styles.sliderh1}>{item.title}</Text>
                     <View style={{flexDirection: 'row'}}>
                         <Text style={styles.sliderh2}>{item.text}</Text>
-                        <Text style={[styles.sliderh2,{marginLeft: 20}]}>{item.review}</Text>
+                        <Text style={[styles.sliderh2r,{marginLeft: 20}]}>{item.review}</Text>
                     </View>
                     <View style={{flexDirection: 'row'}}>{item.times.map((time, index) => <IfAvailableToday key={index} hours={[time]} />)}</View>
 
@@ -183,11 +180,7 @@ export function Home({ navigation }){
                             <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
                         </View>
                     </View>
-                    <View style={
-                        {
-                            zIndex:0
-                        }
-                    }>
+                    <View style={[{zIndex:0}]}>
                         <Image source={require('./assets/gradientback.png')} style={{
                             borderRadius: 0,
                             height: 500,
@@ -229,7 +222,6 @@ export function Home({ navigation }){
                             inactiveDotScale={0.8}
                         />
                     </View>
-
                 </View>
 
                 <View style={[styles.searchBarWrapper, styles.wrapperLayout]}>
@@ -250,14 +242,6 @@ export function Home({ navigation }){
                 <View style={[styles.komponentPrzekskiWrapper, styles.wrapperLayout]}>
                     <View style={[styles.komponentPrzekski, styles.repertuarPosition]}>
                         <View style={styles.maskGroup}>
-                            <Image
-                                style={[
-                                    styles.glowingSpaceshipOrbitsPlaneIcon,
-                                    styles.iconPosition,
-                                ]}
-                                contentFit="cover"
-                                source={require("./assets/glowingspaceshiporbitsplanetstarrygalaxygeneratedbyai-1.png")}
-                            />
                             <Image
                                 style={[styles.image8Icon, styles.iconPosition]}
                                 contentFit="cover"
@@ -293,11 +277,7 @@ export function Home({ navigation }){
                     </View>
                 </View>
                 <View style={styles.frameView}>
-                    <View style={[styles.buttonWrapper, styles.buttonLayout]}>
-                        <View style={[styles.button, styles.buttonLayout]}>
-                            <Text style={styles.cayRepertuar}>Cały repertuar</Text>
-                        </View>
-                    </View>
+
 
                     <Text style={styles.najbliszeSeanse}>Najbliższe seanse</Text>
                     <View style={[styles.repertuarParent, styles.repertuarPosition]}>
@@ -306,11 +286,13 @@ export function Home({ navigation }){
                         <Text style={[styles.sprawdNaszeNowoci1, styles.znajdFilmW1Typo]}>
                             Sprawdź nasze nowości.
                         </Text>
-                        <View>
-                            <FlatList
-                                key={refresh}
-                                data={Movie.array}
+                        <View style={styles.repertuar_gb}>
+                            <SectionList
+                                sections={sections}
                                 renderItem={renderItemList}
+                                renderSectionHeader={({ section: { title } }) => (
+                                    <Text style={styles.sectionHeader}>{title}</Text>
+                                )}
                                 keyExtractor={(item) => item.id.toString()}
                             />
                         </View>
