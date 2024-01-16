@@ -1,294 +1,3276 @@
 {
-    "foodProducts":[
-    {
-        "id": 1,
-        "name": "Mały popcorn",
-        "price": 12,
-        "img": "../images/products/malypopcorn.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Duży popcorn",
-        "price": 20,
-        "img": "../images/products/duzypopcorn.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Nachosy",
-        "price": 15,
-        "img": "../images/products/nachosy.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Nachosy ostre",
-        "price": 17,
-        "img": "../images/products/nachosy.jpg"
-    },
-    {
-        "id": 5,
-        "name": "M&Ms",
-        "price": 8,
-        "img": "../images/products/mms.jpg"
-    },
-    {
-        "id": 6,
-        "name": "Snickers",
-        "price": 7,
-        "img": "../images/products/snickers.jpg"
-    },
-    {
-        "id": 7,
-        "name": "Mars",
-        "price": 7,
-        "img": "../images/products/mars.jpg"
-    },
-    {
-        "id": 8,
-        "name": "Milky Way",
-        "price": 7,
-        "img": "../images/products/milkyway.jpg"
-    },
-    {
-        "id": 9,
-        "name": "Lay's zielona cebulka",
-        "price": 6,
-        "img": "../images/products/laysziel.jpg"
-    },
-    {
-        "id": 10,
-        "name": "Lay's paprykowe",
-        "price": 6,
-        "img": "../images/products/layspapr.jpg"
-    },
-    {
-        "id": 11,
-        "name": "Mały popcorn karmelowy",
-        "price": 13,
-        "img": "../images/products/malypopcorn.jpg"
-    },
-    {
-        "id": 12,
-        "name": "Duży popcorn karmelowy",
-        "price": 21,
-        "img": "../images/products/duzypopcorn.jpg"
-    }
-],
-    "drinkProducts":[
-    {
-        "id": 1,
-        "name": "Sok jabłkowy",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 11
-            }
-        ],
-        "img": "../images/products/sokjabl.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Sok pomarańczowy",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 11
-            }
-        ],
-        "img": "../images/products/sokpoma.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Sok wieloowocowy",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 11
-            }
-        ],
-        "img": "../images/products/popcornsokwiel.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Woda",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 4
-            },
-            {
-                "size": "500 ml",
-                "price": 7
-            },
-            {
-                "size": "1000 ml",
-                "price": 11
-            }
-        ],
-        "img": "../images/products/woda.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Coca-Cola",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 9
-            },
-            {
-                "size": "1000 ml",
-                "price": 14
-            }
-        ],
-        "img": "../images/products/coca.jpg"
-    },
-    {
-        "id": 6,
-        "name": "Coca-Cola Zero",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 9
-            },
-            {
-                "size": "1000 ml",
-                "price": 14
-            }
-        ],
-        "img": "../images/products/cocazero.jpg"
-    },
-    {
-        "id": 7,
-        "name": "Fanta",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 9
-            },
-            {
-                "size": "1000 ml",
-                "price": 14
-            }
-        ],
-        "img": "../images/products/fanta.jpg"
-    },
-    {
-        "id": 8,
-        "name": "Sprite",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 9
-            },
-            {
-                "size": "1000 ml",
-                "price": 14
-            }
-        ],
-        "img": "../images/products/sprite.jpg"
-    },
-    {
-        "id": 9,
-        "name": "Lipton Ice Tea",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 6
-            },
-            {
-                "size": "500 ml",
-                "price": 9
-            },
-            {
-                "size": "1000 ml",
-                "price": 14
-            }
-        ],
-        "img": "../images/products/lipton.jpg"
-    },
-    {
-        "id": 10,
-        "name": "Red Bull",
-        "sizes":[
-            {
-                "size": "250 ml",
-                "price": 9
-            },
-            {
-                "size": "500 ml",
-                "price": 16
-            }
-        ],
-        "img": "../images/products/redbull.jpg"
-    }
-],
+    "foodProducts": [
+        {
+            "id": 1,
+            "name": "Mały popcorn",
+            "price": 12,
+            "img": "../images/products/malypopcorn.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Duży popcorn",
+            "price": 20,
+            "img": "../images/products/duzypopcorn.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Nachosy",
+            "price": 15,
+            "img": "../images/products/nachosy.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Nachosy ostre",
+            "price": 17,
+            "img": "../images/products/nachosy.jpg"
+        },
+        {
+            "id": 5,
+            "name": "M&Ms",
+            "price": 8,
+            "img": "../images/products/mms.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Snickers",
+            "price": 7,
+            "img": "../images/products/snickers.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Mars",
+            "price": 7,
+            "img": "../images/products/mars.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Milky Way",
+            "price": 7,
+            "img": "../images/products/milkyway.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Lay's zielona cebulka",
+            "price": 6,
+            "img": "../images/products/laysziel.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Lay's paprykowe",
+            "price": 6,
+            "img": "../images/products/layspapr.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Mały popcorn karmelowy",
+            "price": 13,
+            "img": "../images/products/malypopcorn.jpg"
+        },
+        {
+            "id": 12,
+            "name": "Duży popcorn karmelowy",
+            "price": 21,
+            "img": "../images/products/duzypopcorn.jpg"
+        }
+    ],
+    "drinkProducts": [
+        {
+            "id": 1,
+            "name": "Sok jabłkowy",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 11
+                }
+            ],
+            "img": "../images/products/sokjabl.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Sok pomarańczowy",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 11
+                }
+            ],
+            "img": "../images/products/sokpoma.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Sok wieloowocowy",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 11
+                }
+            ],
+            "img": "../images/products/popcornsokwiel.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Woda",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 4
+                },
+                {
+                    "size": "500 ml",
+                    "price": 7
+                },
+                {
+                    "size": "1000 ml",
+                    "price": 11
+                }
+            ],
+            "img": "../images/products/woda.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Coca-Cola",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 9
+                },
+                {
+                    "size": "1000 ml",
+                    "price": 14
+                }
+            ],
+            "img": "../images/products/coca.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Coca-Cola Zero",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 9
+                },
+                {
+                    "size": "1000 ml",
+                    "price": 14
+                }
+            ],
+            "img": "../images/products/cocazero.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Fanta",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 9
+                },
+                {
+                    "size": "1000 ml",
+                    "price": 14
+                }
+            ],
+            "img": "../images/products/fanta.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Sprite",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 9
+                },
+                {
+                    "size": "1000 ml",
+                    "price": 14
+                }
+            ],
+            "img": "../images/products/sprite.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Lipton Ice Tea",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 6
+                },
+                {
+                    "size": "500 ml",
+                    "price": 9
+                },
+                {
+                    "size": "1000 ml",
+                    "price": 14
+                }
+            ],
+            "img": "../images/products/lipton.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Red Bull",
+            "sizes": [
+                {
+                    "size": "250 ml",
+                    "price": 9
+                },
+                {
+                    "size": "500 ml",
+                    "price": 16
+                }
+            ],
+            "img": "../images/products/redbull.jpg"
+        }
+    ],
+    "tickets": [
+        {
+            "id": "1",
+            "name": "Bilet normalny",
+            "price": 30
+        },
+        {
+            "id": "2",
+            "name": "Bilet VIP",
+            "price": 35
+        },
+        {
+            "id": "3",
+            "name": "Bilet ulgowy",
+            "price": 20
+        },
+        {
+            "id": "4",
+            "name": "Bilet rodzinny",
+            "price": 65
+        }
+    ],
+    "movies": [
+        {
+            "id": 1,
+            "TMDB API": "753342",
+            "typ": "napisy",
+            "start": "2024-01-10",
+            "stop": "2024-01-30",
+            "times": [
+                "17:00", "19:30", "22:00"
+            ]
+        },
+        {
+            "id": 2,
+            "TMDB API": "955916",
+            "typ": "napisy",
+            "start": "2024-01-13",
+            "stop": "2024-01-28",
+            "times": [
+                "16:00", "19:00"
+            ]
+        },
+        {
+            "id": 3,
+            "TMDB API": "872585",
+            "typ": "napisy",
+            "start": "2024-01-06",
+            "stop": "2024-01-21",
+            "times": [
+                "11:00", "13:00", "21:30"
+            ]
+        },
+        {
+            "id": 4,
+            "TMDB API": "572802",
+            "typ": "napisy",
+            "start": "2024-01-02",
+            "stop": "2024-01-19",
+            "times": [
+                "9:00", "15:00", "19:30"
+            ]
+        },
+        {
+            "id": 5,
+            "TMDB API": "787699",
+            "typ": "lektor",
+            "start": "2024-01-11",
+            "stop": "2024-01-26",
+            "times": [
+                "10:00","13:00", "19:00"
+            ]
+        },
+        {
+            "id": 6,
+            "TMDB API": "866398",
+            "typ": "napisy",
+            "start": "2024-01-15",
+            "stop": "2024-02-01",
+            "times": [
+                "16:00","22:00"
+            ]
+        },
+        {
+            "id": 7,
+            "TMDB API": "901362",
+            "typ": "dubbing",
+            "start": "2024-01-21",
+            "stop": "2024-02-06",
+            "times": [
+                "09:00","12:00","19:00"
+            ]
+        },
+        {
+            "id": 8,
+            "TMDB API": "1133602",
+            "typ": "napisy",
+            "start": "2024-01-21",
+            "stop": "2024-02-08",
+            "times": [
+                "16:00","22:00"
+            ]
+        },
+        {
+            "id": 9,
+            "TMDB API": "1186957",
+            "typ": "dubbing",
+            "start": "2024-01-19",
+            "stop": "2024-02-10",
+            "times": [
+                "09:30","12:00"
+            ]
+        },
+        {
+            "id": 10,
+            "TMDB API": "353491",
+            "typ": "napisy",
+            "start": "2024-01-22",
+            "stop": "2024-02-25",
+            "times": [
+                "18:00","21:00"
+            ]
+        }
 
+    ],
+    "calendar":
+            [
+                    {
+                        "id": "1",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "17.01.2024",
+                        "time": "17:00"
+                    },
+                    {
+                        "id": "2",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "17.01.2024",
+                        "time": "19:30"
+                    },
+                    {
+                        "id": "3",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "17.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "4",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "18.01.2024",
+                        "time": "00:30"
+                    },
+                    {
+                        "id": "5",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "18.01.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "6",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "18.01.2024",
+                        "time": "05:30"
+                    },
+                    {
+                        "id": "7",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "19.01.2024",
+                        "time": "08:00"
+                    },
+                    {
+                        "id": "8",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "19.01.2024",
+                        "time": "10:30"
+                    },
+                    {
+                        "id": "9",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "19.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "10",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "20.01.2024",
+                        "time": "15:30"
+                    },
+                    {
+                        "id": "11",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "20.01.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "12",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "20.01.2024",
+                        "time": "20:30"
+                    },
+                    {
+                        "id": "13",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "21.01.2024",
+                        "time": "23:00"
+                    },
+                    {
+                        "id": "14",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "21.01.2024",
+                        "time": "01:30"
+                    },
+                    {
+                        "id": "15",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "21.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "16",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "22.01.2024",
+                        "time": "06:30"
+                    },
+                    {
+                        "id": "17",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "22.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "18",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "22.01.2024",
+                        "time": "11:30"
+                    },
+                    {
+                        "id": "19",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "23.01.2024",
+                        "time": "14:00"
+                    },
+                    {
+                        "id": "20",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "23.01.2024",
+                        "time": "16:30"
+                    },
+                    {
+                        "id": "21",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "23.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "22",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "24.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "23",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "24.01.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "24",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "24.01.2024",
+                        "time": "02:30"
+                    },
+                    {
+                        "id": "25",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "25.01.2024",
+                        "time": "05:00"
+                    },
+                    {
+                        "id": "26",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "25.01.2024",
+                        "time": "07:30"
+                    },
+                    {
+                        "id": "27",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "25.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "28",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "26.01.2024",
+                        "time": "12:30"
+                    },
+                    {
+                        "id": "29",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "26.01.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "30",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "26.01.2024",
+                        "time": "17:30"
+                    },
+                    {
+                        "id": "31",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "27.01.2024",
+                        "time": "20:00"
+                    },
+                    {
+                        "id": "32",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "27.01.2024",
+                        "time": "22:30"
+                    },
+                    {
+                        "id": "33",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "27.01.2024",
+                        "time": "01:00"
+                    },
+                    {
+                        "id": "34",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "28.01.2024",
+                        "time": "03:30"
+                    },
+                    {
+                        "id": "35",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "28.01.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "36",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "28.01.2024",
+                        "time": "08:30"
+                    },
+                    {
+                        "id": "37",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "29.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "38",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "29.01.2024",
+                        "time": "13:30"
+                    },
+                    {
+                        "id": "39",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "29.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "40",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "30.01.2024",
+                        "time": "18:30"
+                    },
+                    {
+                        "id": "41",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "30.01.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "42",
+                        "cinema_id": "1",
+                        "screenroom_id": "1",
+                        "movies_id": "1",
+                        "date": "30.01.2024",
+                        "time": "23:30"
+                    },
+                    {
+                        "id": "43",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "17.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "44",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "17.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "45",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "18.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "46",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "18.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "47",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "19.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "48",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "19.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "49",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "20.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "50",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "20.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "51",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "21.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "52",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "21.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "53",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "22.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "54",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "22.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "55",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "23.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "56",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "23.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "57",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "24.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "58",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "24.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "59",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "25.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "60",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "25.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "61",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "26.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "62",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "26.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "63",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "27.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "64",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "27.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "65",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "28.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "66",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "2",
+                        "date": "28.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "67",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "17.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "68",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "17.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "69",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "17.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "70",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "18.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "71",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "18.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "72",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "18.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "73",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "19.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "74",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "19.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "75",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "19.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "76",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "20.01.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "77",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "20.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "78",
+                        "cinema_id": "1",
+                        "screenroom_id": "2",
+                        "movies_id": "3",
+                        "date": "20.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "79",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "17.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "80",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "17.01.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "81",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "17.01.2024",
+                        "time": "19:30"
+                    },
+                    {
+                        "id": "82",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "18.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "83",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "18.01.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "84",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "18.01.2024",
+                        "time": "19:30"
+                    },
+                    {
+                        "id": "85",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "19.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "86",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "19.01.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "87",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "4",
+                        "date": "19.01.2024",
+                        "time": "19:30"
+                    },
+                    {
+                        "id": "88",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "17.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "89",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "17.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "90",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "17.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "91",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "18.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "92",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "18.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "93",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "18.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "94",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "19.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "95",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "19.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "96",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "19.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "97",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "20.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "98",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "20.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "99",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "20.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "100",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "21.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "101",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "21.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "102",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "21.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "103",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "22.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "104",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "22.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "105",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "22.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "106",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "23.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "107",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "23.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "108",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "5",
+                        "date": "23.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "109",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "17.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "110",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "17.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "111",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "18.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "112",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "18.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "113",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "19.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "114",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "19.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "115",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "20.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "116",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "20.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "117",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "21.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "118",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "21.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "119",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "22.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "120",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "22.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "121",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "23.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "122",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "23.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "123",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "24.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "124",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "24.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "125",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "25.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "126",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "25.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "127",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "26.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "128",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "26.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "129",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "27.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "130",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "27.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "131",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "28.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "132",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "28.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "133",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "29.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "134",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "29.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "135",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "30.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "136",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "30.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "137",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "31.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "138",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "31.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "139",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "01.02.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "140",
+                        "cinema_id": "1",
+                        "screenroom_id": "4",
+                        "movies_id": "6",
+                        "date": "01.02.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "141",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "21.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "142",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "21.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "143",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "21.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "144",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "22.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "145",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "22.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "146",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "22.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "147",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "23.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "148",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "23.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "149",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "23.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "150",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "24.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "151",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "24.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "152",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "24.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "153",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "25.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "154",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "25.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "155",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "25.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "156",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "26.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "157",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "26.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "158",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "26.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "159",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "27.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "160",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "27.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "161",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "27.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "162",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "28.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "163",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "28.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "164",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "28.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "165",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "29.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "166",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "29.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "167",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "29.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "168",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "30.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "169",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "30.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "170",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "30.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "171",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "31.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "172",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "31.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "173",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "31.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "174",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "01.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "175",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "01.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "176",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "01.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "177",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "02.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "178",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "02.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "179",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "02.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "180",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "03.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "181",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "03.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "182",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "03.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "183",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "04.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "184",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "04.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "185",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "04.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "186",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "05.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "187",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "05.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "188",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "05.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "189",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "06.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "190",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "06.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "191",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "06.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "192",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "07.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "193",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "07.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "194",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "07.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "195",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "08.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "196",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "08.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "197",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "7",
+                        "date": "08.02.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "198",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "17.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "199",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "17.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "200",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "18.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "201",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "18.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "202",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "19.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "203",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "19.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "204",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "20.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "205",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "20.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "206",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "21.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "207",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "21.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "208",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "22.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "209",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "22.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "210",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "23.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "211",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "23.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "212",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "24.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "213",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "24.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "214",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "25.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "215",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "25.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "216",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "26.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "217",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "26.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "218",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "27.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "219",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "27.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "220",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "28.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "221",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "28.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "222",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "29.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "223",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "29.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "224",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "30.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "225",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "30.01.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "226",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "31.01.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "227",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "31.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "228",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "01.02.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "229",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "01.02.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "230",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "02.02.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "231",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "02.02.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "232",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "03.02.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "233",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "03.02.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "234",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "04.02.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "235",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "04.02.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "236",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "05.02.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "237",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "05.02.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "238",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "06.02.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "239",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "06.02.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "240",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "07.02.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "241",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "07.02.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "242",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "08.02.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "243",
+                        "cinema_id": "1",
+                        "screenroom_id": "3",
+                        "movies_id": "8",
+                        "date": "08.02.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "244",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "19.01.2024",
+                        "time": "09:30"
+                    },
+                    {
+                        "id": "245",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "19.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "246",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "20.01.2024",
+                        "time": "14:30"
+                    },
+                    {
+                        "id": "247",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "20.01.2024",
+                        "time": "17:00"
+                    },
+                    {
+                        "id": "248",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "21.01.2024",
+                        "time": "19:30"
+                    },
+                    {
+                        "id": "249",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "21.01.2024",
+                        "time": "22:00"
+                    },
+                    {
+                        "id": "250",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "22.01.2024",
+                        "time": "00:30"
+                    },
+                    {
+                        "id": "251",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "22.01.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "252",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "23.01.2024",
+                        "time": "05:30"
+                    },
+                    {
+                        "id": "253",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "23.01.2024",
+                        "time": "08:00"
+                    },
+                    {
+                        "id": "254",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "24.01.2024",
+                        "time": "10:30"
+                    },
+                    {
+                        "id": "255",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "24.01.2024",
+                        "time": "13:00"
+                    },
+                    {
+                        "id": "256",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "25.01.2024",
+                        "time": "15:30"
+                    },
+                    {
+                        "id": "257",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "25.01.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "258",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "26.01.2024",
+                        "time": "20:30"
+                    },
+                    {
+                        "id": "259",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "26.01.2024",
+                        "time": "23:00"
+                    },
+                    {
+                        "id": "260",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "27.01.2024",
+                        "time": "01:30"
+                    },
+                    {
+                        "id": "261",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "27.01.2024",
+                        "time": "04:00"
+                    },
+                    {
+                        "id": "262",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "28.01.2024",
+                        "time": "06:30"
+                    },
+                    {
+                        "id": "263",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "28.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "264",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "29.01.2024",
+                        "time": "11:30"
+                    },
+                    {
+                        "id": "265",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "29.01.2024",
+                        "time": "14:00"
+                    },
+                    {
+                        "id": "266",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "30.01.2024",
+                        "time": "16:30"
+                    },
+                    {
+                        "id": "267",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "30.01.2024",
+                        "time": "19:00"
+                    },
+                    {
+                        "id": "268",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "31.01.2024",
+                        "time": "21:30"
+                    },
+                    {
+                        "id": "269",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "31.01.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "270",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "01.02.2024",
+                        "time": "02:30"
+                    },
+                    {
+                        "id": "271",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "01.02.2024",
+                        "time": "05:00"
+                    },
+                    {
+                        "id": "272",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "02.02.2024",
+                        "time": "07:30"
+                    },
+                    {
+                        "id": "273",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "02.02.2024",
+                        "time": "10:00"
+                    },
+                    {
+                        "id": "274",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "03.02.2024",
+                        "time": "12:30"
+                    },
+                    {
+                        "id": "275",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "03.02.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "276",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "04.02.2024",
+                        "time": "17:30"
+                    },
+                    {
+                        "id": "277",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "04.02.2024",
+                        "time": "20:00"
+                    },
+                    {
+                        "id": "278",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "05.02.2024",
+                        "time": "22:30"
+                    },
+                    {
+                        "id": "279",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "05.02.2024",
+                        "time": "01:00"
+                    },
+                    {
+                        "id": "280",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "06.02.2024",
+                        "time": "03:30"
+                    },
+                    {
+                        "id": "281",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "06.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "282",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "07.02.2024",
+                        "time": "08:30"
+                    },
+                    {
+                        "id": "283",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "07.02.2024",
+                        "time": "11:00"
+                    },
+                    {
+                        "id": "284",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "08.02.2024",
+                        "time": "13:30"
+                    },
+                    {
+                        "id": "285",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "08.02.2024",
+                        "time": "16:00"
+                    },
+                    {
+                        "id": "286",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "09.02.2024",
+                        "time": "18:30"
+                    },
+                    {
+                        "id": "287",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "09.02.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "288",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "10.02.2024",
+                        "time": "23:30"
+                    },
+                    {
+                        "id": "289",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "9",
+                        "date": "10.02.2024",
+                        "time": "02:00"
+                    },
+                    {
+                        "id": "290",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "22.01.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "291",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "22.01.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "292",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "23.01.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "293",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "23.01.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "294",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "24.01.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "295",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "24.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "296",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "25.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "297",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "25.01.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "298",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "26.01.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "299",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "26.01.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "300",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "27.01.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "301",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "27.01.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "302",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "28.01.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "303",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "28.01.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "304",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "29.01.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "305",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "29.01.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "306",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "30.01.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "307",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "30.01.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "308",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "31.01.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "309",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "31.01.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "310",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "01.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "311",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "01.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "312",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "02.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "313",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "02.02.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "314",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "03.02.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "315",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "03.02.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "316",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "04.02.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "317",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "04.02.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "318",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "05.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "319",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "05.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "320",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "06.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "321",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "06.02.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "322",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "07.02.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "323",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "07.02.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "324",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "08.02.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "325",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "08.02.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "326",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "09.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "327",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "09.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "328",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "10.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "329",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "10.02.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "330",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "11.02.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "331",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "11.02.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "332",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "12.02.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "333",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "12.02.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "334",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "13.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "335",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "13.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "336",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "14.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "337",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "14.02.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "338",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "15.02.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "339",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "15.02.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "340",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "16.02.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "341",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "16.02.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "342",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "17.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "343",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "17.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "344",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "18.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "345",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "18.02.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "346",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "19.02.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "347",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "19.02.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "348",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "20.02.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "349",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "20.02.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "350",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "21.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "351",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "21.02.2024",
+                        "time": "09:00"
+                    },
+                    {
+                        "id": "352",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "22.02.2024",
+                        "time": "12:00"
+                    },
+                    {
+                        "id": "353",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "22.02.2024",
+                        "time": "15:00"
+                    },
+                    {
+                        "id": "354",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "23.02.2024",
+                        "time": "18:00"
+                    },
+                    {
+                        "id": "355",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "23.02.2024",
+                        "time": "21:00"
+                    },
+                    {
+                        "id": "356",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "24.02.2024",
+                        "time": "00:00"
+                    },
+                    {
+                        "id": "357",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "24.02.2024",
+                        "time": "03:00"
+                    },
+                    {
+                        "id": "358",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "25.02.2024",
+                        "time": "06:00"
+                    },
+                    {
+                        "id": "359",
+                        "cinema_id": "1",
+                        "screenroom_id": "5",
+                        "movies_id": "10",
+                        "date": "25.02.2024",
+                        "time": "09:00"
+                    }
+            ],
+    "screenroom" :
+        [
+            {
+                "id": "1",
+                "rows": [10,12,12,12,12,12,12,12,12,16]
+            },
+            {
+                "id": "2",
+                "rows": [8,10,10,10,12,12,12,12,12,14]
+            },
+            {
+                "id": "3",
+                "rows": [10,14,14,14,14,14,14,14,14,18]
+            },
+            {
+                "id": "4",
+                "rows": [12,12,12,12,12,12,12,12,12,14]
+            },
+            {
+                "id": "5",
+                "rows": [14,14,14,14,16,16,16,16,16,20]
+            }
+        ]
 
-"tickets":
-[
-{
-    "id": "1",
-    "name": "Bilet normalny",
-    "price": 30
-}, 
-{
-    "id": "2",
-    "name": "Bilet VIP",
-    "price": 35
-},   
-{
-    "id": "3",
-    "name": "Bilet ulgowy",
-    "price": 20
-},   
-{
-    "id": "4",
-    "name": "Bilet rodzinny",
-    "price": 65
-}   
-],
-
-
-
-"movies":
-[
-    {
-        "id": 1,
-        "TMDB API": "xxxxx"
-    },
-    {
-        "id": 2,
-        "TMDB API": "xxxxx"
-    },
-    {
-        "id": 3,
-        "TMDB API": "xxxxx"
-    }
-]}
+}

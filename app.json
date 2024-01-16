@@ -11,8 +11,16 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "Aplikacja potrzebuje dostępu do kalendarza, aby dodać przypomnienia o zakupionych biletach."
+        }
+      ]
+    ],
 
-"assetBundlePatterns": [
+    "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {

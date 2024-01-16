@@ -182,15 +182,15 @@ export function PrzekaskiView({ navigation }) {
       </View>
 
       <View style={styles.komponentPrzekskiParent}>
-        <TouchableOpacity onPress={() => navigation.navigate(Przekaski2View)}>
-        <View style={[styles.komponentPrzekski, styles.komponentLayout]}>
-          <View style={[styles.maskGroup, styles.maskGroupLayout]}>
-            <Image
-              style={[styles.image9Icon, styles.maskGroupLayout]}
-              contentFit="cover"
-              source={require("./assets/image-9.png")}
-            />
-          </View>
+          <TouchableOpacity onPress={() => navigation.navigate('Przekaski2View', {param: 0})}>
+            <View style={[styles.komponentPrzekski, styles.komponentLayout]}>
+                <View style={[styles.maskGroup, styles.maskGroupLayout]}>
+                    <Image
+                      style={[styles.image9Icon, styles.maskGroupLayout]}
+                      contentFit="cover"
+                      source={require("./assets/image-9.png")}
+                    />
+                </View>
           <LinearGradient
             style={[styles.wrapper, styles.komponentLayout]}
             locations={[0, 0.69]}
@@ -218,7 +218,7 @@ export function PrzekaskiView({ navigation }) {
               />
             </View>
           </View>
-        </View>
+            </View>
         </TouchableOpacity>
 
         <View style={styles.sliderNav}>
@@ -286,7 +286,8 @@ export function PrzekaskiView({ navigation }) {
             Dla ciebie i dla rodziny
           </Text>
         </View>
-        <Pressable style={[styles.komponentPrzekski1, styles.komponentLayout]}>
+          <TouchableOpacity onPress={() => navigation.navigate('Przekaski2View', {param: 1})}>
+          <View style={[styles.komponentPrzekski1, styles.komponentLayout]}>
           <LinearGradient
             style={[styles.komponentPrzekskiChild, styles.pressablePosition]}
             locations={[0, 0.69]}
@@ -312,7 +313,9 @@ export function PrzekaskiView({ navigation }) {
               />
             </View>
           </View>
-        </Pressable>
+        </View>
+          </TouchableOpacity>
+
       </View>
     </View>
       </ScrollView>

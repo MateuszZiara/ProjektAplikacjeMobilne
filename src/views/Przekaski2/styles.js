@@ -86,6 +86,7 @@ export const styles = StyleSheet.create({
   },
   image10IconPosition: {
     top: 18,
+    height: 100,
     position: "absolute",
   },
   lodyOreo2Position: {
@@ -327,6 +328,8 @@ export const styles = StyleSheet.create({
     height: 542,
   },
   sliderPrzekasekParent: {
+    flexDirection: 'row', // Ustawia układ w poziomie
+    justifyContent: 'space-between',
     marginLeft: -261,
     top: 276,
     width: 358,
@@ -436,8 +439,12 @@ export const styles = StyleSheet.create({
   wzr: {
     backgroundColor: "#000",
     flex: 1,
-    height: 896,
     overflow: "hidden",
-    width: "100%",
+    height: 1500
   },
+  sss:{
+    flexDirection: 'row',
+    flexWrap: 'wrap', // Pozwala elementom zawijać się na następny wiersz, jeśli nie mieszczą się na ekranie
+    justifyContent: 'space-between',
+  }
 });
