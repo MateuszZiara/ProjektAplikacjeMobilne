@@ -5,8 +5,47 @@ import {styles} from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 import {UserAvatar} from "../../components/UserAvatar";
 import {Bilety3_vip} from "../Bilety3_vip";
+import * as Calendar from 'expo-calendar';
+import { Alert } from 'react-native';
 
 export function Bilety7({ navigation }) {
+
+    async function createEventInCalendar(title, startDate, endDate, location) {
+        const { status } = await Calendar.requestCalendarPermissionsAsync();
+
+        if (status === 'granted') {
+            // Pobierz dostępne kalendarze
+            const calendars = await Calendar.getCalendarsAsync();
+
+            // Wybierz pierwszy dostępny kalendarz
+            const targetCalendar = calendars[0];
+
+            if (!targetCalendar) {
+                console.error('Nie znaleziono dostępnego kalendarza.');
+                Alert.alert('Błąd', 'Nie znaleziono dostępnego kalendarza.');
+                return;
+            }
+
+            const eventDetails = {
+                title,
+                startDate: new Date(startDate),
+                endDate: new Date(endDate),
+                location,
+                calendarId: targetCalendar.id,  // Ustaw id kalendarza
+            };
+
+            try {
+                const eventId = await Calendar.createEventAsync(targetCalendar.id, eventDetails);
+                console.log(`Utworzono wydarzenie o ID: ${eventId}`);
+            } catch (error) {
+                console.error('Błąd podczas tworzenia wydarzenia:', error);
+                Alert.alert('Błąd', 'Nie udało się utworzyć wydarzenia. Spróbuj ponownie.');
+            }
+        } else {
+            console.error('Brak uprawnień do kalendarza.');
+            Alert.alert('Brak uprawnień', 'Aplikacja wymaga uprawnień do kalendarza.');
+        }
+    }
 
     return (
         <View style={styles.potwierdzenieWyboru}>
@@ -201,22 +240,27 @@ export function Bilety7({ navigation }) {
                     />
                 </View>
             </View>
-            <View
-                style={[styles.potwierdzenieWyboruItem, styles.frameParentPosition]}
-            />
-            <LinearGradient
-                style={[styles.potwierdzenieWyboruInner, styles.dodajParentPosition]}
-                locations={[0, 1]}
-                colors={["rgba(80, 77, 255, 0.2)", "rgba(133, 76, 255, 0.2)"]}
-            />
-            <View style={[styles.dodajParent, styles.dodajParentPosition]}>
-                <Text style={styles.dodaj}>Dodaj do kalendarza</Text>
-                <Image
-                    style={[styles.maskGroupIcon2, styles.maskGroupLayout]}
-                    contentFit="cover"
-                    source={require("./assets/mask-group2.png")}
+            <TouchableOpacity  onPress={() => {
+                createEventInCalendar('Wydarzenie', '2024-02-01T11:30:00.000Z', '2024-02-01T11:30:00.000Z', 'IndieCinema Kielce');
+            }}>
+                <View
+                    style={[styles.potwierdzenieWyboruItem, styles.frameParentPosition]}
                 />
-            </View>
+                <LinearGradient
+                    style={[styles.potwierdzenieWyboruInner, styles.dodajParentPosition]}
+                    locations={[0, 1]}
+                    colors={["rgba(80, 77, 255, 0.2)", "rgba(133, 76, 255, 0.2)"]}
+                />
+                <View style={[styles.dodajParent, styles.dodajParentPosition]}>
+                    <Text style={styles.dodaj}>Dodaj do kalendarza</Text>
+                    <Image
+                        style={[styles.maskGroupIcon2, styles.maskGroupLayout]}
+                        contentFit="cover"
+                        source={require("./assets/mask-group2.png")}
+                    />
+                </View>
+            </TouchableOpacity>
+
         </View>
     );
 }
