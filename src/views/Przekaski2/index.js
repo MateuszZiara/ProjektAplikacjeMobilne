@@ -35,14 +35,14 @@ export function Przekaski2View({navigation, route}) {
     const imagesDrink = {
         1: require('../../images/products/sokjabl.png'),
         2: require('../../images/products/sokpoma.png'),
-        3: require('../../images/products/popcornsokwiel.png'),
+        3: require('../../images/products/sokwiel.png'),
         4: require('../../images/products/woda.png'),
         5: require('../../images/products/coca.png'),
-        6: require('../../images/products/coca.png'),
+        6: require('../../images/products/cocazero.png'),
         7: require('../../images/products/fanta.png'),
         8: require('../../images/products/sprite.png'),
-        9: require('../../images/products/sprite.png'),
-        10: require('../../images/products/sprite.png'),
+        9: require('../../images/products/lipton.png'),
+        10: require('../../images/products/redbull.png'),
     };
 
     useEffect(() => {

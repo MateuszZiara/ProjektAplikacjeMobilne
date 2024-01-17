@@ -77,16 +77,7 @@
         {
             "id": 1,
             "name": "Sok jabłkowy",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 11
-                }
-            ],
+            "price": 6,
             "img": "../images/products/sokjabl.jpg"
         },
         {
@@ -98,145 +89,49 @@
         {
             "id": 3,
             "name": "Sok wieloowocowy",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 11
-                }
-            ],
+            "price": 6,
             "img": "../images/products/popcornsokwiel.jpg"
         },
         {
             "id": 4,
             "name": "Woda",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 4
-                },
-                {
-                    "size": "500 ml",
-                    "price": 7
-                },
-                {
-                    "size": "1000 ml",
-                    "price": 11
-                }
-            ],
+            "price": 5,
             "img": "../images/products/woda.jpg"
         },
         {
             "id": 5,
             "name": "Coca-Cola",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 9
-                },
-                {
-                    "size": "1000 ml",
-                    "price": 14
-                }
-            ],
+            "price": 9,
             "img": "../images/products/coca.jpg"
         },
         {
             "id": 6,
             "name": "Coca-Cola Zero",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 9
-                },
-                {
-                    "size": "1000 ml",
-                    "price": 14
-                }
-            ],
+            "price": 9,
             "img": "../images/products/cocazero.jpg"
         },
         {
             "id": 7,
             "name": "Fanta",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 9
-                },
-                {
-                    "size": "1000 ml",
-                    "price": 14
-                }
-            ],
+            "price": 9,
             "img": "../images/products/fanta.jpg"
         },
         {
             "id": 8,
             "name": "Sprite",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 9
-                },
-                {
-                    "size": "1000 ml",
-                    "price": 14
-                }
-            ],
+            "price": 9,
             "img": "../images/products/sprite.jpg"
         },
         {
             "id": 9,
             "name": "Lipton Ice Tea",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 9
-                },
-                {
-                    "size": "1000 ml",
-                    "price": 14
-                }
-            ],
+            "price": 9,
             "img": "../images/products/lipton.jpg"
         },
         {
             "id": 10,
             "name": "Red Bull",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 9
-                },
-                {
-                    "size": "500 ml",
-                    "price": 16
-                }
-            ],
+            "price": 13,
             "img": "../images/products/redbull.jpg"
         }
     ],
