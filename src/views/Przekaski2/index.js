@@ -7,6 +7,7 @@ import {styles} from "./styles"
 import {PrzekaskiView} from "../Przekaski";
 import {UserAvatar} from "../../components/UserAvatar";
 import axios from "axios";
+import {Przekaski3View} from "../Przekaski3";
 
 export function Przekaski2View({navigation, route}) {
     const [error, setError] = useState(false);
@@ -37,7 +38,7 @@ export function Przekaski2View({navigation, route}) {
         3: require('../../images/products/popcornsokwiel.png'),
         4: require('../../images/products/woda.png'),
         5: require('../../images/products/coca.png'),
-        6: require('../../images/products/cocazero.png'),
+        6: require('../../images/products/coca.png'),
         7: require('../../images/products/fanta.png'),
         8: require('../../images/products/sprite.png'),
         9: require('../../images/products/sprite.png'),
@@ -64,10 +65,18 @@ export function Przekaski2View({navigation, route}) {
         const images = param === 0 ? imagesFood : imagesDrink;
 
         return (
-            <TouchableOpacity key={product.id} style={[styles.parentLayout, styles.lodyOreoParent]}>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Przekaski3View', {
+                    param: route.params.param,
+                    itemid: product.id,
+                })}
+                key={product.id}
+                style={[styles.parentLayout, styles.lodyOreoParent]}
+            >
                 <Text style={[styles.lodyTypo, styles.lodyOreo]}>{product.name}</Text>
-                <Image style={[styles.image10Icon, styles.image10IconPosition]} source={images[imageKey]}/>
+                <Image style={[styles.image10Icon, styles.image10IconPosition]} source={images[imageKey]} />
             </TouchableOpacity>
+
         );
     };
 

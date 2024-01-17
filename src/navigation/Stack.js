@@ -22,6 +22,7 @@ import {Bilety5} from "../views/Bilety5";
 import {Koszyk_gotowka} from "../views/Koszyk_gotowka";
 import {Gotowka_przetwarzanie} from "../views/Gotowka_przetwarzanie";
 import {Zatwierdz_platnosc} from "../views/Zatwierdz_platnosc";
+import {Przekaski3View} from "../views/Przekaski3";
 
 
 const Stack = createNativeStackNavigator();
@@ -40,6 +41,7 @@ export default function StackNav() {
             <Stack.Screen name="Bilety4_vip" component={Bilety4_vip} options={optionScreen} />
             <Stack.Screen name="Bilety5" component={Bilety5} options={optionScreen} />
             <Stack.Screen name="Przekaski2View" component={Przekaski2View} options={optionScreen} />
+            <Stack.Screen name="Przekaski3View" component={Przekaski3View} options={optionScreen} />
             <Stack.Screen name="TabNav" component={TabNav} options={optionScreen} />
             <Stack.Screen name="Test" component={Test} options={optionScreen} />
             <Stack.Screen name="UstawieniaView" component={UstawieniaView} options={optionScreen} />

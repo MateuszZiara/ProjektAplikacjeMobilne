@@ -92,16 +92,7 @@
         {
             "id": 2,
             "name": "Sok pomarańczowy",
-            "sizes": [
-                {
-                    "size": "250 ml",
-                    "price": 6
-                },
-                {
-                    "size": "500 ml",
-                    "price": 11
-                }
-            ],
+            "price": 6,
             "img": "../images/products/sokpoma.jpg"
         },
         {

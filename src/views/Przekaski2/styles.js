@@ -224,21 +224,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
   },
-  image28Icon: {
-    marginLeft: -64.5,
-    width: 130,
-    height: 132,
-    left: "50%",
-  },
-  cocaCola05l: {
-    marginLeft: -63.5,
-    top: 119,
-    fontWeight: "700",
-    fontSize: FontSize.size_lg,
-    left: "50%",
-    textAlign: "left",
-    position: "absolute",
-  },
   lodyOreo: {
     marginLeft: -45.5,
     top: 119,
@@ -257,70 +242,9 @@ export const styles = StyleSheet.create({
   lodyOreoParent: {
     marginTop: 20,
   },
-  pngitem3884021Icon: {
-    marginLeft: -74.5,
-    top: 49,
-    height: 48,
-  },
-  maaKawa: {
-    marginLeft: -50.5,
-  },
-  pngitem38362491Icon: {
-    top: 16,
-    left: 24,
-    width: 123,
-    height: 70,
-    position: "absolute",
-  },
   sliderPrzekasek: {
     marginLeft: 4,
     top: 0,
-  },
-  pngitem48680921Icon: {
-    left: 37,
-    width: 88,
-    height: 112,
-  },
-  nachos: {
-    marginLeft: -35.5,
-  },
-  pngitem11008611Icon: {
-    top: 26,
-    width: 143,
-    height: 80,
-  },
-  lodyOreo2: {
-    marginLeft: -77.5,
-    top: 108,
-    textAlign: "center",
-    width: 155,
-    left: "50%",
-    position: "absolute",
-    color: Color.colorLightgray,
-    fontWeight: "700",
-    fontSize: FontSize.size_lg,
-    justifyContent: "center",
-  },
-  image29Icon: {
-    right: 0,
-    width: 157,
-    height: 96,
-    top: 0,
-    position: "absolute",
-  },
-  lemoniada: {
-    marginLeft: -52.5,
-    left: "50%",
-    textAlign: "left",
-    top: 121,
-    position: "absolute",
-  },
-  pngitem10184351Icon: {
-    left: 35,
-    width: 92,
-    height: 110,
-    top: 0,
-    position: "absolute",
   },
   sliderPrzekasek1: {
     marginLeft: -179,
@@ -336,27 +260,6 @@ export const styles = StyleSheet.create({
     height: 748,
     left: "50%",
     position: "absolute",
-  },
-  ikonaDolnegoNavbaruNieakty: {
-    height: "100%",
-    top: "0%",
-    right: "0%",
-    bottom: "0%",
-    left: "0%",
-    backgroundColor: "#7d7d7d",
-    position: "absolute",
-    width: "100%",
-  },
-  popcornactiveIcon: {
-    marginLeft: 58,
-  },
-  homeinactiveParent: {
-    left: 31,
-    width: 368,
-    height: 58,
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
   },
   line: {
     borderRadius: 575,
@@ -406,35 +309,6 @@ export const styles = StyleSheet.create({
     width: 43,
     height: 20,
     textAlign: "left",
-  },
-  signalIcon: {
-    width: 18,
-    height: 18,
-  },
-  wiFiIcon: {
-    width: 24,
-    height: 22,
-    marginLeft: 6,
-  },
-  fullBatteryIcon: {
-    width: 29,
-    marginLeft: 6,
-    height: 32,
-  },
-  signalParent: {
-    marginLeft: 226,
-    alignItems: "center",
-  },
-  iphonestatusbar: {
-    backgroundColor: "rgba(0, 0, 0, 0)",
-    alignItems: "center",
-    flexDirection: "row",
-    top: 0,
-  },
-  iphonestatusbarOgranicznik: {
-    top: 5,
-    width: 352,
-    height: 32,
   },
   wzr: {
     backgroundColor: "#000",
