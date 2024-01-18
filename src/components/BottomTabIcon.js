@@ -120,6 +120,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#0f0f0f',
         width: 40,
         height: 40,
-        //borderRadius: 2
+        //borderRadius: 2 //już bez tej obwódki bo szkoda czasu na to gówno
     },
 })
