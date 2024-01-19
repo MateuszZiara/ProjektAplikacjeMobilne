@@ -141,7 +141,7 @@ export function UstawieniaView({ navigation }) {
                             User.name = null;
                             Cart.array = [];
                             navigation.navigate(Login);
-                        }} /*//TODO Ziara chuju tu!*/>
+                        }}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image
