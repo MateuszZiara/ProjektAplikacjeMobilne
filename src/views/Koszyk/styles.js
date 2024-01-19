@@ -267,6 +267,7 @@ export const styles = StyleSheet.create({
   frameChild: {
     width: 71,
     height: 71,
+
   },
   vectorWrapper: {
     top: -4,
@@ -281,7 +282,8 @@ export const styles = StyleSheet.create({
   },
   frameContainer: {
     width: 55,
-    marginLeft: 82,
+    marginLeft: 105,
+    marginTop:10,
     height: 55,
   },
   frameParent: {

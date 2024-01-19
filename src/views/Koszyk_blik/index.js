@@ -47,26 +47,7 @@ export function Koszyk_blik({ navigation }){
             </View>
           </View>
           <View style={styles.koszykParent}>
-            <View style={[styles.koszyk, styles.koszykLayout]}>
-              <View style={[styles.maskGroup, styles.koszykLayout]}>
-                <Image
-                  style={[styles.maskGroupChild, styles.wzrLayout]}
-                  contentFit="cover"
-                  source={require("./assets/group-1597883025.png")}
-                />
-                <Image
-                  style={styles.maskGroupItem}
-                  contentFit="cover"
-                  source={require("./assets/group-1597883024.png")}
-                />
-                <Image
-                  style={styles.maskGroupInner}
-                  contentFit="cover"
-                  source={require("./assets/ellipse-1.png")}
-                />
-                <Text style={[styles.text, styles.textFlexBox]}>2</Text>
-              </View>
-            </View>
+
             <View style={styles.vectorWrapper}>
               <Image
                 style={styles.frameChild}

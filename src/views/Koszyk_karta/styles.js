@@ -169,7 +169,7 @@ export const styles = StyleSheet.create({
     borderStyle: "solid",
     borderColor: "rgba(255, 255, 255, 0.14)",
     borderWidth: 4,
-    marginLeft: 52,
+    marginLeft: 5,
     justifyContent: "center",
     alignItems: "center",
   },

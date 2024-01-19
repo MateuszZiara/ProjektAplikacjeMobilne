@@ -352,13 +352,26 @@ export const styles = StyleSheet.create({
   ellipseIcon: {
     width: 71,
     height: 71,
+
+  },
+  frameParentGB: {
+    top: 58,
+    left: 29,
+    justifyContent: "center",
+    alignItems: "center",
+    position: "absolute",
+  },
+  frameParentFlexBoxGB: {
+    flexDirection: "row",
+    alignItems: "center",
   },
   vectorWrapper: {
     borderRadius: 50,
     borderStyle: "solid",
     borderColor: "rgba(255, 255, 255, 0.14)",
     borderWidth: 4,
-    marginLeft: 52,
+    marginLeft: 5,
+    marginTop:-10,
     justifyContent: "center",
   },
   frameParent: {

@@ -192,8 +192,8 @@ export const styles = StyleSheet.create({
     height: 71,
   },
   vectorWrapper: {
-    top: -4,
-    left: 51,
+    top:-10,
+    left: 21,
     borderRadius: 50,
     borderStyle: "solid",
     borderColor: "rgba(255, 255, 255, 0.14)",
