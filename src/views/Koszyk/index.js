@@ -119,16 +119,19 @@ export function Koszyk({ navigation }){
             <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
               <View style={styles.frameItem} />
               <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
-                <TouchableOpacity onPress={() =>navigation.navigate(Koszyk_platnosc)}>
+                <TouchableOpacity onPress={() => navigation.navigate(Koszyk_platnosc)}>
                   <Image
                       style={styles.maskGroupIcon3}
                       contentFit="cover"
                       source={require("./assets/mask-group3.png")}
                   />
-                  <Text style={[styles.garyLee, styles.garyLeeTypo]}>
-                    Przejdź do Płatności
-                  </Text>
+                  <View style={styles.garyLeeContainer}>
+                    <Text style={[styles.garyLee, styles.garyLeeTypo]}>
+                      Przejdź do Płatności
+                    </Text>
+                  </View>
                 </TouchableOpacity>
+
               </View>
             </View>
       </View>

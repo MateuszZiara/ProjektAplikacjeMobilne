@@ -1,10 +1,12 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import {StyleSheet, View, Text, TouchableOpacity} from "react-native";
+import {StyleSheet, View, Text, TouchableOpacity, TouchableWithoutFeedback} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import {Bilety4_vip} from "../Bilety4_vip";
 import {Gotowka_przetwarzanie} from "../Gotowka_przetwarzanie";
+import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
+import {Koszyk_platnosc} from "../Koszyk_platnosc";
 
 
 export function Koszyk_gotowka({ navigation }){
@@ -49,11 +51,13 @@ export function Koszyk_gotowka({ navigation }){
         </View>
       </View>
       <View style={[styles.backParent, styles.parentFlexBox]}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('Koszyk_platnosc')}>
         <Image
           style={styles.backIcon}
           contentFit="cover"
           source={require("./assets/back.png")}
         />
+        </TouchableWithoutFeedback>
         <View style={[styles.frameContainer, styles.frameFlexBox]}>
           <View style={styles.appNameContainer}>
             <View style={[styles.appName1, styles.appSpaceBlock]}>
@@ -68,8 +72,8 @@ export function Koszyk_gotowka({ navigation }){
       </View>
       <Text style={[styles.patnoKartGotwkaPrzyContainer, styles.parentFlexBox]}>
         <Text style={styles.patnoKartGotwkaPrzyContainer1}>
-          <Text style={styles.patnoKart}>Płatność kartą</Text>
-          <Text style={styles.gotwkaPrzyKasie}>Gotówka przy kasie</Text>
+          <Text style={styles.patnoKart}>Płatność kartą                   </Text>
+          <Text style={styles.gotwkaPrzyKasie}>Gotówka przy kasie                    </Text>
           <Text style={styles.patnoKart}>BLIK</Text>
         </Text>
       </Text>

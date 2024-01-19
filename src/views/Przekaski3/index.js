@@ -10,8 +10,6 @@ import axios from "axios";
 import Cart from "../../Classes/Cart";
 
 export function Przekaski3View({navigation, route}) {
-
-
     function sub() {
         if (number === 0) {
             return;
@@ -19,7 +17,6 @@ export function Przekaski3View({navigation, route}) {
             setNumber(number - 1);
         }
     }
-
     function add() {
         if (number === 19) {
             return;
@@ -27,14 +24,12 @@ export function Przekaski3View({navigation, route}) {
             setNumber(number + 1);
         }
     }
-
     const [error, setError] = useState(false);
     const [number, setNumber] = useState(0);
     const firebaseURL = "https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app";
     const [goods, setGoods] = useState([]);
     const name = route.params && route.params.param === 0 ? "Przekąski" : "Napoje";
     const param = route.params.param;
-
     const diff = param === 0 ? 'foodProducts' : 'drinkProducts';
     const imagesFood = {
         1: require('../../images/products/malypopcorn.png'),

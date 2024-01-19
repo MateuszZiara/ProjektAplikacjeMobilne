@@ -91,7 +91,7 @@ export const styles = StyleSheet.create({
     height: 26,
     fontWeight: "500",
     fontSize: FontSize.size_mid,
-    textAlign: "left",
+    textAlign: "center",
   },
   parentLayout: {
     width: 250,
@@ -481,7 +481,7 @@ export const styles = StyleSheet.create({
     lineHeight: 26,
     color: "#0c0c0c",
     width: 182,
-    marginLeft: 21,
+    marginLeft: 30,
   },
   maskGroupParent: {
     top: 22,
@@ -493,6 +493,13 @@ export const styles = StyleSheet.create({
   rectangleParent: {
     top: 500,
   },
+  garyLeeContainer: {
+    position: "absolute",
+    top: "25%",
+    left: "50%",
+
+  },
+
   wzr: {
     backgroundColor: Color.colorBlack,
     flex: 1,

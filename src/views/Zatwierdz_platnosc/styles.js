@@ -24,8 +24,8 @@ export const styles = StyleSheet.create({
     fontWeight: "500",
   },
   twojeZamwienieZostao: {
-    fontSize: 32,
-    height: 53,
+    fontSize: 20,
+    height: 20,
     fontFamily: FontFamily.poppinsMedium,
     fontWeight: "500",
   },

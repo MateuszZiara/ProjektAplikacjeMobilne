@@ -22,7 +22,6 @@ export function Grzechotnik({ navigation }) {
 
             Gyroscope.addListener(({ x, y, z }) => {
                 setGyroscopeData({ x, y, z });
-                // Sprawdzanie wartości żyroskopu i ustawianie odpowiedniego obrazu
                 if (x >= 1) {
                     setCheck("lewo");
                     setCurrentImage("macka_lewo");
@@ -143,12 +142,6 @@ export function Grzechotnik({ navigation }) {
                 </Text>
             </TouchableOpacity>
 
-            <Text style={styles.text}>Gyroscope:</Text>
-            <Text style={styles.text}>x: {
-                gyroscopeData.x
-            }</Text>
-            <Text style={styles.text}>y: {gyroscopeData.y}</Text>
-            <Text style={styles.text}>z: {gyroscopeData.z}</Text>
 
             <Image
                 style={styles.mackaImage}

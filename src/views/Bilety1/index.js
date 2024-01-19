@@ -478,7 +478,7 @@ const styles = StyleSheet.create({
     wzr: {
         backgroundColor: "#000",
         flex: 1,
-        height: 750,
+        height: 800,
         overflow: "hidden",
     },
 });
