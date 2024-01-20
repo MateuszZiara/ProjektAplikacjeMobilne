@@ -12,10 +12,14 @@ import {Login} from "../Login";
 import User from "../../Classes/User"
 import Cart from "../../Classes/Cart"
 import {UserAvatar} from "../../components/UserAvatar";
+import TabNav from "../../navigation/Tab";
+import {NavigationContainer} from "@react-navigation/native";
 export function UstawieniaView({ navigation }) {
 
     {
         return (
+            <NavigationContainer independent={true}>
+                <View style={{ flex: 1 }}>
                 <ScrollView>
                     <View style={styles.frameParent}>
                         <View style={styles.titleParent}>
@@ -48,21 +52,21 @@ export function UstawieniaView({ navigation }) {
                             </View>
 
                             <TouchableWithoutFeedback onPress={() => navigation.navigate('SzczegolyKonta')}>
-                                    <Image
-                                        style={[styles.frameItem, styles.frameItemLayout]}
-                                        contentFit="cover"
-                                        source={require('./assets/ellipse-78.png')}
-                                    />
+                                <Image
+                                    style={[styles.frameItem, styles.frameItemLayout]}
+                                    contentFit="cover"
+                                    source={require('./assets/ellipse-78.png')}
+                                />
 
                             </TouchableWithoutFeedback>
 
                             <TouchableWithoutFeedback onPress={() => navigation.navigate('SzczegolyKonta')}>
 
-                                    <Image
-                                        style={[styles.pencilIcon, styles.frameItemLayout]}
-                                        contentFit="cover"
-                                        source={require('./assets/pencil.png')}
-                                    />
+                                <Image
+                                    style={[styles.pencilIcon, styles.frameItemLayout]}
+                                    contentFit="cover"
+                                    source={require('./assets/pencil.png')}
+                                />
                             </TouchableWithoutFeedback>
 
 
@@ -99,16 +103,16 @@ export function UstawieniaView({ navigation }) {
 
                         <TouchableOpacity style={styles.rectangleParent}
                                           onPress={() => navigation.navigate(SzczegolyKonta)}>
-                                <View style={[styles.frameInner, styles.frameLayout]}/>
-                                <View style={[styles.adjustParent, styles.parentGroupPosition]}>
-                                    <Image
-                                        style={styles.maskGroupIcon}
-                                        contentFit="cover"
-                                        source={require("./assets/mask-group.png")}
-                                    />
-                                    <Text style={[styles.garyLee, styles.garyTypo]}>
-                                        Ustawienia Konta </Text>
-                                </View>
+                            <View style={[styles.frameInner, styles.frameLayout]}/>
+                            <View style={[styles.adjustParent, styles.parentGroupPosition]}>
+                                <Image
+                                    style={styles.maskGroupIcon}
+                                    contentFit="cover"
+                                    source={require("./assets/mask-group.png")}
+                                />
+                                <Text style={[styles.garyLee, styles.garyTypo]}>
+                                    Ustawienia Konta </Text>
+                            </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate()}>
@@ -165,7 +169,14 @@ export function UstawieniaView({ navigation }) {
                             barStyle="light-content"
                         />
                     </View>
+
                 </ScrollView>
+                    <View style={{marginBottom: 47}}>
+                        <TabNav navigation={navigation} />
+                    </View>
+                </View>
+            </NavigationContainer>
+
         );
     }
 }
