@@ -33,11 +33,11 @@ export function LoginView({ navigation }) {
                 }
             }
 
-            // If no matching user is found
+
             setError(true);
         } catch (error) {
             console.error("Error checking login:", error);
-            // Handle error, e.g., show an error message
+
         }
     };
 

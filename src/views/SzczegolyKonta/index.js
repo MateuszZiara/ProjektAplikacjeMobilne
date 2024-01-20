@@ -121,16 +121,16 @@ export function SzczegolyKonta({ navigation }) {
                 {editPersonality ? (
                     <TextInput
                         placeholder={Singleton.name}
-                        value={Singleton.name} // You may want to bind the value to the state or some variable
+                        value={Singleton.name}
                         onChangeText={(text) => {
-                          // Handle text input changes if necessary
+
                         }}
                         style={[
                           styles.garyLee1,
                           styles.garyTypo,
                           {
-                            borderBottomWidth: 1, // Example: Add a bottom border
-                            borderColor: 'blue', // Example: Border color
+                            borderBottomWidth: 1,
+                            borderColor: 'blue',
 
                           },
                             ]}
