@@ -1,7 +1,6 @@
 import * as React from "react";
-import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback, StatusBar} from "react-native";
+import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback, StatusBar, Linking} from "react-native";
 import { Image } from "expo-image";
-import { Border, FontSize, FontFamily, Color } from "./styles.js";
 import { styles } from "./styles.js";
 import Singleton from "../../Classes/User";
 import {PrzekaskiView} from "../Przekaski";
@@ -14,8 +13,13 @@ import Cart from "../../Classes/Cart"
 import {UserAvatar} from "../../components/UserAvatar";
 import TabNav from "../../navigation/Tab";
 import {NavigationContainer} from "@react-navigation/native";
-export function UstawieniaView({ navigation }) {
+import {Historia_zakupow} from "../Historia_zakupow";
 
+
+export function UstawieniaView({ navigation }) {
+    const openHelpCenter = () => {
+        Linking.openURL("https://www.vivus.pl/");
+    };
     {
         return (
             <NavigationContainer independent={true}>
@@ -73,33 +77,10 @@ export function UstawieniaView({ navigation }) {
                         </View>
 
 
-                        <TouchableOpacity style={styles.rectangleParent}
-                                          onPress={() => navigation.navigate(PrzekaskiView)}>
-                            <View style={[styles.frameInner, styles.frameLayout]}/>
-                            <View style={[styles.adjustParent, styles.parentGroupPosition]}>
-                                <Image
-                                    style={styles.adjustIcon}
-                                    contentFit="cover"
-                                    source={require("./assets/adjust.png")}
-                                />
-                                <Text style={[styles.garyLee, styles.garyTypo]}>Preferencje</Text>
-                            </View>
-                        </TouchableOpacity>
 
 
-                        <TouchableOpacity style={styles.rectangleParent}  onPress={() => navigation.navigate(SzczegolyKonta)}>
-                            <View style={[styles.frameInner, styles.frameLayout]}/>
-                            <View style={[styles.adjustParent, styles.parentGroupPosition]}>
-                                <Image
-                                    style={styles.adjustIcon}
-                                    contentFit="cover"
-                                    source={require("./assets/notification.png")}
-                                />
-                                <Text style={[styles.garyLee, styles.garyTypo]}>
-                                    Powiadomienia
-                                </Text>
-                            </View>
-                        </TouchableOpacity>
+
+
 
                         <TouchableOpacity style={styles.rectangleParent}
                                           onPress={() => navigation.navigate(SzczegolyKonta)}>
@@ -115,7 +96,7 @@ export function UstawieniaView({ navigation }) {
                             </View>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate()}>
+                        <TouchableOpacity style={styles.rectangleParent} onPress={() => navigation.navigate(Historia_zakupow)}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image
@@ -127,8 +108,8 @@ export function UstawieniaView({ navigation }) {
                             </View>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.rectangleParent1} onPress={() => navigation.navigate()}>
-                            <View style={[styles.frameInner, styles.frameLayout]}/>
+                        <TouchableOpacity style={styles.rectangleParent1} onPress={openHelpCenter}>
+                            <View style={[styles.frameInner, styles.frameLayout]} />
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image
                                     style={styles.helpIcon}
