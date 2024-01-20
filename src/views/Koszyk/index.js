@@ -11,6 +11,7 @@ import {useEffect, useState} from "react";
 import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
+import {UserAvatar} from "../../components/UserAvatar";
 
 export function Koszyk({ navigation }){
   const renderItem = ({ item }) => (
@@ -87,16 +88,9 @@ export function Koszyk({ navigation }){
                       </View>
                     </View>
                   </View>
-                  <View style={styles.frameContainer}>
-                    <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
-                      Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
-                    }}>
-                      <Image
-                          style={styles.frameChild}
-                          contentFit="cover"
-                          source={require("./assets/ellipse-19.png")}
-                      />
-                    </TouchableOpacity>
+                  <View style={styles.gb}>
+                    <UserAvatar  navigation={navigation} />
+                  </View>
                   </View>
                 </View>
               </View>
@@ -136,7 +130,7 @@ export function Koszyk({ navigation }){
             </View>
       </View>
 
-        </View>
+
 
   );
 }

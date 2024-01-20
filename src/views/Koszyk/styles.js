@@ -492,6 +492,10 @@ export const styles = StyleSheet.create({
     left: 31,
     position: "absolute",
   },
+  gb:{
+    left:80,
+    marginTop:5,
+  },
   rectangleParent: {
     top: 500,
   },

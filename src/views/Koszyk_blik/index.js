@@ -5,6 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles";
 import {Koszyk_platnosc} from "../Koszyk_platnosc";
 import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
+import {UserAvatar} from "../../components/UserAvatar";
 
 export function Koszyk_blik({ navigation }){
   return (
@@ -46,16 +47,12 @@ export function Koszyk_blik({ navigation }){
               </View>
             </View>
           </View>
-          <View style={styles.koszykParent}>
 
-            <View style={styles.vectorWrapper}>
-              <Image
-                style={styles.frameChild}
-                contentFit="cover"
-                source={require("./assets/ellipse-19.png")}
-              />
+
+            <View style={styles.gb}>
+              <UserAvatar  navigation={navigation} />
             </View>
-          </View>
+
         </View>
       </View>
       <View style={[styles.backParent, styles.parentFlexBox]}>

@@ -211,6 +211,10 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     position: "absolute",
   },
+  gb:{
+    marginTop:-5,
+    left:85,
+  },
   koszykParent: {
     width: 110,
     marginLeft: 82,

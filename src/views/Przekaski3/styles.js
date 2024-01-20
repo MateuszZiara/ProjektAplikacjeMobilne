@@ -755,6 +755,9 @@ export const styles3 = StyleSheet.create({
         left: "50%",
         position: "absolute",
     },
+    gb:{
+        left:-5,
+    },
     wzr: {
         backgroundColor: Color.colorBlack,
         width: "100%",

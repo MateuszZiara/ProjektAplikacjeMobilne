@@ -40,6 +40,10 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
   },
+  gb:{
+    marginTop:-5,
+    left:-15,
+  },
   appSpaceBlock: {
     paddingVertical: Padding.p_8xs,
     paddingHorizontal: 0,

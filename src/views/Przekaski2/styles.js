@@ -50,6 +50,10 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     overflow: "hidden",
   },
+  gb:{
+    marginTop:15,
+    left:-15,
+  },
   ustawieniaTypo: {
     color: Color.colorWhitesmoke,
     fontWeight: "500",

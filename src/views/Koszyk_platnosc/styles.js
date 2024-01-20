@@ -316,6 +316,10 @@ export const styles = StyleSheet.create({
     left: 31,
     zIndex: 1,
   },
+  gb:{
+    marginTop:-10,
+    left:85,
+  },
   rectangleParent: {
     marginLeft: -186,
     top: 648,

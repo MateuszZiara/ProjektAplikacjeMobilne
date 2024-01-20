@@ -7,6 +7,7 @@ import {Bilety4_vip} from "../Bilety4_vip";
 import {Gotowka_przetwarzanie} from "../Gotowka_przetwarzanie";
 import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
 import {Koszyk_platnosc} from "../Koszyk_platnosc";
+import {UserAvatar} from "../../components/UserAvatar";
 
 
 export function Koszyk_gotowka({ navigation }){
@@ -46,6 +47,10 @@ export function Koszyk_gotowka({ navigation }){
                   Zamówienie
                 </Text>
               </View>
+
+            </View>
+            <View style={styles.gb}>
+              <UserAvatar  navigation={navigation} />
             </View>
           </View>
         </View>

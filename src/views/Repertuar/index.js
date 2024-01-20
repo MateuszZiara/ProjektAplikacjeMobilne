@@ -21,6 +21,7 @@ import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
 import Search from "../../Classes/Search";
 import {PrzekaskiView} from "../Przekaski";
+import {UserAvatar} from "../../components/UserAvatar";
 export function RepertuarView({ navigation }) {
 
   const [refresh, setRefresh] = useState(false);
@@ -115,16 +116,10 @@ export function RepertuarView({ navigation }) {
                 </View>
               </View>
             </View>
-            <View style={[styles.vectorWrapper, styles.parentFlexBox]}>
-              <TouchableOpacity onPress={() => navigation.navigate(UstawieniaView)}>
-              <Image
-                  style={styles.ellipseIcon}
-                  contentFit="cover"
-                  source={require("./assets/ellipse-19.png")}
-              />
-              </TouchableOpacity>
-            </View>
 
+            <View style={styles.maskGroupParent}>
+              <UserAvatar  navigation={navigation} />
+            </View>
           </View>
 
           <View style={styles.dynamiczneitemki}>

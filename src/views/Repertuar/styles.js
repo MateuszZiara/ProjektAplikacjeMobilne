@@ -365,12 +365,16 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
+  maskGroupParent: {
+    marginTop:-20,
+    marginLeft: -15,
+  },
   vectorWrapper: {
     borderRadius: 50,
     borderStyle: "solid",
     borderColor: "rgba(255, 255, 255, 0.14)",
     borderWidth: 4,
-    marginLeft: 5,
+    marginLeft: -5,
     marginTop:-10,
     justifyContent: "center",
   },

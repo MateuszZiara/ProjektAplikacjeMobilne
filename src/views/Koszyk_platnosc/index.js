@@ -7,6 +7,7 @@ import {Koszyk_blik} from "../Koszyk_blik";
 import {Koszyk} from "../Koszyk";
 import {Koszyk_karta} from "../Koszyk_karta";
 import {Koszyk_gotowka} from "../Koszyk_gotowka";
+import {UserAvatar} from "../../components/UserAvatar";
 export function Koszyk_platnosc({ navigation }){
   return (
       <ScrollView>
@@ -47,18 +48,12 @@ export function Koszyk_platnosc({ navigation }){
               </View>
             </View>
           </View>
-          <View style={styles.koszykParent}>
-            <View style={[styles.koszyk, styles.koszykLayout]}>
 
+
+            <View style={styles.gb}>
+              <UserAvatar  navigation={navigation} />
             </View>
-            <View style={[styles.vectorWrapper, styles.parentFlexBox]}>
-              <Image
-                style={styles.frameChild}
-                contentFit="cover"
-                source={require("./assets/ellipse-19.png")}
-              />
-            </View>
-          </View>
+
         </View>
       </View>
       <View style={[styles.backParent, styles.parentFlexBox]}>
