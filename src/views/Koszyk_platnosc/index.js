@@ -7,6 +7,7 @@ import {Koszyk_blik} from "../Koszyk_blik";
 import {Koszyk} from "../Koszyk";
 import {Koszyk_karta} from "../Koszyk_karta";
 import {Koszyk_gotowka} from "../Koszyk_gotowka";
+import {UserAvatar} from "../../components/UserAvatar";
 export function Koszyk_platnosc({ navigation }){
   return (
       <ScrollView>
@@ -47,35 +48,12 @@ export function Koszyk_platnosc({ navigation }){
               </View>
             </View>
           </View>
-          <View style={styles.koszykParent}>
-            <View style={[styles.koszyk, styles.koszykLayout]}>
-              <View style={[styles.maskGroup, styles.koszykLayout]}>
-                <Image
-                  style={[styles.maskGroupChild, styles.wzrLayout]}
-                  contentFit="cover"
-                  source={require("./assets/group-1597883025.png")}
-                />
-                <Image
-                  style={styles.maskGroupItem}
-                  contentFit="cover"
-                  source={require("./assets/group-1597883024.png")}
-                />
-                <Image
-                  style={styles.maskGroupInner}
-                  contentFit="cover"
-                  source={require("./assets/ellipse-1.png")}
-                />
-                <Text style={[styles.text, styles.textFlexBox]}>2</Text>
-              </View>
+
+
+            <View style={styles.gb}>
+              <UserAvatar  navigation={navigation} />
             </View>
-            <View style={[styles.vectorWrapper, styles.parentFlexBox]}>
-              <Image
-                style={styles.frameChild}
-                contentFit="cover"
-                source={require("./assets/ellipse-19.png")}
-              />
-            </View>
-          </View>
+
         </View>
       </View>
       <View style={[styles.backParent, styles.parentFlexBox]}>

@@ -201,7 +201,7 @@ export const styles = StyleSheet.create({
   },
   vectorWrapper: {
     top: -4,
-    left: 51,
+    left: 21,
     borderRadius: 50,
     borderColor: "rgba(255, 255, 255, 0.14)",
     borderWidth: 4,
@@ -210,6 +210,10 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     position: "absolute",
+  },
+  gb:{
+    marginTop:-5,
+    left:85,
   },
   koszykParent: {
     width: 110,

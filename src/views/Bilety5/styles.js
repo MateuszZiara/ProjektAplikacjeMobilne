@@ -159,7 +159,8 @@ export const styles = StyleSheet.create({
     },
     text: {
         width: 54,
-        height: 41,
+        top: 6,
+        height: 31,
         marginLeft: 83,
         display: "flex",
         textAlign: "center",

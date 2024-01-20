@@ -1,7 +1,7 @@
 import * as React from "react";
 import {useEffect, useState} from "react";
 import {Image} from "expo-image";
-import {ScrollView, Text, TouchableOpacity, View} from "react-native";
+import {ScrollView, Text, TouchableOpacity, View, Modal, Alert, Pressable} from "react-native";
 import {LinearGradient} from "expo-linear-gradient";
 import {styles} from "../Przekaski2/styles"
 import {styles2, styles3} from "./styles"
@@ -10,8 +10,7 @@ import axios from "axios";
 import Cart from "../../Classes/Cart";
 
 export function Przekaski3View({navigation, route}) {
-
-
+    const [modalVisible, setModalVisible] = useState(false);
     function sub() {
         if (number === 0) {
             return;
@@ -19,7 +18,6 @@ export function Przekaski3View({navigation, route}) {
             setNumber(number - 1);
         }
     }
-
     function add() {
         if (number === 19) {
             return;
@@ -27,14 +25,12 @@ export function Przekaski3View({navigation, route}) {
             setNumber(number + 1);
         }
     }
-
     const [error, setError] = useState(false);
     const [number, setNumber] = useState(0);
     const firebaseURL = "https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app";
     const [goods, setGoods] = useState([]);
     const name = route.params && route.params.param === 0 ? "Przekąski" : "Napoje";
     const param = route.params.param;
-
     const diff = param === 0 ? 'foodProducts' : 'drinkProducts';
     const imagesFood = {
         1: require('../../images/products/malypopcorn.png'),
@@ -88,9 +84,13 @@ export function Przekaski3View({navigation, route}) {
                 });
 
             }
+            setModalVisible(true); // Show the modal
         }
     }
 
+    const closeModal = () => {
+        setModalVisible(false);
+    };
 
     const [productData, setProductData] = useState(null);
 
@@ -109,6 +109,8 @@ export function Przekaski3View({navigation, route}) {
 
         fetchData();
     }, [route.params.itemid, diff]);
+
+
 
     const renderProduct = () => {
         if (error) {
@@ -205,8 +207,8 @@ export function Przekaski3View({navigation, route}) {
                             </View>
                         </View>
 
-                        <View style={{left: -5}}>
-                            <UserAvatar style={{zIndex: '0'}} navigation={navigation}/>
+                        <View style={styles.gb}>
+                            <UserAvatar  navigation={navigation}/>
                         </View>
                     </View>
                 </View>
@@ -232,7 +234,25 @@ export function Przekaski3View({navigation, route}) {
                     </View>
                 </View>
                 {renderProduct()}
-
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => {
+                        Alert.alert('Modal has been closed.');
+                        closeModal();
+                    }}>
+                    <View style={styles3.centeredView}>
+                        <View style={styles3.modalView}>
+                            <Text style={styles3.modalText}>Przedmiot został dodany do koszyka</Text>
+                            <Pressable
+                                style={[styles3.button, styles3.buttonClose]}
+                                onPress={closeModal}>
+                                <Text style={styles3.textStyle}>Zamknij</Text>
+                            </Pressable>
+                        </View>
+                    </View>
+                </Modal>
                 <View style={[styles2.rectangleParent, styles2.parentPosition]}>
                     <LinearGradient
                         style={styles2.frameItem}

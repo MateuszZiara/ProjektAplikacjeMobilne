@@ -11,6 +11,7 @@ import {LoginView} from "../LoginView";
 import {Login} from "../Login";
 import User from "../../Classes/User"
 import Cart from "../../Classes/Cart"
+import {UserAvatar} from "../../components/UserAvatar";
 export function UstawieniaView({ navigation }) {
 
     {
@@ -20,13 +21,9 @@ export function UstawieniaView({ navigation }) {
                         <View style={styles.titleParent}>
                             <Text style={{fontFamily: 'Inter_900Black', fontSize: 18, color: 'white', textAlign: "center", paddingTop: 30}}>Edytuj Profil</Text>
                             <View style={styles.frameGroup}>
-                                <View style={[styles.vectorWrapper, styles.wrapperFlexBox]}>
-                                    <Image
-                                        style={styles.frameChild}
-                                        contentFit="cover"
-                                        source={require("./assets/ellipse-19.png")}
-                                    />
-                                </View>
+
+
+
                                 <View
                                     style={[
                                         styles.agnieszkaKowalParent,
@@ -43,6 +40,9 @@ export function UstawieniaView({ navigation }) {
                                         <Text style={styles.agnieszkakowalgmailcom}>
                                             {Singleton.email}
                                         </Text>
+                                    </View>
+                                    <View style={styles.gb}>
+                                        <UserAvatar  navigation={navigation} />
                                     </View>
                                 </View>
                             </View>
@@ -141,7 +141,7 @@ export function UstawieniaView({ navigation }) {
                             User.name = null;
                             Cart.array = [];
                             navigation.navigate(Login);
-                        }} /*//TODO Ziara chuju tu!*/>
+                        }}>
                             <View style={[styles.frameInner, styles.frameLayout]}/>
                             <View style={[styles.maskGroupGroup, styles.parentGroupPosition]}>
                                 <Image

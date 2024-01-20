@@ -531,7 +531,7 @@ export const styles = StyleSheet.create({
     ekranGowny111: {
         backgroundColor: "#000",
         flex: 1,
-        height: 1500,
+        height: 1300,
         overflow: "hidden",
         width: "100%",
     },

@@ -46,6 +46,10 @@ export const styles = StyleSheet.create({
         right: "0%",
         position: "absolute",
     },
+    gb:{
+        marginTop:-160,
+        left:-5,
+    },
     frameItemLayout: {
         maxHeight: "100%",
         maxWidth: "100%",

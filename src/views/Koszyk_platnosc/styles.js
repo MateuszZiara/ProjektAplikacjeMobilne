@@ -192,8 +192,8 @@ export const styles = StyleSheet.create({
     height: 71,
   },
   vectorWrapper: {
-    top: -4,
-    left: 51,
+    top:-10,
+    left: 21,
     borderRadius: 50,
     borderStyle: "solid",
     borderColor: "rgba(255, 255, 255, 0.14)",
@@ -315,6 +315,10 @@ export const styles = StyleSheet.create({
     top: 22,
     left: 31,
     zIndex: 1,
+  },
+  gb:{
+    marginTop:-10,
+    left:85,
   },
   rectangleParent: {
     marginLeft: -186,

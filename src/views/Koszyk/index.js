@@ -11,38 +11,43 @@ import {useEffect, useState} from "react";
 import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
+import {UserAvatar} from "../../components/UserAvatar";
 
-export function Koszyk({ navigation }){
-  const renderItem = ({ item }) => (
-      <View style={styles.zestaw}>
-        <View style={[styles.duyPopcornParent, styles.parentLayout, styles.itemContainer]}>
-          <Image source={item.img} contentFit="cover" style={styles.image} />
-          <View style={styles.textContainer}>
-            <Text style={ { color: 'white', fontSize: 16 }}>{`${item.name}`}</Text>
-            <Text style={{ color: 'white', fontSize: 16 }}>{`Ilość: ${item.amount}`}</Text>
-
+export function Koszyk({ navigation }) {
+  const [isCartEmpty, setIsCartEmpty] = useState(Cart.array.length === 0);
+  const renderItem = ({ item }) => {
+    return (
+        <View style={styles.zestaw}>
+          <View style={[styles.duyPopcornParent, styles.parentLayout, styles.itemContainer]}>
+            <Image source={item.img} contentFit="cover" style={styles.image} />
+            <View style={styles.textContainer}>
+              <Text style={{ color: 'white', fontSize: 16 }}>{`${item.name}`}</Text>
+              <Text style={{ color: 'white', fontSize: 16 }}>{`Ilość: ${item.amount}`}</Text>
+            </View>
           </View>
         </View>
-      </View>
-  );
+    );
+  };
+  const handlePaymentPress = () => {
+    if (!isCartEmpty) {
+      navigation.navigate(Koszyk_platnosc);
+    }
+  };
   const [refresh, setRefresh] = useState(false);
 
   useEffect(() => {
     const unsubscribe = navigation.addListener("focus", () => {
-      // The screen is focused
-      // Call the function to refresh the FlatList
       refreshFlatList();
     });
-
-    // Return the cleanup function to unsubscribe from the event
     return unsubscribe;
   }, [navigation, refresh]);
 
-  // Function to refresh the FlatList
   const refreshFlatList = () => {
-    // Toggle the state to force a re-render
     setRefresh((prevRefresh) => !prevRefresh);
   };
+  useEffect(() => {
+    setIsCartEmpty(Cart.array.length === 0);
+  }, [refresh, Cart.array]);
   return (
 
         <View style={[styles.wzr, styles.wzrLayout]}>
@@ -87,16 +92,9 @@ export function Koszyk({ navigation }){
                       </View>
                     </View>
                   </View>
-                  <View style={styles.frameContainer}>
-                    <TouchableOpacity style={styles.vectorWrapper} onPress={() => { //TODO Zrobić z tego moduł!!!
-                      Singleton.name === null ? navigation.navigate(Login) : navigation.navigate(UstawieniaView);
-                    }}>
-                      <Image
-                          style={styles.frameChild}
-                          contentFit="cover"
-                          source={require("./assets/ellipse-19.png")}
-                      />
-                    </TouchableOpacity>
+                  <View style={styles.gb}>
+                    <UserAvatar  navigation={navigation} />
+                  </View>
                   </View>
                 </View>
               </View>
@@ -106,34 +104,43 @@ export function Koszyk({ navigation }){
               marginTop: 200,
               height: 350,
             }}>
-              <FlatList
-                  key={refresh}
-                  data={Cart.array}
-                  renderItem={renderItem}
-                  style={styles.koszyk_items}
-                  keyExtractor={(item) => item.id.toString()}
-              />
-
-
-            </View>
-            <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
-              <View style={styles.frameItem} />
-              <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
-                <TouchableOpacity onPress={() =>navigation.navigate(Koszyk_platnosc)}>
-                  <Image
-                      style={styles.maskGroupIcon3}
-                      contentFit="cover"
-                      source={require("./assets/mask-group3.png")}
-                  />
-                  <Text style={[styles.garyLee, styles.garyLeeTypo]}>
-                    Przejdź do Płatności
+              {isCartEmpty ? (
+                  <Text style={{ color: 'white', fontSize: 18, textAlign: 'center', marginTop: 20 }}>
+                    Twój koszyk jest pusty.
                   </Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-      </View>
+              ) : (
+                  <FlatList
+                      key={refresh}
+                      data={Cart.array}
+                      renderItem={renderItem}
+                      style={styles.koszyk_items}
+                      keyExtractor={(item) => item.id.toString()}
+                  />
+              )}
 
+
+
+            </View>
+          <View style={[styles.rectangleParent, styles.sliderItemPosition]}>
+            <View style={styles.frameItem} />
+            <View style={[styles.maskGroupParent, styles.frameParentFlexBox]}>
+              <TouchableOpacity onPress={handlePaymentPress}>
+                <Image
+                    style={styles.maskGroupIcon3}
+                    contentFit="cover"
+                    source={require("./assets/mask-group3.png")}
+                />
+                <View style={styles.garyLeeContainer}>
+                  <Text style={[styles.garyLee, styles.garyLeeTypo]}>
+                    {isCartEmpty ? 'Koszyk jest pusty' : 'Przejdź do Płatności'}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
+
+
 
   );
 }

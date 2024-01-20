@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
 
     left: 0,
     width: 951,
-    height: 691,
+    height: 900,
     position: "absolute",
   },
   grzechotnik: {
@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
     width: 322,
     height: 53,
   },
+
   backIcon: {
     top: 110,
     left: 16,

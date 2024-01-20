@@ -52,9 +52,7 @@ export function RegisterView({ navigation }) {
                 contentFit="cover"
                 source={require("./assets/ellipse-2.png")}
             />
-            <View style={styles.iphoneIndicator}>
-                <View style={styles.line} />
-            </View>
+
             <View style={[styles.appNameWrapper, styles.buttonPosition]}>
                 <View style={styles.appName}>
                     <Text style={[styles.poznajKino, styles.naNowoLayout]}>

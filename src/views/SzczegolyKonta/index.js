@@ -17,54 +17,9 @@ export function SzczegolyKonta({ navigation }) {
           styles.iphonestatusbarPosition,
         ]}
       >
-        <View style={[styles.iphonestatusbar, styles.parentWrapperFlexBox]}>
-          <Text style={styles.text}>9.41</Text>
-          <View style={[styles.signalParent, styles.parentWrapperFlexBox]}>
-            <Image
-              style={styles.signalIcon}
-              contentFit="cover"
-              source={require("./assets/signal.png")}
-            />
-            <Image
-              style={styles.wiFiIcon}
-              contentFit="cover"
-              source={require("./assets/wifi.png")}
-            />
-            <Image
-              style={styles.fullBatteryIcon}
-              contentFit="cover"
-              source={require("./assets/full-battery.png")}
-            />
-          </View>
-        </View>
+
       </View>
-      <View style={[styles.navigationBar, styles.navigationBarLayout]}>
-        <View style={[styles.homeinactiveParent, styles.frameViewPosition]}>
-          <Image
-            style={styles.pencilIconLayout}
-            contentFit="cover"
-            source={require("./assets/homeinactive.png")}
-          />
-          <Image
-            style={[styles.popcorninactiveIcon, styles.pencilIconLayout]}
-            contentFit="cover"
-            source={require("./assets/popcorninactive.png")}
-          />
-          <Image
-            style={[styles.popcorninactiveIcon, styles.pencilIconLayout]}
-            contentFit="cover"
-            source={require("./assets/mask-group.png")}
-          />
-          <Image
-            style={[styles.popcorninactiveIcon, styles.pencilIconLayout]}
-            contentFit="cover"
-            source={require("./assets/mask-group1.png")}
-          />
-        </View>
-        <View style={[styles.iphoneIndicator, styles.navigationBarLayout]}>
-          <View style={styles.line} />
-        </View>
-      </View>
+
       <View style={styles.frameParent}>
         <View style={[styles.backParent, styles.parentWrapperFlexBox]}>
             <TouchableWithoutFeedback onPress={() => navigation.navigate('UstawieniaView')}>

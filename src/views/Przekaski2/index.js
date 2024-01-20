@@ -121,7 +121,7 @@ export function Przekaski2View({navigation, route}) {
                                 </View>
                             </View>
 
-                            <View style={{left: -5}}>
+                            <View style={styles.gb}>
                                 <UserAvatar style={{zIndex: '0'}} navigation={navigation}/>
                             </View>
                         </View>
