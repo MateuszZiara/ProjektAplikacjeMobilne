@@ -27,21 +27,17 @@ export function RepertuarView({ navigation }) {
   const [refresh, setRefresh] = useState(false);
   useEffect(() => {
     const unsubscribe = navigation.addListener("focus", () => {
-      // The screen is focused
-      // Call the function to refresh the FlatList
       refreshFlatList();
     });
-
-    // Return the cleanup function to unsubscribe from the event
     return unsubscribe;
   }, [navigation, refresh]);
   const sections = [
     {
       title: 'Repertuar',
-      data: Movie.array, // Assuming Movie.array is an array of movie items
+      data: Movie.array,
     },
   ];
-  // Function to refresh the FlatList
+
   const refreshFlatList = () => {
     // Toggle the state to force a re-render
     setRefresh((prevRefresh) => !prevRefresh);
