@@ -12,6 +12,8 @@ import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
 import Search from "../../Classes/Search";
 import {Home} from "../Home";
+import {NavigationContainer} from "@react-navigation/native";
+import TabNav from "../../navigation/Tab";
 export function RepertuarSearch({ navigation }) {
 
   const renderItem = ({ item }) => (
@@ -47,6 +49,8 @@ export function RepertuarSearch({ navigation }) {
 
   };
   return (
+      <NavigationContainer independent={true}>
+        <View style={{ flex: 1 }}>
       <ScrollView style={{ flex: 1 }}>
         <View style={styles.wzr}>
 
@@ -160,6 +164,11 @@ export function RepertuarSearch({ navigation }) {
         </View>
 
       </ScrollView>
+          <View style={{marginBottom: 47}}>
+            <TabNav navigation={navigation} />
+          </View>
+        </View>
+      </NavigationContainer>
   );
 }
 

@@ -8,10 +8,14 @@ import {Gotowka_przetwarzanie} from "../Gotowka_przetwarzanie";
 import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
 import {Koszyk_platnosc} from "../Koszyk_platnosc";
 import {UserAvatar} from "../../components/UserAvatar";
+import {NavigationContainer} from "@react-navigation/native";
+import TabNav from "../../navigation/Tab";
 
 
 export function Koszyk_gotowka({ navigation }){
   return (
+      <NavigationContainer independent={true}>
+        <View style={{ flex: 1 }}>
     <View style={styles.wzr}>
       <View style={styles.headerEkranuPrzeksek}>
         <View style={styles.slider}>
@@ -105,5 +109,10 @@ export function Koszyk_gotowka({ navigation }){
         <Text style={styles.twojeKontoTypo}>.</Text>
       </Text>
     </View>
+          <View style={{marginBottom: 47}}>
+            <TabNav navigation={navigation} />
+          </View>
+        </View>
+      </NavigationContainer>
   );
 };

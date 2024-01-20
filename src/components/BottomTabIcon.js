@@ -51,7 +51,7 @@ export const BottomTabIcon = ({ routeName, focused }) => {
                     source={require('../images/Ticket(inactive).png')}
                 />
             }
-        case 'RepertuarView':
+        case 'RepertuarVs':
             if(focused)
             {
                 return<Image

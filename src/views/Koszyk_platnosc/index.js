@@ -8,8 +8,11 @@ import {Koszyk} from "../Koszyk";
 import {Koszyk_karta} from "../Koszyk_karta";
 import {Koszyk_gotowka} from "../Koszyk_gotowka";
 import {UserAvatar} from "../../components/UserAvatar";
+import {NavigationContainer} from "@react-navigation/native";
 export function Koszyk_platnosc({ navigation }){
   return (
+      <NavigationContainer independent={true}>
+        <View style={{ flex: 1 }}>
       <ScrollView>
     <View style={[styles.wzr, styles.wzrLayout]}>
       <View style={styles.headerEkranuPrzeksek}>
@@ -111,5 +114,10 @@ export function Koszyk_platnosc({ navigation }){
       </View>
     </View>
       </ScrollView>
+          <View style={{marginBottom: 47}}>
+            <TabNav navigation={navigation} />
+          </View>
+        </View>
+      </NavigationContainer>
   );
 }

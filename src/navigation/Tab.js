@@ -29,7 +29,7 @@ export default function TabNav({ navigation }) {
             <Tab.Screen name="Home" component={Home} options={optionScreen} />
             <Tab.Screen name="PrzekaskiView" component={PrzekaskiView} options={optionScreen} />
             <Tab.Screen name="Bilety1" component={Bilety1} options={optionScreen} />
-            <Tab.Screen name="RepertuarView" component={RepertuarView} options={optionScreen} />
+            <Tab.Screen name="RepertuarVs" component={RepertuarView} options={optionScreen} />
             <Tab.Screen name="Koszyk" component={Koszyk} options={optionScreen} />
         </Tab.Navigator>
     );

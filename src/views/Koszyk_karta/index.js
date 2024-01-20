@@ -8,11 +8,17 @@ import Carousel from "react-native-snap-carousel";
 import {styles} from "./styles";
 import {Gotowka_przetwarzanie} from "../Gotowka_przetwarzanie";
 import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
+import {NavigationContainer} from "@react-navigation/native";
+import TabNav from "../../navigation/Tab";
 
 
 export function Koszyk_karta({ navigation }){
   return (
-      <ScrollView>
+
+      <NavigationContainer independent={true}>
+        <View style={{ flex: 1 }}>
+
+        <ScrollView>
     <View style={styles.wzr}>
       <View style={[styles.headerEkranuPrzeksek1, styles.sliderLayout]}>
         <View style={[styles.slider, styles.sliderLayout]}>
@@ -187,5 +193,10 @@ export function Koszyk_karta({ navigation }){
       </View>
     </View>
   </ScrollView>
+          <View style={{marginBottom: 47}}>
+            <TabNav navigation={navigation} />
+          </View>
+        </View>
+      </NavigationContainer>
   );
 }

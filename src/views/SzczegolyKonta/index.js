@@ -5,11 +5,15 @@ import {styles} from "./styles";
 import {Text, StyleSheet, View, TouchableOpacity, ScrollView, TouchableWithoutFeedback, TextInput} from "react-native";
 import Singleton from "../../Classes/User"
 import {useState} from "react";
+import TabNav from "../../navigation/Tab";
+import {NavigationContainer} from "@react-navigation/native";
 export function SzczegolyKonta({ navigation }) {
   const [editPersonality, setEditPersonality] = useState(false);
   const [editEmail, setEditEmail] = useState(false);
   const [editPass, setEditPass] = useState(false);
   return (
+      <NavigationContainer independent={true}>
+      <View style={{ flex: 1 }}>
     <View style={styles.wzr}>
       <View
         style={[
@@ -175,5 +179,12 @@ export function SzczegolyKonta({ navigation }) {
         </View>
       </View>
     </View>
+        <View style={{marginBottom: 47}}>
+          <TabNav navigation={navigation} />
+        </View>
+
+
+      </View>
+      </NavigationContainer>
   );
 };

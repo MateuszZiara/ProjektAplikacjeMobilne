@@ -8,6 +8,8 @@ import {PrzekaskiView} from "../Przekaski";
 import {UserAvatar} from "../../components/UserAvatar";
 import axios from "axios";
 import {Przekaski3View} from "../Przekaski3";
+import {NavigationContainer} from "@react-navigation/native";
+import TabNav from "../../navigation/Tab";
 
 export function Przekaski2View({navigation, route}) {
     const [error, setError] = useState(false);
@@ -81,7 +83,9 @@ export function Przekaski2View({navigation, route}) {
     };
 
     return (
-        <ScrollView>
+        <NavigationContainer independent={true}>
+            <View style={{ flex: 1 }}>
+            <ScrollView>
             <View style={styles.wzr}>
                 <View style={styles.headerEkranuPrzeksekParent}>
                     <View style={styles.headerEkranuPrzeksek}>
@@ -159,5 +163,10 @@ export function Przekaski2View({navigation, route}) {
                 </View>
             </View>
         </ScrollView>
+                <View style={{marginBottom: 47}}>
+                    <TabNav navigation={navigation} />
+                </View>
+            </View>
+        </NavigationContainer>
     );
 }

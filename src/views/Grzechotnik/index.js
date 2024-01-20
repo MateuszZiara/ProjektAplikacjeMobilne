@@ -72,7 +72,7 @@ export function Grzechotnik({ navigation }) {
             console.log("Unsubscribing gyroscope");
             _unsubscribe();
         };
-    }, []); // Pusta tablica dependencies oznacza, że useEffect zostanie wywołany tylko po zamontowaniu komponentu
+    }, []);
 
     const handleZagrzechotajPressIn = () => {
 
