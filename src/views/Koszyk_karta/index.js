@@ -1,12 +1,8 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Text,ScrollView,TouchableWithoutFeedback, TouchableOpacity } from "react-native";
+import { View, Text,ScrollView,TouchableWithoutFeedback, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import {Koszyk_platnosc} from "../Koszyk_platnosc";
-import Carousel from "react-native-snap-carousel";
-
 import {styles} from "./styles";
-import {Gotowka_przetwarzanie} from "../Gotowka_przetwarzanie";
 import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
 import {NavigationContainer} from "@react-navigation/native";
 import TabNav from "../../navigation/Tab";

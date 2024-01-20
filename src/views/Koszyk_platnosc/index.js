@@ -9,6 +9,8 @@ import {Koszyk_karta} from "../Koszyk_karta";
 import {Koszyk_gotowka} from "../Koszyk_gotowka";
 import {UserAvatar} from "../../components/UserAvatar";
 import {NavigationContainer} from "@react-navigation/native";
+import TabNav from "../../navigation/Tab";
+
 export function Koszyk_platnosc({ navigation }){
   return (
       <NavigationContainer independent={true}>

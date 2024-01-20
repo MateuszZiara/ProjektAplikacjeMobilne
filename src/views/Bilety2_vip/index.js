@@ -9,6 +9,8 @@ import Ticket from "../../Classes/Ticket";
 import {Bilety1} from "../Bilety1";
 import {UserAvatar} from "../../components/UserAvatar";
 import TicketToBuy from "../../Classes/TicketToBuy";
+import TabNav from "../../navigation/Tab";
+import {NavigationContainer} from "@react-navigation/native";
 
 export function Bilety2_vip({ navigation }) {
   const [number, setNumber] = useState(0);
@@ -88,6 +90,7 @@ export function Bilety2_vip({ navigation }) {
     }
   }
   return (
+      <NavigationContainer independent={true}>
       <ScrollView style={{ flex: 1 }}>
     <View style={styles.wzr}>
 
@@ -211,6 +214,10 @@ export function Bilety2_vip({ navigation }) {
       </TouchableOpacity>
     </View>
       </ScrollView>
+        <View style={{marginBottom: 47}}>
+          <TabNav navigation={navigation} />
+        </View>
+      </NavigationContainer>
   );
 }
 
