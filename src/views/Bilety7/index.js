@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Image} from "expo-image";
-import {Alert, Text, TouchableOpacity, View} from "react-native";
+import {Alert, Modal, Pressable, Text, TouchableOpacity, View} from "react-native";
 import {styles} from "./styles";
 import {LinearGradient} from "expo-linear-gradient";
 import {UserAvatar} from "../../components/UserAvatar";
@@ -8,22 +8,48 @@ import {Bilety3_vip} from "../Bilety3_vip";
 import * as Calendar from 'expo-calendar';
 import {NavigationContainer} from "@react-navigation/native";
 import TabNav from "../../navigation/Tab";
+import {styles3} from "../Przekaski3/styles";
+import {useState} from "react";
 
 export function Bilety7({navigation}) {
+    const [modalVisible, setModalVisible] = useState(false);
+    const closeModal = () => {
+        setModalVisible(false);
+    };
 
     async function createEventInCalendar(title, startDate, endDate, location) {
-        const {status} = await Calendar.requestCalendarPermissionsAsync();
+        const remindersPermission = await Calendar.requestRemindersPermissionsAsync();
 
-        if (status === 'granted') {
-            // Pobierz dostępne kalendarze
-            const calendars = await Calendar.getCalendarsAsync();
+        if (remindersPermission.status !== 'granted') {
+            console.error('Brak uprawnień do przypomnień.');
+            Alert.alert('Brak uprawnień', 'Aplikacja wymaga uprawnień do przypomnień.');
+            return;
+        }
 
-            // Wybierz pierwszy dostępny kalendarz
-            const targetCalendar = calendars[0];
+        const calendarPermission = await Calendar.requestCalendarPermissionsAsync(Calendar.EntityTypes.EVENT);
+
+        console.log('Calendar permission status:', calendarPermission.status);
+
+        if (calendarPermission.status === 'granted') {
+            const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
+            const targetCalendar = await Calendar.getDefaultCalendarAsync();
 
             if (!targetCalendar) {
-                console.error('Nie znaleziono dostępnego kalendarza.');
-                Alert.alert('Błąd', 'Nie znaleziono dostępnego kalendarza.');
+                console.error('Nie znaleziono domyślnego kalendarza.');
+                Alert.alert('Błąd', 'Nie znaleziono domyślnego kalendarza.');
+                return;
+            }
+            const existingEvents = await Calendar.getEventsAsync([targetCalendar.id], new Date(startDate), new Date(endDate));
+            let duplicateEventFound = false;
+            existingEvents.forEach((event) => {
+                if (event.title === title && event.startDate.getTime() === new Date(startDate).getTime()) {
+                    duplicateEventFound = true;
+                }
+            });
+
+            if (duplicateEventFound) {
+                console.log('Wydarzenie o takiej nazwie i czasie już istnieje.');
+                Alert.alert('Błąd', 'Wydarzenie o takiej nazwie i czasie już istnieje.');
                 return;
             }
 
@@ -32,21 +58,24 @@ export function Bilety7({navigation}) {
                 startDate: new Date(startDate),
                 endDate: new Date(endDate),
                 location,
-                calendarId: targetCalendar.id,  // Ustaw id kalendarza
+                //calendarId: targetCalendar.id,
             };
 
             try {
                 const eventId = await Calendar.createEventAsync(targetCalendar.id, eventDetails);
-                console.log(`Utworzono wydarzenie o ID: ${eventId}`);
+                Alert.alert('Dodano wydarzenie', 'Film został dodany do kalendarza. Miłego seansu!');
+                //console.log(`Utworzono wydarzenie o ID: ${eventId}`);
             } catch (error) {
                 console.error('Błąd podczas tworzenia wydarzenia:', error);
                 Alert.alert('Błąd', 'Nie udało się utworzyć wydarzenia. Spróbuj ponownie.');
             }
         } else {
-            console.error('Brak uprawnień do kalendarza.');
+            //console.error('Brak uprawnień do kalendarza.');
             Alert.alert('Brak uprawnień', 'Aplikacja wymaga uprawnień do kalendarza.');
         }
     }
+
+
 
     return (
         <NavigationContainer independent={true}>
@@ -242,8 +271,12 @@ export function Bilety7({navigation}) {
                         />
                     </View>
                 </View>
-                <TouchableOpacity onPress={() => {
-                    createEventInCalendar('Wydarzenie', '2024-02-01T11:30:00.000Z', '2024-02-01T11:30:00.000Z', 'IndieCinema Kielce');
+                <TouchableOpacity onPress={async () => {
+                    try {
+                        await createEventInCalendar(`American Psycho`, '2024-02-01T11:30:00.000Z', '2024-02-01T11:30:00.000Z', 'IndieCinema Kielce');
+                    } catch (error) {
+                        console.error('Error while creating event:', error);
+                    }
                 }}>
                     <View
                         style={[styles.potwierdzenieWyboruItem, styles.frameParentPosition]}
@@ -262,7 +295,6 @@ export function Bilety7({navigation}) {
                         />
                     </View>
                 </TouchableOpacity>
-
             </View>
             <View style={{marginBottom: 47}}>
                 <TabNav navigation={navigation}/>
