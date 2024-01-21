@@ -5,7 +5,7 @@ import {Image} from "expo-image";
 import {LinearGradient} from "expo-linear-gradient";
 import {styles} from "./styles";
 import Movie from "../../Classes/Movie";
-import {Bilety3_vip} from "../Bilety3_vip";
+import {Bilety3} from "../Bilety3";
 import TicketToBuy from "../../Classes/TicketToBuy";
 import Cart from "../../Classes/Cart";
 import {UserAvatar} from "../../components/UserAvatar";
@@ -13,7 +13,7 @@ import {Bilety5} from "../Bilety5";
 import TabNav from "../../navigation/Tab";
 import {NavigationContainer} from "@react-navigation/native";
 
-export function Bilety4_vip({navigation}) {
+export function Bilety4({navigation}) {
     function addToCart(item) {
         let contains = false;
         TicketToBuy.time = item.start + " - " + item.end;
@@ -126,7 +126,7 @@ export function Bilety4_vip({navigation}) {
 
 
                     <View style={[styles.backParent, styles.parentFlexBox]}>
-                        <TouchableOpacity onPress={() => navigation.navigate(Bilety3_vip)}>
+                        <TouchableOpacity onPress={() => navigation.navigate(Bilety3)}>
                             <Image
                                 style={styles.backIcon}
                                 contentFit="cover"

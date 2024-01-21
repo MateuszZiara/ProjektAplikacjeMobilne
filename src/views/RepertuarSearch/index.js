@@ -7,7 +7,7 @@ import {styles} from "./styles.js"
 import Singleton from "../../Classes/User";
 import {Login} from "../Login";
 import {UstawieniaView} from "../Ustawienia";
-import {Bilety3_vip} from "../Bilety3_vip";
+import {Bilety3_vip} from "../Bilety3";
 import Movie from "../../Classes/Movie";
 import {useEffect, useState} from "react";
 import Search from "../../Classes/Search";

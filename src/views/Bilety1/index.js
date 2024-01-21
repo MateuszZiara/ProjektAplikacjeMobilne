@@ -2,7 +2,7 @@ import * as React from "react";
 import { Image } from "expo-image";
 import {StyleSheet, View, Text, StatusBar, ScrollView, Button, TouchableOpacity} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import {Bilety2_vip} from "../Bilety2_vip";
+import {Bilety2} from "../Bilety2";
 import Ticket from "../../Classes/Ticket";
 import Singleton from "../../Classes/User";
 import {Login} from "../Login";
@@ -51,7 +51,7 @@ export function Bilety1({ navigation }) {
                 </View>
                 <View style={styles.sliderPrzekasekParent} >
                     <View style={[styles.sliderPrzekasek, styles.sliderPosition]}>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 1; TicketToBuy.id = 1; TicketToBuy.name = 'VIP'; TicketToBuy.number = 1} navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 1; TicketToBuy.id = 1; TicketToBuy.name = 'VIP'; TicketToBuy.number = 1} navigation.navigate(Bilety2)}}>
                         <View style={styles.parentLayout}>
                             <Text style={[styles.vip, styles.vipClr]}>VIP</Text>
                             <Image
@@ -61,7 +61,7 @@ export function Bilety1({ navigation }) {
                             />
                         </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 2;TicketToBuy.id = 2; TicketToBuy.name = 'Ulgowy'; TicketToBuy.number = 1} navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 2;TicketToBuy.id = 2; TicketToBuy.name = 'Ulgowy'; TicketToBuy.number = 1} navigation.navigate(Bilety2)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
 
                             <Text style={[styles.ulgowy, styles.vipClr]}>Ulgowy</Text>
@@ -74,7 +74,7 @@ export function Bilety1({ navigation }) {
                         </TouchableOpacity>
                     </View>
                     <View style={[styles.sliderPrzekasek1, styles.sliderPosition]}>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 3;TicketToBuy.id = 3; TicketToBuy.name = 'Normalny'; TicketToBuy.number = 1 } navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 3;TicketToBuy.id = 3; TicketToBuy.name = 'Normalny'; TicketToBuy.number = 1 } navigation.navigate(Bilety2)}}>
                         <View style={styles.parentLayout}>
                             <Image
                                 style={styles.maskGroupIcon}
@@ -84,7 +84,7 @@ export function Bilety1({ navigation }) {
                             <Text style={[styles.normalny, styles.vipClr]}>Normalny</Text>
                         </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => {{Ticket.id = 4; TicketToBuy.id = 4; TicketToBuy.name = 'Rodzinny'; TicketToBuy.number = 1} navigation.navigate(Bilety2_vip)}}>
+                        <TouchableOpacity onPress={() => {{Ticket.id = 4; TicketToBuy.id = 4; TicketToBuy.name = 'Rodzinny'; TicketToBuy.number = 1} navigation.navigate(Bilety2)}}>
                         <View style={[styles.ulgowyParent, styles.parentLayout]}>
                             <Text style={[styles.rodzinny, styles.vipClr] }>Rodzinny</Text>
                             <Image

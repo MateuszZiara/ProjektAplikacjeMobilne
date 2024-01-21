@@ -5,13 +5,13 @@ import {ScrollView, Text, TouchableOpacity, View} from "react-native";
 import {LinearGradient} from "expo-linear-gradient";
 import {styles} from "./styles";
 import {Calendar} from "react-native-calendars";
-import {Bilety4_vip} from "../Bilety4_vip";
-import {Bilety2_vip} from "../Bilety2_vip";
+import {Bilety4} from "../Bilety4";
+import {Bilety2} from "../Bilety2";
 import {UserAvatar} from "../../components/UserAvatar";
 import {NavigationContainer} from "@react-navigation/native";
 import TabNav from "../../navigation/Tab";
 
-export function Bilety3_vip({navigation}) {
+export function Bilety3({navigation}) {
     const [selected, setSelected] = useState('');
     return (
         <NavigationContainer independent={true}>
@@ -43,7 +43,7 @@ export function Bilety3_vip({navigation}) {
                     </View>
 
                     <View style={[styles.backParent, styles.wrapperParentFlexBox]}>
-                        <TouchableOpacity onPress={() => navigation.navigate(Bilety2_vip)}>
+                        <TouchableOpacity onPress={() => navigation.navigate(Bilety2)}>
                             <Image
                                 style={styles.backIconLayout1}
                                 contentFit="cover"
@@ -102,7 +102,7 @@ export function Bilety3_vip({navigation}) {
                             monthTextColor: '#888'
                         }}
                     />
-                    <TouchableOpacity onPress={() => navigation.navigate(Bilety4_vip)}>
+                    <TouchableOpacity onPress={() => navigation.navigate(Bilety4)}>
                         <View style={styles.rectangleParent}>
                             <View style={styles.frameItem}/>
                             <View style={styles.garyLeeParent}>

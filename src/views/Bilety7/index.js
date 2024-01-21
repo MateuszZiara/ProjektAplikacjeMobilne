@@ -4,12 +4,14 @@ import {Alert, Modal, Pressable, Text, TouchableOpacity, View} from "react-nativ
 import {styles} from "./styles";
 import {LinearGradient} from "expo-linear-gradient";
 import {UserAvatar} from "../../components/UserAvatar";
-import {Bilety3_vip} from "../Bilety3_vip";
+import {Bilety3} from "../Bilety3";
 import * as Calendar from 'expo-calendar';
 import {NavigationContainer} from "@react-navigation/native";
 import TabNav from "../../navigation/Tab";
 import {styles3} from "../Przekaski3/styles";
 import {useState} from "react";
+import {Zatwierdz_platnosc} from "../Zatwierdz_platnosc";
+import {Koszyk} from "../Koszyk";
 
 export function Bilety7({navigation}) {
     const [modalVisible, setModalVisible] = useState(false);
@@ -105,7 +107,7 @@ export function Bilety7({navigation}) {
                     </View>
                 </View>
                 <View style={styles.backParent}>
-                    <TouchableOpacity onPress={() => navigation.navigate(Bilety3_vip)}>
+                    <TouchableOpacity onPress={() => navigation.navigate(Bilety3)}>
                         <Image
                             style={styles.backIcon}
                             contentFit="cover"
@@ -251,9 +253,11 @@ export function Bilety7({navigation}) {
                         colors={["rgba(244, 22, 22, 0.2)", "rgba(172, 10, 0, 0.2)"]}
                     />
                     <View style={[styles.garyLeeParent, styles.garyPosition]}>
+                        <TouchableOpacity onPress={() => navigation.navigate(Koszyk)}>
                         <Text style={[styles.garyLee, styles.garyTypo]}>
                             Dodaj do zamówienia
                         </Text>
+                        </TouchableOpacity>
                         <Image
                             style={[styles.maskGroupIcon, styles.maskGroupLayout]}
                             contentFit="cover"

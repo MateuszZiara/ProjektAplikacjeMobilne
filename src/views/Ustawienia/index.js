@@ -18,7 +18,7 @@ import {Historia_zakupow} from "../Historia_zakupow";
 
 export function UstawieniaView({ navigation }) {
     const openHelpCenter = () => {
-        Linking.openURL("https://www.vivus.pl/");
+        Linking.openURL("https://achilles.tu.kielce.pl/portal/Members/7637837b75044f12a9338bd380002931");
     };
     {
         return (

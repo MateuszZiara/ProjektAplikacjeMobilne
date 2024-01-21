@@ -2,7 +2,7 @@ import * as React from "react";
 import {StyleSheet, View, Text, TouchableOpacity} from "react-native";
 import { Image } from "expo-image";
 import { styles } from "./styles";
-import {Bilety2_vip} from "../Bilety2_vip";
+import {Bilety2_vip} from "../Bilety2";
 import {Grzechotnik} from "../Grzechotnik";
 
 export function Rabat({ navigation }) {

@@ -4,7 +4,7 @@ import {Text, TouchableOpacity, View} from "react-native";
 import {styles} from "./styles"
 import {LinearGradient} from "expo-linear-gradient";
 import {UserAvatar} from "../../components/UserAvatar";
-import {Bilety3_vip} from "../Bilety3_vip";
+import {Bilety3} from "../Bilety3";
 import {Bilety7} from "../Bilety7";
 import {NavigationContainer} from "@react-navigation/native";
 import TabNav from "../../navigation/Tab";
@@ -83,7 +83,7 @@ export function Bilety5({navigation}) {
                 </View>
                 <View style={styles.siedzeniaChild}/>
                 <View style={[styles.backParent, styles.parentFrameFlexBox]}>
-                    <TouchableOpacity onPress={() => navigation.navigate(Bilety3_vip)}>
+                    <TouchableOpacity onPress={() => navigation.navigate(Bilety3)}>
                         <Image
                             style={styles.backIcon}
                             contentFit="cover"

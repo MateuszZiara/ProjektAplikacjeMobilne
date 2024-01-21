@@ -3,7 +3,7 @@ import { Image } from "expo-image";
 import {StyleSheet, View, ScrollView, Text, TouchableOpacity, TextInput} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import {styles} from "./styles"
-import {Bilety3_vip} from "../Bilety3_vip";
+import {Bilety3} from "../Bilety3";
 import {useState} from "react";
 import Ticket from "../../Classes/Ticket";
 import {Bilety1} from "../Bilety1";
@@ -12,7 +12,7 @@ import TicketToBuy from "../../Classes/TicketToBuy";
 import TabNav from "../../navigation/Tab";
 import {NavigationContainer} from "@react-navigation/native";
 
-export function Bilety2_vip({ navigation }) {
+export function Bilety2({ navigation }) {
   const [number, setNumber] = useState(0);
 
   function sub()
@@ -197,7 +197,7 @@ export function Bilety2_vip({ navigation }) {
           <UserAvatar style={{zIndex: '0'}} navigation={navigation} />
         </View>
       </View>
-      <TouchableOpacity onPress={() =>{{TicketToBuy.number = number}navigation.navigate(Bilety3_vip)}}>
+      <TouchableOpacity onPress={() =>{{TicketToBuy.number = number}navigation.navigate(Bilety3)}}>
 
       <View style={styles.rectangleParent}>
         <View style={styles.frameItem} />
