@@ -16,14 +16,28 @@ export function RegisterView({ navigation }) {
     const ApiKey = 'AIzaSyB5iaS38Fm9mYfMNaK_HnBqk4V6sp5paJg';
     const LinkZadania = `${firebaseLinkDoBazy}${sciezkaDoBazy}?key=${ApiKey}`;
 
+    const [error,setError] = useState(false);
+
+    const checkEmailExistence = async (email) => {
+        try {
+            const response = await axios.get('https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app/users.json');
+            const users = response.data;
+
+            const usersWithSameEmail = Object.values(users).filter(user => user.email === email);
+
+            return usersWithSameEmail.length > 0;
+        } catch (error) {
+            console.error('Error checking email existence:', error);
+            throw error;
+        }
+    };
+
     const handleRegistration = async () => {
         try {
-            const checkEmailResponse = await axios.get(
-                `https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app/users.json?orderBy="email"&equalTo="${login}"`
-            );
+            const emailExists = await checkEmailExistence(login);
 
-            if (checkEmailResponse.data) {
-                console.log("Email already exists. Registration failed.");
+            if (emailExists) {
+                setError(true);
             } else {
                 const registrationResponse = await axios.post(
                     'https://aplikacjemobilne-ff0b1-default-rtdb.europe-west1.firebasedatabase.app/users.json',
@@ -34,9 +48,11 @@ export function RegisterView({ navigation }) {
                     }
                 );
                 console.log("Registration successful:", registrationResponse.data);
+                navigation.navigate(LoginView);
             }
-        } catch (error) {
-            console.error("Registration failed:", error);
+        }
+        catch (error) {
+            setError(true);
         }
     };
     return (
@@ -62,6 +78,7 @@ export function RegisterView({ navigation }) {
                 </View>
             </View>
             <View style={styles.ekranRejestracjiInner}>
+                {error ? <Text style={styles.error}>Email istnieje w bazie.</Text> : null}
                 <View>
                     <TextInput
                         style={styles.TextInput}

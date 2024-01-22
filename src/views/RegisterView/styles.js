@@ -224,4 +224,7 @@ export const styles = StyleSheet.create({
         overflow: "hidden",
         height: 896,
     },
+    error:{
+        color: 'white',
+    },
 });
