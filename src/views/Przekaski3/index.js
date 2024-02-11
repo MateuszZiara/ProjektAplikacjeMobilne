@@ -102,7 +102,7 @@ export function Przekaski3View({navigation, route}) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${firebaseURL}/przekaski/${diff}/${route.params.itemid - 1}.json`);
+                const response = await axios.get(`${firebaseURL}/${diff}/${route.params.itemid - 1}.json`);
                 setProductData(response.data);
                 console.log(response.data);
                 console.log(route.params.itemid);

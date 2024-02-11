@@ -50,7 +50,7 @@ export function Przekaski2View({navigation, route}) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${firebaseURL}/przekaski/${diff}.json`);
+                const response = await axios.get(`${firebaseURL}/${diff}.json`);
                 setGoods(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
